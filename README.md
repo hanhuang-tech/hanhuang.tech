@@ -6,6 +6,7 @@
   * Require TLS 1.2 or 1.3  
   * Redirection to HTTPS encryption via SSL Certificate via certbot_gen_docker  
   * Frontend static site featuring html, css and javascript
+  * Mounted /html directory on the host to allow on-the-fly static file changes to parallel this directory inside the container  
   
 **Dockerfile**  
 Nginx: From nginx alpine image, copy nginx.conf and hanhuang.tech.conf, from host /conf directory to standard nginx directories inside container.  
