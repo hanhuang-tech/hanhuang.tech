@@ -1,8 +1,8 @@
 /* browsing behaviour */
 :focus {
-  outline-offset: 4px;
-  outline: 0.35rem ridge lightgray;
-  border-radius: 4px;
+  outline-offset: 3px;
+  outline: 4px solid lightgray;
+  border-radius: 5px;
   position: relative;
   z-index: 5;
 }
@@ -98,21 +98,29 @@ body {
     var(--clr-accent) 20%,
     var(--clr-light)
   );
-  padding: 2%;
+}
+.logo-banner__bg {
+  background-image: url("../img/cherryblossom.jpg");
+  background-size: 25%;
+  background-position: right 1000px;
 }
 
 .logo__div {
   display: flex;
-  width: 35%;
-  column-gap: 5%;
+  padding: 20px;
+  column-gap: 4%;
   min-width: 200px;
+  max-width: 350px;
 }
 
 .hht-banner__img {
-  border: 8px solid var(--clr-accent);
+  border: 6px solid gray;
   border-radius: 20px;
 }
 /* habbit animation */
+.habbit__img {
+  cursor: pointer;
+}
 
 .habbit-move .habbit__img {
   animation: rotation 6s;
@@ -256,7 +264,7 @@ body {
 
 /* home title */
 
-.home-title__section {
+/*.home-title__section {
   padding: 0;
 }
 .home-title__div {
@@ -303,7 +311,7 @@ body {
   .home-title__subtitle {
     font-size: 1.8rem;
   }
-}
+}*/
 
 /* resources */
 
