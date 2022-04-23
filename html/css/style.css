@@ -1,8 +1,9 @@
 /* focus */
 
 :focus {
-  outline-offset: 2px;
-  outline: 0.2rem dashed gray;
+  outline-offset: 4px;
+  outline: 0.4rem ridge var(--clr-green);
+  border-radius: 4px;
   position: relative;
   z-index: 5;
 }
@@ -26,34 +27,7 @@
 
   --clr-light: whitesmoke;
   --clr-dark: #303030;
-
-  /* --clr-light: #ffffff;
-  --clr-light2: whitesmoke;
-  --clr-dark: #303030;
-  --clr-darkgrey: #404040;
-  --clr-grey: #525252;
-  --clr-lightgrey: #d3d3d3;
-  --clr-lightgrey2: #e0e0e0;
-  --clr-dirt: #a16121;
-  --clr-copper: #b87333;
-  --clr-lightbrown: #c77d37;
-  --clr-lightgreen: #d1f9d1;
-  --clr-softlimegreen: #70dc70;
-  --clr-limegreen: #32cd32;
-  --clr-darklimegreen: #007e00;
-  --clr-forestgreen: #228b22;
-  --clr-darkgreen: #006400;
-  --clr-myrtle: #274e13;
-  --clr-darkblue: #09447b;
-  --clr-babyblue: #89cff0;
-  --clr-lightblue: #add8e6;
-  --clr-paleaqua: #bcd4e6;
-  --clr-skyblue: #87ceeb;
-  --clr-dodgerblue: #1e90ff;
-  --clr-pastelorange: #ffb347;
-  --clr-darkorange: #fa9200;
-  --clr-brown: #b05800;
-  --clr-blue: #0000cd; */
+  --clr-green: #2a8019;
 
   --fs-h1: 2.75rem;
   --fs-h2: 2rem;
