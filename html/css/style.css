@@ -2,7 +2,7 @@
 
 :focus {
   outline-offset: 2px;
-  outline: 0.3rem dashed var(--clr-dark);
+  outline: 0.2rem dashed gray;
   position: relative;
   z-index: 5;
 }
@@ -24,7 +24,10 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #ffffff;
+  --clr-light: whitesmoke;
+  --clr-dark: #303030;
+
+  /* --clr-light: #ffffff;
   --clr-light2: whitesmoke;
   --clr-dark: #303030;
   --clr-darkgrey: #404040;
@@ -50,7 +53,7 @@
   --clr-pastelorange: #ffb347;
   --clr-darkorange: #fa9200;
   --clr-brown: #b05800;
-  --clr-blue: #0000cd;
+  --clr-blue: #0000cd; */
 
   --fs-h1: 2.75rem;
   --fs-h2: 2rem;
@@ -141,9 +144,6 @@ h4 {
   width: 35%;
   column-gap: 5%;
   min-width: 225px;
-}
-
-.habbit__img {
 }
 
 .hh-tech__img {
@@ -465,9 +465,6 @@ h4 {
   height: 5px;
   margin: 0.3em auto 0.8em;
   background: var(--clr-dark);
-}
-
-.myprojects {
 }
 
 .myproject {
@@ -1198,9 +1195,6 @@ h4 {
   max-height: 325px;
 }
 
-.moby__div {
-}
-
 .moby__logo {
   margin-left: auto;
   margin-right: auto;
@@ -1236,9 +1230,6 @@ h4 {
   background-size: cover;
   background-blend-mode: multiply;
   max-height: 350px;
-}
-
-.resourcesbackend__div {
 }
 
 .resourcesbackend__logo {
