@@ -1,25 +1,4 @@
-/* browsing behaviour */
-:focus {
-  outline-offset: 3px;
-  outline: 4px solid lightgray;
-  border-radius: 5px;
-  position: relative;
-  z-index: 5;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-/* border-box */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* custom properties */
-
 :root {
   --ff-primary: "Noto Sans", sans-serif;
   --ff-secondary: "Inconsolata", monospace;
@@ -61,6 +40,12 @@ img {
   max-width: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* typography */
 
 h1 {
@@ -90,74 +75,17 @@ body {
   font-family: var(--ff-primary);
 }
 
-/* logo */
-
-.logo__bg {
-  background-image: linear-gradient(
-    25deg,
-    var(--clr-accent) 20%,
-    var(--clr-light)
-  );
-}
-.logo-banner__bg {
-  background-image: url("../img/cherryblossom.jpg");
-  background-size: 25%;
-  background-position: right 1000px;
+/* browsing behaviour */
+:focus {
+  outline-offset: 3px;
+  outline: 4px solid lightgray;
+  border-radius: 5px;
+  position: relative;
+  z-index: 5;
 }
 
-.logo__div {
-  display: flex;
-  padding: 20px;
-  column-gap: 4%;
-  min-width: 200px;
-  max-width: 350px;
-}
-
-.hht-banner__img {
-  border: 6px solid gray;
-  border-radius: 20px;
-}
-/* habbit animation */
-.habbit__img {
-  cursor: pointer;
-}
-
-.habbit-move .habbit__img {
-  animation: rotation 6s;
-}
-
-.habbit-move .hht-banner__img {
-  animation: movenback 6s;
-}
-
-.habbit-move .nav__arrow {
-  animation: arrowrotation 6s;
-}
-
-@keyframes rotation {
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes movenback {
-  50% {
-    transform: translateX(100px);
-    filter: opacity(0.5);
-    border: 10px solid var(--clr-dark);
-  }
-}
-
-@keyframes arrowrotation {
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(765deg);
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 /* navigation bar */
@@ -242,76 +170,84 @@ body {
   }
 }
 
-/* under construction */
-/* .construct__section {
-  background: linear-gradient(to right, blue 5%, red 10%, var(--clr-light) 10% 100%);
-  background-blend-mode: difference;
-  border: 5px solid var(--clr-grey);
-  padding: 0;
-  margin-bottom: 30px;
+/* logo */
+
+.logo__bg {
+  display: flex;
+  background-image: linear-gradient(to right, black 5%, white 95%);
 }
 
-.construct {
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  color: var(--clr-grey);
-  font-weight: var(--fw-bold);
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: 5px;
-} */
+.logo__div {
+  display: flex;
+  padding: 20px;
+  column-gap: 4%;
+  min-width: 300px;
+}
 
-/* home title */
+.logo-habbit__img {
+  border: 4px solid white;
+}
 
-/*.home-title__section {
-  padding: 0;
+.logo-hhtbanner__img {
+  border: 4px solid gray;
+  border-radius: 10px 50px 10px;
 }
-.home-title__div {
-  background-color: var(--clr-darkgreen);
-  border: 0px solid var(--clr-light);
-  border-width: 10px 0 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 275px;
-}
-.home-title__services {
-  margin-top: 175px;
-  margin-left: 35px;
-}
-.home-title__title {
-  color: var(--clr-light2);
-  font-size: 1.75rem;
-  line-height: 0;
-  padding-right: 10px;
-}
-.home-title__subtitle {
-  color: var(--clr-light2);
-  font-size: 1.5rem;
-  line-height: 1;
-}
-.home-title__background {
+
+.logo-bannerbg__img {
   background-image: linear-gradient(
       to right,
-      rgba(0, 100, 0, 1) 5%,
-      rgba(255, 255, 255, 1)
+      rgba(150, 150, 150, 1) 5%,
+      rgba(255, 255, 255, 0)
     ),
-    url("../img/cherryblossom.jpg");
+    url("../img/pohutu.jpg");
   background-size: cover;
-  background-blend-mode: multiply;
-  height: 255px;
-  background-position: 0px;
-  border: 0px solid var(--clr-light);
-  border-width: 0 0 0 5px;
+  background-repeat: no-repeat;
+  margin-left: 40%;
+  min-width: 800px;
 }
-@media (min-width: 900px) {
-  .home-title__title {
-    font-size: 2rem;
+
+/* habbit animation */
+.logo-habbit__img {
+  cursor: pointer;
+}
+
+.habbit-move .logo-habbit__img {
+  animation: rotation 6s;
+}
+
+.habbit-move .logo-hhtbanner__img {
+  animation: movenback 6s;
+}
+
+.habbit-move .nav__arrow {
+  animation: arrowrotation 6s;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(180deg);
   }
-  .home-title__subtitle {
-    font-size: 1.8rem;
+  100% {
+    transform: rotate(0deg);
   }
-}*/
+}
+
+@keyframes movenback {
+  50% {
+    transform: translateX(100px);
+    filter: opacity(0.5);
+    border: 10px solid var(--clr-dark);
+  }
+}
+
+@keyframes arrowrotation {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(765deg);
+  }
+}
 
 /* resources */
 
