@@ -8,7 +8,7 @@
 
   --clr-light: whitesmoke;
   --clr-dark: #303030;
-  --clr-accent: rgb(12, 109, 12);
+  --clr-accent: rgb(40, 145, 40);
 
   --fs-h1: 2.75rem;
   --fs-h2: 2rem;
@@ -87,27 +87,26 @@ html {
   scroll-behavior: smooth;
 }
 
-/* navigation bar */
+/* nav bar */
 .nav__bar {
   position: fixed;
   top: -18px;
-  right: 2px;
+  right: -10px;
   z-index: 4;
 }
 
-.nav__list {
+.nav__border {
   display: inline-grid;
   justify-items: right;
-  float: right;
-  border: 0px solid rgba(200, 200, 200, 0.6);
+  border: 0px solid rgba(100, 100, 100, 0.5);
   border-width: 5px 5px 0 0;
   padding: 5px;
-  grid-row-gap: 6px;
+  grid-row-gap: 5px;
 }
 
 .nav__item {
   list-style-type: none;
-  background-color: rgba(200, 200, 200, 0.75);
+  background-color: rgba(100, 100, 100, 0.5);
   border-radius: 5px;
 }
 
@@ -115,21 +114,25 @@ html {
   font-size: 1em;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
-  color: var(--clr-light);
+  color: white;
   text-decoration: none;
+  letter-spacing: 1px;
   padding: 4px;
 }
 
+.nav__border:hover {
+  border: 0px solid rgba(70, 120, 120, 0.7);
+  border-width: 5px 5px 0 0;
+}
+
 .nav__item a:hover {
-  background-color: lightblue;
-  border-radius: 8px;
+  background-color: slateblue;
 }
 
 .arrow {
-  border: solid var(--clr-light);
-  border-width: 4px 0 0 4px;
+  border: solid white;
+  border-width: 3px 0 0 3px;
   display: inline-block;
-  margin-top: 0;
   margin-bottom: 0.5px;
   margin-left: 9.2px;
   margin-right: 9.2px;
@@ -138,17 +141,11 @@ html {
 
 .nav__arrow {
   list-style-type: none;
-  background-color: rgba(180, 250, 180, 0.5);
-  border-radius: 20px;
+  background-color: rgba(50, 150, 50, 0.5);
   font-size: 1.25em;
   transform: rotate(45deg);
-}
-
-.nav__arrow a {
-  color: var(--clr-light);
-  text-decoration: none;
-  font-size: 0.85em;
-  font-weight: var(--fw-bold);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
 }
 
 .nav__arrow:hover {
