@@ -10,7 +10,7 @@
   --clr-dark: #303030;
   --clr-accent: rgb(40, 145, 40);
 
-  --fs-h1: 2.75rem;
+  --fs-h1: 2.5rem;
   --fs-h2: 2rem;
   --fs-h3: 1.25rem;
   --fs-h4: 1rem;
@@ -22,7 +22,7 @@
 
 @media (min-width: 900px) {
   :root {
-    --fs-h1: 3.5rem;
+    --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.5rem;
     --fs-h4: 1.25rem;
@@ -133,7 +133,6 @@ html {
   border: solid white;
   border-width: 3px 0 0 3px;
   display: inline-block;
-  margin-bottom: 0.5px;
   margin-left: 9.2px;
   margin-right: 9.2px;
   padding: 5px;
@@ -195,6 +194,7 @@ html {
     url(../img/pohutu.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0px;
   margin-left: 50%;
   width: 1000px;
 }
@@ -245,28 +245,66 @@ html {
 }
 
 /* resources */
-.resources__background {
-  background-color: var(--clr-lightgreen);
+.resources__bg {
+  background-color: rgb(100, 100, 100);
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   background-position: 0px;
-  border: 0px solid var(--clr-light2);
-  border-width: 0 0 15px 0;
+  border: 0px solid var(--clr-light);
+  border-width: 40px 0 40px 0;
 }
 .resources__title {
   color: var(--clr-light);
   text-align: center;
+  font-family: var(--ff-secondary);
 }
-.resources__linebar::after {
+.resources__title::after {
   content: "";
   display: block;
-  max-width: 175px;
-  height: 5px;
-  margin: 0.3em auto 0.8em;
+  max-width: 220px;
+  height: 3px;
+  margin: 0px auto 30px;
   background: var(--clr-light);
 }
-.resources {
+
+.subject a {
+  display: inline-block;
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/*area between unordered list to listed item*/
+subject-ul subject-li {
+  display: inline-block;
+}
+
+/*hover to change bg colour*/
+subject-ul subject-li:hover {
+  background: #555;
+}
+
+/*hide normally, but when appear give 150px width absolute position*/
+subject-ul subject-li subject-ul {
+  position: absolute;
+  width: 150px;
+  display: none;
+}
+
+/*multiple list items fuse together instead of separate list items*/
+subject-ul subject-li subject-ul subject-li {
+  background: #555;
+  display: block;
+}
+
+/*hover over to reveal hidden fused block*/
+subject-ul subject-li:hover subject-ul {
+  display: block;
+}
+
+/* .subjects__group {
   margin-bottom: -10px;
 }
 .subject__div {
@@ -278,11 +316,10 @@ html {
 }
 .subject__btn {
   display: inline-block;
-  width: 160px;
-  background: var(--clr-dirt);
-  border: 4px solid var(--clr-light2);
+  background: purple;
+  border: 4px solid white;
   border-radius: 10px;
-  color: var(--clr-light2);
+  color: white;
   text-decoration: none;
   font-size: 1.25rem;
   letter-spacing: 2px;
@@ -295,7 +332,7 @@ html {
 .subject__title:hover {
   transform: scale(1.04);
 }
-.topic__area {
+.topic__div {
   display: flex;
   position: relative;
 }
@@ -312,7 +349,7 @@ html {
 .topic__title:hover {
   color: var(--clr-light2);
   background-color: var(--clr-grey);
-}
+} */
 .topic-youtube,
 .topic-github {
   max-width: 40px;
@@ -329,7 +366,7 @@ html {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .resources {
     display: flex;
     margin: auto;
@@ -343,7 +380,165 @@ html {
   }
   .subject__div + .subject__div {
     margin-left: 100px;
+  } 
+}*/
+
+/* resources frontend */
+
+.ref-titlepage__div {
+  background-color: var(--clr-dirt);
+  border: 0px solid var(--clr-light);
+  border-width: 10px 0 10px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 275px;
+}
+
+.ref-titlepage__services {
+  margin-top: 115px;
+  margin-left: 35px;
+}
+
+.ref-titlepage__title {
+  color: var(--clr-light2);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.ref-titlepage__subtitle {
+  color: var(--clr-light2);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.ref-titlepage__background {
+  background-image: linear-gradient(
+      to right,
+      rgba(161, 97, 33) 5%,
+      rgba(255, 255, 255, 1)
+    ),
+    url("../img/treebyhouse.jpg");
+  background-size: cover;
+  background-position: 0px;
+
+  background-blend-mode: multiply;
+  height: 255px;
+
+  border: 0px solid var(--clr-light);
+  border-width: 0 0 0 5px;
+}
+.ref-logo__background {
+  background-color: var(--clr-pastelorange);
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 30px;
+}
+.ref-logo__holder {
+  background-color: var(--clr-light2);
+  padding-top: 20px;
+
+  min-width: 200px;
+  border: 5px solid var(--clr-dark);
+  border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .ref-titlepage__title {
+    font-size: 2rem;
   }
+  .ref-titlepage__subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .ref-titlepage__services {
+    width: 200px;
+  }
+  .ref-titlepage__title {
+    margin-bottom: 20px;
+    height: 40px;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .ref-titlepage__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.moby__background {
+  background-color: var(--clr-lightgrey);
+  background-size: cover;
+  border: 20px solid var(--clr-lightgrey2);
+  max-height: 325px;
+}
+
+.moby__logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.moby__caption {
+  color: var(--clr-dirt);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-secondary);
+  font-size: 2em;
+  text-align: center;
+  margin: auto;
+}
+
+/* sitebackend */
+
+.sitebackend__title {
+  text-align: center;
+}
+
+.sitebackend__blog {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .resourcesbackend */
+
+.resourcesbackend__background {
+  background-color: var(--clr-grey);
+  background-image: url(../img/treesbyfootpath.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  max-height: 350px;
+}
+
+.resourcesbackend__logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.resourcesbackend__caption {
+  color: var(--clr-light2);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-secondary);
+  font-size: 2em;
+  text-align: center;
+  margin: auto;
+}
+
+/* express */
+
+.express__title {
+  text-align: center;
+}
+
+.express__blog {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* projects */
@@ -358,7 +553,7 @@ html {
   text-align: center;
 }
 
-.myprojects__linebar::after {
+.myprojects__ul:after {
   content: "";
   display: block;
   max-width: 250px;
@@ -806,7 +1001,7 @@ html {
   font-size: 1.6rem;
   color: var(--clr-darkgrey);
 }
-.pro__linebar {
+.pro__ul {
   content: "";
   display: block;
   max-width: 300px;
@@ -833,7 +1028,7 @@ html {
   font-size: 1.6rem;
   color: var(--clr-grey);
 }
-.con__linebar {
+.con__ul {
   content: "";
   display: block;
   max-width: 410px;
@@ -1000,164 +1195,6 @@ html {
   .sfe-titlepage__subtitle {
     font-size: 1.25rem;
   }
-}
-
-/* resources frontend */
-
-.ref-titlepage__div {
-  background-color: var(--clr-dirt);
-  border: 0px solid var(--clr-light);
-  border-width: 10px 0 10px 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 275px;
-}
-
-.ref-titlepage__services {
-  margin-top: 115px;
-  margin-left: 35px;
-}
-
-.ref-titlepage__title {
-  color: var(--clr-light2);
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.ref-titlepage__subtitle {
-  color: var(--clr-light2);
-  font-size: 1.5rem;
-  line-height: 1;
-  margin-top: 10px;
-}
-
-.ref-titlepage__background {
-  background-image: linear-gradient(
-      to right,
-      rgba(161, 97, 33) 5%,
-      rgba(255, 255, 255, 1)
-    ),
-    url("../img/treebyhouse.jpg");
-  background-size: cover;
-  background-position: 0px;
-
-  background-blend-mode: multiply;
-  height: 255px;
-
-  border: 0px solid var(--clr-light);
-  border-width: 0 0 0 5px;
-}
-.ref-logo__background {
-  background-color: var(--clr-pastelorange);
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 30px;
-}
-.ref-logo__holder {
-  background-color: var(--clr-light2);
-  padding-top: 20px;
-
-  min-width: 200px;
-  border: 5px solid var(--clr-dark);
-  border-radius: 10px;
-}
-
-@media (min-width: 900px) {
-  .ref-titlepage__title {
-    font-size: 2rem;
-  }
-  .ref-titlepage__subtitle {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .ref-titlepage__services {
-    width: 200px;
-  }
-  .ref-titlepage__title {
-    margin-bottom: 20px;
-    height: 40px;
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-  .ref-titlepage__subtitle {
-    font-size: 1.25rem;
-  }
-}
-
-.moby__background {
-  background-color: var(--clr-lightgrey);
-  background-size: cover;
-  border: 20px solid var(--clr-lightgrey2);
-  max-height: 325px;
-}
-
-.moby__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-}
-
-.moby__caption {
-  color: var(--clr-dirt);
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
-  font-size: 2em;
-  text-align: center;
-  margin: auto;
-}
-
-/* sitebackend */
-
-.sitebackend__title {
-  text-align: center;
-}
-
-.sitebackend__blog {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* .resourcesbackend */
-
-.resourcesbackend__background {
-  background-color: var(--clr-grey);
-  background-image: url(../img/treesbyfootpath.jpg);
-  background-size: cover;
-  background-blend-mode: multiply;
-  max-height: 350px;
-}
-
-.resourcesbackend__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 200px;
-}
-
-.resourcesbackend__caption {
-  color: var(--clr-light2);
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
-  font-size: 2em;
-  text-align: center;
-  margin: auto;
-}
-
-/* express */
-
-.express__title {
-  text-align: center;
-}
-
-.express__blog {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* spoilers */
