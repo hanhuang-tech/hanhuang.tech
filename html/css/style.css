@@ -133,8 +133,7 @@ html {
   border: solid white;
   border-width: 3px 0 0 3px;
   display: inline-block;
-  margin-left: 9.2px;
-  margin-right: 9.2px;
+  margin: 0 9.2px;
   padding: 5px;
 }
 
@@ -246,13 +245,13 @@ html {
 
 /* resources */
 .resources__bg {
-  background-color: rgb(100, 100, 100);
+  background-color: var(--clr-accent);
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   background-position: 0px;
   border: 0px solid var(--clr-light);
-  border-width: 40px 0 40px 0;
+  border-width: 40px 0;
 }
 .resources__title {
   color: var(--clr-light);
@@ -262,47 +261,66 @@ html {
 .resources__title::after {
   content: "";
   display: block;
-  max-width: 220px;
+  max-width: 180px;
   height: 3px;
-  margin: 0px auto 30px;
+  margin: 0 0 30px 30px;
   background: var(--clr-light);
 }
 
+/*drop down boxes*/
 .subject a {
-  display: inline-block;
-  background-color: green;
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
-/*area between unordered list to listed item*/
-subject-ul subject-li {
+/*area between ul and li*/
+.subject-ul .subject-li {
   display: inline-block;
+  padding: 0 10px;
+  border-radius: 5px;
+  margin: 0 0 0 -3px;
 }
 
-/*hover to change bg colour*/
-subject-ul subject-li:hover {
-  background: #555;
+/* hover to change bg colour */
+.subject-ul .subject-li:hover {
+  background: darkgreen;
 }
 
 /*hide normally, but when appear give 150px width absolute position*/
-subject-ul subject-li subject-ul {
+.subject-ul .subject-li .subject-ul {
   position: absolute;
-  width: 150px;
+  width: 400px;
   display: none;
 }
 
 /*multiple list items fuse together instead of separate list items*/
-subject-ul subject-li subject-ul subject-li {
+.subject-ul .subject-li .subject-ul .subject-li {
   background: #555;
-  display: block;
 }
 
 /*hover over to reveal hidden fused block*/
-subject-ul subject-li:hover subject-ul {
-  display: block;
+.subject-ul .subject-li:hover .subject-ul {
+  display: inline-block;
 }
+
+.subject-ul .subject-li .subject-ul .subject-li:hover {
+  background: #666;
+}
+
+@media (min-width: 900px) {
+  .resources__title::after {
+    max-width: 220px;
+    margin: 0 auto 30px;
+  }
+  .subject {
+    display: flex;
+    justify-content: space-evenly;
+  } 
+  .subject-ul .subject-li{
+    margin: 0 0 0 -50px; 
+  }
+
 
 /* .subjects__group {
   margin-bottom: -10px;
@@ -384,8 +402,7 @@ subject-ul subject-li:hover subject-ul {
 }*/
 
 /* resources frontend */
-
-.ref-titlepage__div {
+ .ref-titlepage__div {
   background-color: var(--clr-dirt);
   border: 0px solid var(--clr-light);
   border-width: 10px 0 10px 0;
@@ -539,7 +556,7 @@ subject-ul subject-li:hover subject-ul {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-}
+} 
 
 /* projects */
 
