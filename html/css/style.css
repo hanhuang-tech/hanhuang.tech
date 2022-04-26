@@ -6,9 +6,10 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: whitesmoke;
+  --clr-light: rgb(230, 230, 230);
   --clr-dark: #303030;
-  --clr-accent: rgb(40, 145, 40);
+  --clr-accent: rgb(50, 150, 50);
+  --clr-accent2: rgb(100, 100, 200);
 
   --fs-h1: 2.5rem;
   --fs-h2: 2rem;
@@ -87,15 +88,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* nav bar */
-.nav__bar {
+/* nav */
+nav.bar {
   position: fixed;
   top: -18px;
   right: -10px;
   z-index: 4;
 }
 
-.nav__border {
+/*nav border*/
+ul.nav {
   display: inline-grid;
   justify-items: right;
   border: 0px solid rgba(100, 100, 100, 0.5);
@@ -104,13 +106,19 @@ html {
   grid-row-gap: 5px;
 }
 
-.nav__item {
+ul.nav:hover {
+  border: 0px solid var(--clr-accent2);
+  border-width: 5px 5px 0 0;
+}
+
+/*nav item*/
+li.nav {
   list-style-type: none;
   background-color: rgba(100, 100, 100, 0.5);
   border-radius: 5px;
 }
 
-.nav__item a {
+li.nav a {
   font-size: 1em;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
@@ -120,13 +128,8 @@ html {
   padding: 4px;
 }
 
-.nav__border:hover {
-  border: 0px solid slateblue;
-  border-width: 5px 5px 0 0;
-}
-
-.nav__item a:hover {
-  background-color: slateblue;
+li.nav a:hover {
+  background-color: var(--clr-accent2);
 }
 
 .arrow {
@@ -137,7 +140,7 @@ html {
   padding: 5px;
 }
 
-.nav__arrow {
+.nav-arrow {
   list-style-type: none;
   background-color: rgba(50, 150, 50, 0.5);
   font-size: 1.25em;
@@ -146,44 +149,45 @@ html {
   border-radius: 20px;
 }
 
-.nav__arrow:hover {
+.nav-arrow:hover {
   background-color: var(--clr-accent);
 }
 
 @media (min-width: 900px) {
-  .nav__arrow {
+  .nav-arrow {
     font-size: 1em;
   }
-  .nav__bar {
+  nav.bar {
     height: 175px;
     width: 160px;
   }
 }
 
 /* logo */
-.logo__bg {
+section.logo {
   display: flex;
   background-image: linear-gradient(to right, black 5%, white 95%);
+  padding: 0px;
 }
 
-.logo__div {
+div.logo {
   display: flex;
   padding: 25px;
   column-gap: 4%;
   min-width: 300px;
 }
 
-.logo-habbit__img {
+img.habbit {
   border: 4px solid white;
   cursor: pointer;
 }
 
-.logo-hhtbanner__img {
+img.banner {
   border: 4px solid var(--clr-accent);
   border-radius: 10px 50px 10px;
 }
 
-.logo-bannerbg__img {
+div.rbanner {
   display: flex;
   background-image: linear-gradient(
       to right,
@@ -199,15 +203,15 @@ html {
 }
 
 /* logo animation */
-.habbit-move .logo-habbit__img {
+.habbit-move img.habbit {
   animation: rotation 5s;
 }
 
-.habbit-move .logo-hhtbanner__img {
+.habbit-move img.banner {
   animation: movenback 5s;
 }
 
-.habbit-move .nav__arrow {
+.habbit-move .nav-arrow {
   animation: arrowrotation 5s;
 }
 
@@ -267,142 +271,49 @@ html {
   background: var(--clr-light);
 }
 
-/*drop down boxes*/
-.subject a {
+/* dropdown */
+div.subject {
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.subject a {
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
-}
-
-/*area between ul and li*/
-.subject-ul .subject-li {
+  font-size: 20px;
+  padding: 15px;
   display: inline-block;
-  padding: 0 10px;
-  border-radius: 5px;
-  margin: 0 0 0 -3px;
 }
-
-/* hover to change bg colour */
-.subject-ul .subject-li:hover {
-  background: darkgreen;
+ul.subject {
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
-
-/*hide normally, but when appear give 150px width absolute position*/
-.subject-ul .subject-li .subject-ul {
-  position: absolute;
-  width: 400px;
-  display: none;
+ul.subject li.subject {
+  display: inline-block;
 }
-
-/*multiple list items fuse together instead of separate list items*/
-.subject-ul .subject-li .subject-ul .subject-li {
+ul.subject li.subject:hover {
   background: #555;
 }
-
-/*hover over to reveal hidden fused block*/
-.subject-ul .subject-li:hover .subject-ul {
-  display: inline-block;
+ul.subject li.subject:hover ul.subject {
+  display: block;
 }
-
-.subject-ul .subject-li .subject-ul .subject-li:hover {
+ul.subject li.subject ul.subject {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul.subject li.subject ul.subject li.subject {
+  background: #555;
+  display: block;
+}
+ul.subject li.subject ul.subject li.subject:hover {
   background: #666;
 }
 
-@media (min-width: 900px) {
-  .resources__title::after {
-    max-width: 220px;
-    margin: 0 auto 30px;
-  }
-  .subject {
-    display: flex;
-    justify-content: space-evenly;
-  } 
-  .subject-ul .subject-li{
-    margin: 0 0 0 -50px; 
-  }
-
-
-/* .subjects__group {
-  margin-bottom: -10px;
-}
-.subject__div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-row-gap: 10px;
-  margin-bottom: 35px;
-}
-.subject__btn {
-  display: inline-block;
-  background: purple;
-  border: 4px solid white;
-  border-radius: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 1.25rem;
-  letter-spacing: 2px;
-  line-height: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  transition: transform 300ms ease-in-out;
-  cursor: pointer;
-}
-.subject__title:hover {
-  transform: scale(1.04);
-}
-.topic__div {
-  display: flex;
-  position: relative;
-}
-.topic__title {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--clr-dark);
-  background-color: var(--clr-light2);
-  line-height: 0;
-  padding: 0px 5px;
-  border-radius: 8px;
-  margin: 0px 5px;
-}
-.topic__title:hover {
-  color: var(--clr-light2);
-  background-color: var(--clr-grey);
-} */
-.topic-youtube,
-.topic-github {
-  max-width: 40px;
-  filter: invert(1);
-  padding: 3px;
-  margin: 0px 3px;
-  border: 1px solid var(--clr-dark);
-  border-radius: 20px;
-}
-.topic-youtube:hover,
-.topic-github:hover {
-  transform: scale(1.05);
-  background-color: var(--clr-lightgrey);
-  position: relative;
-  z-index: 1;
-}
-/* @media (min-width: 900px) {
-  .resources {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-    margin-bottom: -25px;
-  }
-  .subject__div {
-    margin-left: -110px;
-  }
-  .subject__div + .subject__div {
-    margin-left: 100px;
-  } 
-}*/
-
 /* resources frontend */
- .ref-titlepage__div {
+.ref-titlepage__div {
   background-color: var(--clr-dirt);
   border: 0px solid var(--clr-light);
   border-width: 10px 0 10px 0;
@@ -556,7 +467,7 @@ html {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-} 
+}
 
 /* projects */
 
@@ -842,14 +753,14 @@ html {
   filter: opacity(0.7);
 }
 
-/* final gap */
+/* footer */
 
-.hh-tech__section {
+.footer {
   height: 210px;
   position: relative;
 }
 
-.hh-tech {
+.footer-hht {
   position: absolute;
   bottom: 0;
   right: 0;
