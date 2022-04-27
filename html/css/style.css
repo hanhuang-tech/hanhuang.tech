@@ -78,7 +78,7 @@ body {
 
 /* browsing */
 :focus {
-  outline: 4px dashed lightgray;
+  outline: 3px dashed var(--clr-light);
   border-radius: 10px;
   position: relative;
   z-index: 5;
@@ -248,7 +248,7 @@ div.rbanner {
 }
 
 /* resources */
-.resources__bg {
+section.resources {
   background-color: var(--clr-accent);
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
@@ -257,59 +257,72 @@ div.rbanner {
   border: 0px solid var(--clr-light);
   border-width: 40px 0;
 }
-.resources__title {
-  color: var(--clr-light);
+h1.resources {
+  color: white;
   text-align: center;
   font-family: var(--ff-secondary);
 }
-.resources__title::after {
+h1.resources::after {
   content: "";
   display: block;
   max-width: 180px;
   height: 3px;
   margin: 0 0 30px 30px;
-  background: var(--clr-light);
+  background: white;
 }
 
 /* dropdown */
-div.subject {
-  background-color: green;
-  display: flex;
-  justify-content: space-around;
-}
-
-div.subject a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  display: inline-block;
-}
 ul.subject {
-  display: inline;
-  margin: 0;
   padding: 0;
 }
-ul.subject li.subject {
+
+/*listed items*/
+li.subject a {
   display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0 15px;
+}
+
+/*li's in ul*/
+/*items in ul comply with rules on li*/
+ul.subject li.subject {
+  display: block;
 }
 ul.subject li.subject:hover {
-  background: #555;
+  background: var(--clr-accent2);
+}
+
+/*hide li unless hovered over*/
+ul.subject li.subject ul.subject {
+  position: absolute;
+  width: 310px;
+  display: none;
 }
 ul.subject li.subject:hover ul.subject {
   display: block;
 }
-ul.subject li.subject ul.subject {
-  position: absolute;
-  width: 200px;
-  display: none;
-}
+
+/*make li's #black unless hovered over*/
+/*make li's same block width*/
 ul.subject li.subject ul.subject li.subject {
-  background: #555;
-  display: block;
+  background: black;
+  border: 2px solid white;
 }
 ul.subject li.subject ul.subject li.subject:hover {
-  background: #666;
+  background: var(--clr-dark);
+}
+
+@media (min-width: 900px) {
+  h1.resources::after {
+    margin: 0 auto 30px;
+    max-width: 220px;
+  }
+  div.subject {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /* resources frontend */
