@@ -77,8 +77,7 @@ body {
 
 /* browse assist*/
 :focus {
-  outline: 3px dashed var(--clr-light);
-  border-radius: 10px;
+  outline: 3px dashed lightblue;
   position: relative;
   z-index: 5;
 }
@@ -136,6 +135,56 @@ li.nav a:hover {
   background-color: var(--clr-accent2);
 }
 
+/*tooltip*/
+.tooltip .wiptip {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  width: 75px;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: var(--ff-secondary);
+  border-radius: 5px;
+  border: 1px solid black;
+  top: -5px;
+  right: 110%;
+}
+
+@media (min-width: 900px) {
+  .tooltip .wiptip {
+    width: 180px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    top: 4px;
+    right: 115%;
+  }
+}
+
+/*tooltip arrow*/
+.tooltip .wiptip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .wiptip {
+  visibility: visible;
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+/*arrow*/
 .arrow {
   border: solid white;
   border-width: 3px 0 0 3px;
@@ -259,7 +308,7 @@ section.resources {
   background-blend-mode: multiply;
   background-position: 0px;
   border: 0px solid var(--clr-light);
-  border-width: 40px 0;
+  border-width: 60px 0;
 }
 h1.resources {
   color: white;
@@ -342,10 +391,12 @@ ul.subject li.subject:hover {
   opacity: 0;
   position: absolute;
   z-index: 1;
+  /*tooltip facing right*/
   top: 0px;
   left: 112%;
 }
 
+/*tooltip arrow*/
 .tooltip .awstip::after {
   content: "";
   position: absolute;
@@ -596,18 +647,17 @@ ul.subject li.subject ul.subject li.subject:hover {
 }
 
 /* projects */
-
-.myprojects__background {
+section.wip {
   background: var(--clr-lightgreen);
 }
 
-.myprojects__title {
+h1.wip {
   font-weight: var(--fw-bold);
   color: var(--clr-dark);
   text-align: center;
 }
 
-.myprojects__ul:after {
+h1.wip:after {
   content: "";
   display: block;
   max-width: 250px;
