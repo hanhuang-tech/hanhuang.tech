@@ -11,7 +11,7 @@
   --clr-accent: rgb(50, 150, 50);
   --clr-accent2: rgb(100, 100, 200);
 
-  --fs-h1: 2.5rem;
+  --fs-h1: 2.6rem;
   --fs-h2: 2rem;
   --fs-h3: 1.25rem;
   --fs-h4: 1rem;
@@ -23,7 +23,7 @@
 
 @media (min-width: 900px) {
   :root {
-    --fs-h1: 3rem;
+    --fs-h1: 3.3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.5rem;
     --fs-h4: 1.25rem;
@@ -269,9 +269,9 @@ h1.resources {
 h1.resources::after {
   content: "";
   display: block;
-  max-width: 180px;
+  max-width: 190px;
   height: 3px;
-  margin: 0 0 40px 30px;
+  margin: 0 0 60px 25px;
   background: white;
 }
 
@@ -280,6 +280,7 @@ div.subject {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 div.subject img {
@@ -287,11 +288,12 @@ div.subject img {
 }
 
 li.subject a {
-  display: inline-block;
+  display: inline;
   text-decoration: none;
   color: white;
+  font-weight: var(--fw-bold);
   font-size: 1.4rem;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 /*offset padding added in li.subject a*/
@@ -301,8 +303,21 @@ ul.subject {
 
 /*specify li only*/
 li.subject .topic a {
-  font-size: 1.2rem;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: var(--fw-reg);
   border: 1px solid white;
+}
+
+li.subject .fundamentals a {
+  text-align: start;
+  width: 220px;
+}
+
+li.subject .aws a {
+  text-align: start;
+  width: 178px;
 }
 
 /*subject headings*/
@@ -313,6 +328,7 @@ ul.subject li.subject:hover {
   background: var(--clr-accent2);
 }
 
+/*tooltip*/
 .tooltip .awstip {
   background-color: white;
   color: black;
@@ -360,7 +376,7 @@ ul.subject li.subject:hover {
 /*reveal dropdown on hover*/
 ul.subject li.subject ul.subject {
   position: absolute;
-  width: 182px;
+  width: 160px;
   display: none;
 }
 ul.subject li.subject:hover ul.subject {
@@ -377,19 +393,48 @@ ul.subject li.subject ul.subject li.subject:hover {
 @media (min-width: 900px) {
   h1.resources::after {
     margin: 0 auto 75px;
-    max-width: 220px;
+    max-width: 240px;
   }
   div.subject-grps {
     display: flex;
     justify-content: space-evenly;
   }
+  div.subject {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    margin: 150px 0 -100px 0;
+  }
   div.subject img {
-    width: 200px;
+    position: absolute;
+    bottom: 225px;
+    width: 100%;
+    margin: auto auto;
   }
   ul.subject li.subject ul.subject {
     position: absolute;
-    width: 270px;
+    width: 260px;
     display: none;
+  }
+  /*subject heading*/
+  li.subject a {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: var(--fw-bold);
+  }
+  /*subject li*/
+  li.subject .topic a {
+    text-align: start;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: var(--fw-reg);
+  }
+  li.subject .fundamentals a {
+    width: 260px;
+  }
+  li.subject .aws a {
+    text-align: start;
+    width: 225px;
   }
 }
 
@@ -470,7 +515,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   .ref-titlepage__title {
     margin-bottom: 20px;
     height: 40px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1;
   }
   .ref-titlepage__subtitle {
