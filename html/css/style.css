@@ -392,7 +392,7 @@ ul.subject li.subject ul.subject li.subject:hover {
 
 @media (min-width: 900px) {
   h1.resources::after {
-    margin: 0 auto 75px;
+    margin: 0 auto 60px;
     max-width: 240px;
   }
   div.subject-grps {
@@ -401,13 +401,13 @@ ul.subject li.subject ul.subject li.subject:hover {
   }
   div.subject {
     position: relative;
-    width: 230px;
-    height: 230px;
-    margin: 150px 0 -100px 0;
+    width: 210px;
+    height: 210px;
+    margin: 150px 0 -90px 0;
   }
   div.subject img {
     position: absolute;
-    bottom: 225px;
+    bottom: 210px;
     width: 100%;
     margin: auto auto;
   }
