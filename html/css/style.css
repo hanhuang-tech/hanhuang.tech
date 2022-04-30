@@ -13,7 +13,7 @@
 
   --fs-h1: 2.6rem;
   --fs-h2: 2rem;
-  --fs-h3: 1.25rem;
+  --fs-h3: 1.5rem;
   --fs-h4: 1rem;
   --fs-body: 1rem;
 
@@ -25,7 +25,7 @@
   :root {
     --fs-h1: 3.3rem;
     --fs-h2: 2.25rem;
-    --fs-h3: 1.5rem;
+    --fs-h3: 1.75rem;
     --fs-h4: 1.25rem;
     --fs-body: 1.25rem;
   }
@@ -86,9 +86,64 @@ html {
   scroll-behavior: smooth;
 }
 
-.tooltip {
+.tooltip,
+.divFadeIn {
   position: relative;
   display: inline-block;
+}
+
+/* animations */
+.habbit-move img.habbit {
+  animation: rotation 5s;
+}
+
+.habbit-move img.banner {
+  animation: movenback 5s;
+}
+
+.habbit-move .nav-arrow {
+  animation: arrowrotation 5s;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-radius: 75px;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movenback {
+  50% {
+    transform: translateX(100px);
+    filter: opacity(0);
+    border-radius: 50px 10px 50px;
+  }
+}
+
+@keyframes arrowrotation {
+  from {
+    transform: rotate(45deg);
+  }
+  50% {
+    background-color: var(--clr-accent);
+  }
+  to {
+    transform: rotate(765deg);
+  }
+}
+
+@keyframes animateFI {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* nav */
@@ -142,7 +197,7 @@ li.nav a:hover {
   opacity: 0;
   z-index: 1;
   background-color: white;
-  color: black;
+  color: var(--clr-accent2);
   width: 75px;
   font-size: 1rem;
   line-height: 1rem;
@@ -150,7 +205,7 @@ li.nav a:hover {
   text-transform: capitalize;
   font-family: var(--ff-secondary);
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--clr-accent2);
   top: -5px;
   right: 110%;
 }
@@ -174,13 +229,13 @@ li.nav a:hover {
   margin-top: -6px;
   border-width: 6px;
   border-style: solid;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent var(--clr-accent2);
 }
 
 .tooltip:hover .wiptip {
   visibility: visible;
   opacity: 1;
-  animation-name: fadeIn;
+  animation-name: animateFI;
   animation-duration: 2s;
 }
 
@@ -255,51 +310,6 @@ div.rbanner {
   width: 1000px;
 }
 
-/* logo animation */
-.habbit-move img.habbit {
-  animation: rotation 5s;
-}
-
-.habbit-move img.banner {
-  animation: movenback 5s;
-}
-
-.habbit-move .nav-arrow {
-  animation: arrowrotation 5s;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  50% {
-    border-radius: 75px;
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes movenback {
-  50% {
-    transform: translateX(100px);
-    filter: opacity(0);
-    border-radius: 50px 10px 50px;
-  }
-}
-
-@keyframes arrowrotation {
-  from {
-    transform: rotate(45deg);
-  }
-  50% {
-    background-color: var(--clr-accent);
-  }
-  to {
-    transform: rotate(765deg);
-  }
-}
-
 /* resources */
 section.resources {
   background-color: var(--clr-accent);
@@ -308,7 +318,7 @@ section.resources {
   background-blend-mode: multiply;
   background-position: 0px;
   border: 0px solid var(--clr-light);
-  border-width: 60px 0;
+  border-width: 75px 0;
 }
 h1.resources {
   color: white;
@@ -411,17 +421,8 @@ ul.subject li.subject:hover {
 .tooltip:hover .awstip {
   visibility: visible;
   opacity: 1;
-  animation-name: fadeIn;
+  animation-name: animateFI;
   animation-duration: 2s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /*reveal dropdown on hover*/
@@ -646,23 +647,48 @@ ul.subject li.subject ul.subject li.subject:hover {
   margin-right: auto;
 }
 
-/* projects */
+/* wip */
 section.wip {
-  background: var(--clr-lightgreen);
+  background: rgb(59, 59, 59);
+  border: 0px solid gray;
+  border-width: 75px 0;
 }
 
 h1.wip {
-  color: black;
+  color: white;
   text-align: center;
   font-family: var(--ff-secondary);
 }
-h1.wip:after {
+h1.wip::after {
   content: "";
   display: block;
+  background: white;
   max-width: 170px;
   height: 3px;
-  margin: 0 0 60px 34px;
-  background: black;
+  margin: 0 0 30px 34px;
+}
+a.wip img {
+  margin: 25px 0 25px 4px;
+}
+h3.wip {
+  text-align: center;
+  font-family: var(--ff-secondary);
+  letter-spacing: 2px;
+  color: white;
+}
+
+a.divFadeIn .hiddenDiv {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+a.divFadeIn:hover .hiddenDiv {
+  visibility: visible;
+  opacity: 1;
+  animation-name: divFadeIn;
+  animation-duration: 5s;
 }
 
 .myproject {
@@ -707,6 +733,14 @@ h1.wip:after {
 }
 
 @media (min-width: 900px) {
+  h1.wip::after {
+    max-width: 425px;
+    margin: 0 auto 60px;
+  }
+  a.wip img {
+    margin: 25px auto;
+  }
+
   .myproject {
     display: flex;
     justify-content: center;
@@ -904,12 +938,12 @@ h1.wip:after {
 
 /* footer */
 
-.footer {
+footer {
   height: 210px;
   position: relative;
 }
 
-.footer-hht {
+h4.footer {
   position: absolute;
   bottom: 0;
   right: 0;
