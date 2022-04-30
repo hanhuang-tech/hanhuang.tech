@@ -31,22 +31,6 @@
   }
 }
 
-/* styles */
-section {
-  padding: 3em 2em;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* typography */
 h1 {
   line-height: 1;
@@ -75,21 +59,38 @@ body {
   font-family: var(--ff-primary);
 }
 
-/* browse assist*/
-:focus {
-  outline: 3px dashed lightblue;
-  position: relative;
-  z-index: 5;
+/* styles */
+section {
+  padding: 3em 2em;
 }
 
-html {
-  scroll-behavior: smooth;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .tooltip,
 .divFadeIn {
   position: relative;
   display: inline-block;
+}
+
+/* browse assist*/
+:focus {
+  outline: 3px solid lightblue;
+  outline-offset: 1px;
+  position: relative;
+  z-index: 5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* animations */
@@ -190,6 +191,89 @@ li.nav a:hover {
   background-color: var(--clr-accent2);
 }
 
+/*feedback lantern*/
+/*post*/
+div.feedback {
+  position: fixed;
+  top: 450px;
+  right: 33px;
+  z-index: 4;
+  content: "";
+  display: block;
+  background: black;
+  width: 6px;
+  height: 160px;
+}
+/*roof*/
+span.feedback::before {
+  content: "";
+  position: absolute;
+  bottom: 108%;
+  left: -31%;
+  border: 32px solid;
+  border-color: transparent transparent black transparent;
+}
+/*bulb*/
+span.feedback {
+  position: absolute;
+  bottom: 100px;
+  right: 12px;
+  z-index: 4;
+  background: whitesmoke;
+  display: inline-block;
+
+  writing-mode: vertical-lr;
+  border: 0px solid black;
+  border-width: 10px 4px;
+
+  text-decoration: none;
+  color: gray;
+  font-size: 0.9rem;
+  line-height: 2.5rem;
+  font-weight: var(--fw-bold);
+}
+span.feedback:hover {
+  background: yellow;
+  color: black;
+}
+/*base*/
+span.feedback::after {
+  content: "";
+  position: absolute;
+  top: 102%;
+  left: -13%;
+  border: 25px solid;
+  border-color: black transparent transparent transparent;
+}
+@media (min-width: 900px) {
+  div.feedback {
+    position: fixed;
+    height: 250px;
+    width: 10px;
+    top: 75%;
+    left: 97%;
+  }
+  span.feedback::before {
+    position: absolute;
+    bottom: 108%;
+    left: -36%;
+    border: 38px solid;
+    border-color: transparent transparent black transparent;
+  }
+  span.feedback {
+    position: absolute;
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+  }
+  span.feedback::after {
+    position: absolute;
+    top: 102%;
+    left: -10%;
+    border: 26px solid;
+    border-color: black transparent transparent transparent;
+  }
+}
+
 /*tooltip*/
 .tooltip .wiptip {
   visibility: hidden;
@@ -227,8 +311,7 @@ li.nav a:hover {
   top: 50%;
   left: 100%;
   margin-top: -6px;
-  border-width: 6px;
-  border-style: solid;
+  border: 6px solid;
   border-color: transparent transparent transparent var(--clr-accent2);
 }
 
@@ -778,9 +861,9 @@ div.flowersbed {
   background-size: cover;
   filter: grayscale(100%);
   opacity: 0.8;
-  height: 100px;
+  height: 150px;
   border: 0px solid white;
-  border-width: 5px 0;
+  border-width: 10px 0;
 }
 
 @media (min-width: 900px) {
