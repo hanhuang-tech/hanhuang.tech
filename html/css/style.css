@@ -11,8 +11,8 @@
   --clr-accent: rgb(50, 150, 50);
   --clr-accent2: rgb(100, 100, 200);
 
-  --fs-h1: 2.6rem;
-  --fs-h2: 2rem;
+  --fs-h1: 2.25rem;
+  --fs-h2: 1.75rem;
   --fs-h3: 1.5rem;
   --fs-h4: 1rem;
   --fs-body: 1rem;
@@ -23,8 +23,8 @@
 
 @media (min-width: 900px) {
   :root {
-    --fs-h1: 3.3rem;
-    --fs-h2: 2.25rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.25rem;
     --fs-body: 1.25rem;
@@ -318,7 +318,7 @@ section.resources {
   background-blend-mode: multiply;
   background-position: 0px;
   border: 0px solid var(--clr-light);
-  border-width: 75px 0;
+  border-width: 50px 0;
 }
 h1.resources {
   color: white;
@@ -528,7 +528,6 @@ ul.subject li.subject ul.subject li.subject:hover {
     url("../img/treebyhouse.jpg");
   background-size: cover;
   background-position: 0px;
-
   background-blend-mode: multiply;
   height: 255px;
 
@@ -650,8 +649,8 @@ ul.subject li.subject ul.subject li.subject:hover {
 /* wip */
 section.wip {
   background: rgb(59, 59, 59);
-  border: 0px solid gray;
-  border-width: 75px 0;
+  border: 0px solid var(--clr-light);
+  border-width: 50px 0;
 }
 
 h1.wip {
@@ -665,10 +664,11 @@ h1.wip::after {
   background: white;
   max-width: 170px;
   height: 3px;
-  margin: 0 0 30px 34px;
+  margin: 0 0 20px 34px;
 }
-a.wip img {
-  margin: 25px 0 25px 4px;
+div.wip img {
+  width: 200px;
+  margin: 20px 0 20px 20px;
 }
 h3.wip {
   text-align: center;
@@ -737,8 +737,8 @@ a.divFadeIn:hover .hiddenDiv {
     max-width: 425px;
     margin: 0 auto 60px;
   }
-  a.wip img {
-    margin: 25px auto;
+  div.wip img {
+    margin-left: 500px;
   }
 
   .myproject {
@@ -772,21 +772,23 @@ a.divFadeIn:hover .hiddenDiv {
 }
 
 /* flowersbed */
-
-.flowersbed__background {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.75)
-    ),
-    url("../img/flowersbed.jpg");
-  height: 250px;
-  width: auto;
-  background-size: cover;
-  border: 1px solid var(--clr-lightgrey2);
+div.flowersbed {
+  background-image: url(../img/flowersbed.jpg);
   background-position: 0;
-  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  height: 100px;
+  border: 0px solid white;
+  border-width: 5px 0;
+}
+
+@media (min-width: 900px) {
+  div.flowersbed {
+    background-position: 0 64%;
+    height: 220px;
+    border-width: 15px 0;
+  }
 }
 
 /* about-me*/
