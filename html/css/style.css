@@ -419,7 +419,7 @@ div.rbanner {
 /* resources */
 section.resources {
   background-color: var(--clr-accent);
-  background-image: url(../img/treesfootpath.jpg);
+  background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   background-attachment: fixed;
