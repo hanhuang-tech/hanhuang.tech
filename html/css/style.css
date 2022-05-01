@@ -76,7 +76,7 @@ img {
 }
 
 .tooltip,
-.divFadeIn {
+.divFadeIn .divFadeOut {
   position: relative;
   display: inline-block;
 }
@@ -144,6 +144,15 @@ html {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes animateFO {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -722,6 +731,18 @@ section.wip {
   border: 0px solid var(--clr-light);
   border-width: 50px 0;
 }
+/*fade out*/
+.divFadeOut {
+  visibility: visible;
+  opacity: 1;
+}
+
+.divFadeOut:hover {
+  visibility: visible;
+  opacity: 0;
+  animation-name: animateFO;
+  animation-duration: 4s;
+}
 
 h1.wip {
   color: white;
@@ -747,18 +768,19 @@ h3.wip {
   color: white;
 }
 
-a.divFadeIn .hiddenDiv {
+/*fade in*/
+div.divFadeIn .hiddenDiv {
   visibility: hidden;
   position: absolute;
   opacity: 0;
   z-index: 1;
 }
 
-a.divFadeIn:hover .hiddenDiv {
+div.divFadeIn:hover .hiddenDiv {
   visibility: visible;
   opacity: 1;
-  animation-name: divFadeIn;
-  animation-duration: 5s;
+  animation-name: animateFI;
+  animation-duration: 4s;
 }
 
 .myproject {
