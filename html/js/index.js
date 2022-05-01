@@ -1,4 +1,4 @@
-// animate habbit section
+// animate logo
 const habbitToggle = document.querySelector("#habbit-toggle");
 
 habbitToggle.addEventListener("click", function () {
