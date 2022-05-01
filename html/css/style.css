@@ -195,29 +195,31 @@ li.nav a:hover {
 /*post*/
 div.feedback {
   position: fixed;
-  bottom: 25px;
-  right: 30px;
+  bottom: 35px;
+  right: 25px;
   z-index: 4;
   content: "";
   display: block;
   background: var(--clr-dark);
   width: 6px;
-  height: 160px;
+  height: 175px;
+  border-radius: 3px;
 }
 /*roof*/
 span.feedback::before {
   content: "";
   position: absolute;
-  bottom: 72px;
+  bottom: 70px;
   right: -12px;
   border: 32px solid;
   border-color: transparent transparent var(--clr-dark) transparent;
+  border-radius: 8px;
 }
 /*bulb*/
 span.feedback {
   position: absolute;
   top: 40px;
-  left: -21px;
+  left: -19px;
   z-index: 4;
   background: whitesmoke;
   display: inline-block;
@@ -225,8 +227,8 @@ span.feedback {
   writing-mode: vertical-lr;
   border-style: solid;
   border-color: var(--clr-dark) gray;
-  border-width: 10px 4px;
-  border-radius: 10px;
+  border-width: 8px 2px;
+  border-radius: 5px;
 
   text-decoration: none;
   color: gray;
@@ -238,9 +240,9 @@ span.feedback {
 span.feedback::after {
   content: "";
   position: absolute;
-  top: 70px;
-  left: -5px;
-  border: 25px solid;
+  top: 68px;
+  left: -2px;
+  border: 22px solid;
   border-color: var(--clr-dark) transparent transparent transparent;
 }
 /*hover styles*/
@@ -258,35 +260,6 @@ span.feedback:hover {
 span.feedback:hover::after {
   border-color: black transparent transparent transparent;
 }
-
-/* @media (min-width: 900px) {
-  div.feedback {
-    position: fixed;
-    height: 250px;
-    width: 10px;
-    top: 75%;
-    left: 97%;
-  }
-  span.feedback::before {
-    position: absolute;
-    bottom: 108%;
-    left: -36%;
-    border: 38px solid;
-    border-color: transparent transparent black transparent;
-  }
-  span.feedback {
-    position: absolute;
-    font-size: 1.2rem;
-    line-height: 2.8rem;
-  }
-  span.feedback::after {
-    position: absolute;
-    top: 102%;
-    left: -10%;
-    border: 26px solid;
-    border-color: black transparent transparent transparent;
-  }
-}*/
 
 /*tooltip*/
 .tooltip .wiptip {
@@ -745,7 +718,7 @@ ul.subject li.subject ul.subject li.subject:hover {
 
 /* wip */
 section.wip {
-  background: rgb(59, 59, 59);
+  background: rgb(60, 60, 60);
   border: 0px solid var(--clr-light);
   border-width: 50px 0;
 }
