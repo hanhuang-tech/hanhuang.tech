@@ -5,6 +5,16 @@ habbitToggle.addEventListener("click", function () {
 });
 
 const vpToggle = ["mbToggle","tbToggle","dtToggle","dthdToggle"]
-mbToggle = document.querySelector("#mb-toggle");
-vpToggle.addEventListener("click", function () {
+
+vpToggle[0].addEventListener("click", function () {
   document.body.classList.toggle("toggle-mobile")});
+
+vpToggle[1].addEventListener("click", function () {
+  document.body.classList.toggle("toggle-tablet")});
+
+vpToggle[2].addEventListener("click", function () {
+  document.body.classList.toggle("toggle-desktop")});
+
+vpToggle[3].addEventListener("click", function () {
+  document.body.classList.toggle("toggle-desktophd")});
+
