@@ -156,6 +156,29 @@ html {
   }
 }
 
+@keyframes animateLtn {
+  from {
+    background: whitesmoke;
+    border-color: var(--clr-dark) gray;
+    color: gray;
+  }
+  80% {
+    background: yellow;
+    border-color: black black;
+    color: black;
+  }
+  90% {
+    background: whitesmoke;
+    border-color: var(--clr-dark) gray;
+    color: gray;
+  }
+  to {
+    background: yellow;
+    border-color: black black;
+    color: black;
+  }
+}
+
 /* nav */
 nav.bar {
   position: fixed;
@@ -211,7 +234,7 @@ div.feedback {
   display: block;
   background: var(--clr-dark);
   width: 6px;
-  height: 175px;
+  height: 150px;
   border-radius: 3px;
 }
 /*roof*/
@@ -232,8 +255,8 @@ span.feedback {
   z-index: 4;
   background: whitesmoke;
   display: inline-block;
-
   writing-mode: vertical-lr;
+
   border-style: solid;
   border-color: var(--clr-dark) gray;
   border-width: 8px 2px;
@@ -262,9 +285,13 @@ span.feedback:hover::before {
   border-color: transparent transparent black transparent;
 }
 span.feedback:hover {
-  background: yellow;
-  color: black;
+  transition-delay: 2s;
+  background-color: yellow;
   border-color: black;
+  color: black;
+  animation-name: animateLtn;
+  /* animation-delay: 0.5s; */
+  animation-duration: 2s;
 }
 span.feedback:hover::after {
   border-color: black transparent transparent transparent;
@@ -480,7 +507,6 @@ ul.subject li.subject:hover {
   opacity: 0;
   position: absolute;
   z-index: 1;
-  /*tooltip facing right*/
   top: 0px;
   left: 112%;
 }
@@ -731,19 +757,6 @@ section.wip {
   border: 0px solid var(--clr-light);
   border-width: 50px 0;
 }
-/*fade out*/
-.divFadeOut {
-  visibility: visible;
-  opacity: 1;
-}
-
-.divFadeOut:hover {
-  visibility: visible;
-  opacity: 0;
-  animation-name: animateFO;
-  animation-duration: 4s;
-}
-
 h1.wip {
   color: white;
   text-align: center;
@@ -767,7 +780,18 @@ h3.wip {
   letter-spacing: 2px;
   color: white;
 }
+/*fade out*/
+.divFadeOut {
+  visibility: visible;
+  opacity: 1;
+}
 
+.divFadeOut:hover {
+  visibility: visible;
+  opacity: 0;
+  animation-name: animateFO;
+  animation-duration: 3s;
+}
 /*fade in*/
 div.divFadeIn .hiddenDiv {
   visibility: hidden;
@@ -780,7 +804,7 @@ div.divFadeIn:hover .hiddenDiv {
   visibility: visible;
   opacity: 1;
   animation-name: animateFI;
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 
 .myproject {
@@ -829,9 +853,9 @@ div.divFadeIn:hover .hiddenDiv {
     max-width: 425px;
     margin: 0 auto 60px;
   }
-  div.wip img {
+  /* div.wip img {
     margin-left: 500px;
-  }
+  } */
 
   .myproject {
     display: flex;
