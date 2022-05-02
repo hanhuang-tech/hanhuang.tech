@@ -287,7 +287,7 @@ span.feedback {
 
   border-style: solid;
   border-color: rgb(25, 25, 25) gray;
-  border-width: 10px 2px;
+  border-width: 12px 3px;
 
   text-decoration: none;
   color: gray;
@@ -309,7 +309,7 @@ span.feedback::after {
 
 /*hover styles*/
 div.feedback:hover {
-  background: black;
+  background: rgb(25, 25, 25);
 }
 
 span.feedback:hover::before {
