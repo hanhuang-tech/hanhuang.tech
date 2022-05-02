@@ -1,280 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hanhuang.tech</title>
-    <!--links-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <!-- logo -->
-      <div class="logo-bg" id="index.html">
-        <div class="logo">
-          <div id="habbit-toggle">
-            <img
-              src="img/habbitnoborder.png"
-              class="habbit"
-              alt="a pic of habbit"
-            />
-          </div>
-          <a href="index.html">
-            <img
-              src="img/hht-banner.png"
-              class="banner"
-              alt="picture of hht banner"
-            />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hanhuang.tech</title>
+  <!--links-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.ico" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <!-- logo -->
+    <div class="logo-bg" id="index.html">
+      <div class="logo">
+        <div id="habbit-toggle">
+          <img src="img/habbitnoborder.png" class="habbit" alt="a pic of habbit" />
         </div>
-        <div class="rbanner"></div>
+        <a href="index.html">
+          <img src="img/hht-banner.png" class="banner" alt="picture of hht banner" />
+        </a>
       </div>
-      <!-- nav -->
-      <nav class="bar">
-        <ul class="nav">
-          <li class="nav">
-            <a href="index.html#resources">resources</a>
-          </li>
-          <li class="nav tooltip">
-            <a href="index.html#wip"
-              >wip<span class="wiptip">Walk In Projects</span></a
-            >
-          </li>
-          <li class="nav"><a href="index.html#han">han</a></li>
-          <li class="nav"><a href="index.html#contact">contact</a></li>
-          <li class="nav-arrow">
-            <a href="index.html#"><span class="arrow"></span></a>
+      <div class="rbanner"></div>
+    </div>
+    <h6 class="mb">*</h6>
+    <!-- nav -->
+    <nav class="bar">
+      <ul class="nav">
+        <li class="nav">
+          <a href="index.html#resources">resources</a>
+        </li>
+        <li class="nav tooltip">
+          <a href="index.html#wip">wip<span class="wiptip">Walk In Projects</span></a>
+        </li>
+        <li class="nav"><a href="index.html#han">han</a></li>
+        <li class="nav"><a href="index.html#contact">contact</a></li>
+        <li class="nav-arrow">
+          <a href="index.html#"><span class="arrow"></span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="feedback">
+      <a href="index.html#contact"><span class="feedback">feedback</span></a>
+    </div>
+  </header>
+  <!-- resources -->
+  <section class="resources" id="resources">
+    <h1 class="resources">Resources</h1>
+    <div class="subject-grps">
+      <div class="subject">
+        <img src="img/pyramid.png" alt="picture of pyramid logo" />
+        <ul class="subject">
+          <li class="subject title">
+            <a href="resources/fundamentals/index.html">Fundamentals</a>
+            <ul class="subject">
+              <li class="subject topic fundamentals">
+                <a href="#">VPS & Cloud computing</a>
+              </li>
+              <li class="subject topic fundamentals">
+                <a href="#">Client-Host network</a>
+              </li>
+              <li class="subject topic fundamentals">
+                <a href="#">Monolithic vs Microservice architectures</a>
+              </li>
+            </ul>
           </li>
         </ul>
-      </nav>
-      <div class="feedback">
-        <a href="index.html#contact"><span class="feedback">feedback</span></a>
       </div>
-    </header>
-    <!-- resources -->
-    <section class="resources" id="resources">
-      <h1 class="resources">Resources</h1>
-      <div class="subject-grps">
-        <div class="subject">
-          <img src="img/pyramid.png" alt="picture of pyramid logo" />
-          <ul class="subject">
-            <li class="subject title">
-              <a href="resources/fundamentals/index.html">Fundamentals</a>
-              <ul class="subject">
-                <li class="subject topic fundamentals">
-                  <a href="#">VPS & Cloud computing</a>
-                </li>
-                <li class="subject topic fundamentals">
-                  <a href="#">Client-Host network</a>
-                </li>
-                <li class="subject topic fundamentals">
-                  <a href="#">Monolithic vs Microservice architectures</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subject">
-          <img src="img/html.png" alt="picture of html" />
-          <ul class="subject">
-            <li class="subject">
-              <a href="resources/fundamentals/index.html">Frontend</a>
-              <ul class="subject">
-                <li class="subject topic">
-                  <a href="#">HTML</a>
-                </li>
-                <li class="subject topic">
-                  <a href="#">CSS</a>
-                </li>
-                <li class="subject topic">
-                  <a href="#">JavaScript</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subject">
-          <img src="img/moby.png" alt="picture of moby" />
-          <ul class="subject">
-            <li class="subject">
-              <a href="resources/fundamentals/index.html">Backend</a>
-              <ul class="subject">
-                <li class="subject topic">
-                  <a href="#">Docker</a>
-                </li>
-                <li class="subject topic">
-                  <a href="#">Nginx</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="subject">
-          <img src="img/aws.jpg" alt="logo of aws services" />
-          <ul class="subject">
-            <li class="subject tooltip">
-              <a href="resources/fundamentals/index.html">
-                AWS<span class="awstip">Amazon Web Services</span></a
-              >
-              <ul class="subject">
-                <li class="subject topic aws">
-                  <a href="#">Elastic Cloud Compute</a>
-                </li>
-                <li class="subject topic aws">
-                  <a href="#">Simple Email Service</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+      <div class="subject">
+        <img src="img/html.png" alt="picture of html" />
+        <ul class="subject">
+          <li class="subject">
+            <a href="resources/fundamentals/index.html">Frontend</a>
+            <ul class="subject">
+              <li class="subject topic">
+                <a href="#">HTML</a>
+              </li>
+              <li class="subject topic">
+                <a href="#">CSS</a>
+              </li>
+              <li class="subject topic">
+                <a href="#">JavaScript</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </section>
-    <!-- flowerbed -->
-    <div class="flowersbed"></div>
-    <!-- walk in projects -->
-    <section class="wip" id="wip">
-      <div class="wip divFadeIn">
-        <div class="divFadeOut">
-          <h1 class="wip">Walk In Projects</h1>
-          <img src="img/walkin.png" alt="picture of stairs" />
-          <h3 class="wip">walk in</h3>
-        </div>
-        <div class="hiddenDiv">
-          <div class="projects">
-            <div class="project">
-              <div class="imgrestrictor">
-                <a href="projects/sitefrontend" class="project__link">
-                  <img
-                    src="img/frontendlogo.png"
-                    class="project__img"
-                    alt="frontend image"
-                  />
-                </a>
-              </div>
-              <div class="project__text">
-                <h3 class="project__title">site frontend</h3>
-                <p class="project__body">
-                  Critiques on markup and styling decisions during the course of
-                  the creating pages on this website. Featuring: HTML, Custom
-                  properties, Flexbox, Grid, Javascript and more.
-                </p>
-              </div>
+      <div class="subject">
+        <img src="img/moby.png" alt="picture of moby" />
+        <ul class="subject">
+          <li class="subject">
+            <a href="resources/fundamentals/index.html">Backend</a>
+            <ul class="subject">
+              <li class="subject topic">
+                <a href="#">Docker</a>
+              </li>
+              <li class="subject topic">
+                <a href="#">Nginx</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="subject">
+        <img src="img/aws.jpg" alt="logo of aws services" />
+        <ul class="subject">
+          <li class="subject tooltip">
+            <a href="resources/fundamentals/index.html">
+              AWS<span class="awstip">Amazon Web Services</span></a>
+            <ul class="subject">
+              <li class="subject topic aws">
+                <a href="#">Elastic Cloud Compute</a>
+              </li>
+              <li class="subject topic aws">
+                <a href="#">Simple Email Service</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- flowerbed -->
+  <div class="flowersbed"></div>
+  <!-- walk in projects -->
+  <section class="wip" id="wip">
+    <div class="wip divFadeIn">
+      <div class="divFadeOut">
+        <h1 class="wip">Walk In Projects</h1>
+        <img src="img/walkin.png" alt="picture of stairs" />
+        <h3 class="wip">walk in</h3>
+      </div>
+      <div class="hiddenDiv">
+        <div class="projects">
+          <div class="project">
+            <div class="imgrestrictor">
+              <a href="projects/sitefrontend" class="project__link">
+                <img src="img/frontendlogo.png" class="project__img" alt="frontend image" />
+              </a>
             </div>
-            <div class="project">
-              <div class="imgrestrictor">
-                <a href="projects/sitebackend" class="project__link">
-                  <img
-                    src="img/moby.png"
-                    class="project__img"
-                    alt="backend image"
-                  />
-                </a>
-              </div>
-              <div class="project__text">
-                <h3 class="project__title">site backend</h3>
-                <p class="project__body">
-                  Here I will provide justification of database and storage
-                  options for this website . Featuring: Cloud computing, Nginx,
-                  Docker
-                </p>
-              </div>
+            <div class="project__text">
+              <h3 class="project__title">site frontend</h3>
+              <p class="project__body">
+                Critiques on markup and styling decisions during the course of
+                the creating pages on this website. Featuring: HTML, Custom
+                properties, Flexbox, Grid, Javascript and more.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="imgrestrictor">
+              <a href="projects/sitebackend" class="project__link">
+                <img src="img/moby.png" class="project__img" alt="backend image" />
+              </a>
+            </div>
+            <div class="project__text">
+              <h3 class="project__title">site backend</h3>
+              <p class="project__body">
+                Here I will provide justification of database and storage
+                options for this website . Featuring: Cloud computing, Nginx,
+                Docker
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- horizontal-section -->
-    <div class="flowersbed__background"></div>
-    <!-- about me -->
-    <section class="about-me__section" id="aboutme">
-      <h1 class="about-me__title">About me</h1>
-      <h2 class="about-me__subtitle">A Dev based in Aotearoa (New Zealand)</h2>
-      <div class="about-me__body">
-        <p>Kia Ora!</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
-          ac purus malesuada porttitor. Morbi accumsan viverra justo in
-          eleifend. Etiam ultricies, massa eu feugiat tristique, ipsum odio
-          luctus velit, eget accumsan justo nibh sit amet nisl. Morbi a ante ac
-          nisl ultrices vulputate. Vivamus in ultricies orci. Ut non risus
-          risus. Fusce id pulvinar lectus. Sed tempor, risus vel efficitur
-          rutrum, risus nisl pretium tellus, at rutrum est nibh id mauris. Donec
-          at nulla a turpis dictum ornare. Integer tincidunt, leo sed fermentum
-          aliquet, leo mauris consequat sapien, et scelerisque mi sem nec arcu.
-        </p>
-      </div>
-      <img
-        class="about-me__img"
-        src="img/outsideportrait.jpg"
-        alt="a photo of han huang"
-      />
-    </section>
+    </div>
+  </section>
+  <!-- horizontal-section -->
+  <div class="flowersbed__background"></div>
+  <!-- about me -->
+  <section class="about-me__section" id="aboutme">
+    <h1 class="about-me__title">About me</h1>
+    <h2 class="about-me__subtitle">A Dev based in Aotearoa (New Zealand)</h2>
+    <div class="about-me__body">
+      <p>Kia Ora!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
+        ac purus malesuada porttitor. Morbi accumsan viverra justo in
+        eleifend. Etiam ultricies, massa eu feugiat tristique, ipsum odio
+        luctus velit, eget accumsan justo nibh sit amet nisl. Morbi a ante ac
+        nisl ultrices vulputate. Vivamus in ultricies orci. Ut non risus
+        risus. Fusce id pulvinar lectus. Sed tempor, risus vel efficitur
+        rutrum, risus nisl pretium tellus, at rutrum est nibh id mauris. Donec
+        at nulla a turpis dictum ornare. Integer tincidunt, leo sed fermentum
+        aliquet, leo mauris consequat sapien, et scelerisque mi sem nec arcu.
+      </p>
+    </div>
+    <img class="about-me__img" src="img/outsideportrait.jpg" alt="a photo of han huang" />
+  </section>
 
-    <!-- findme -->
-    <section class="find-me__section find-me__background" id="findme">
-      <h1 class="find-me__title">Find me</h1>
-      <a href="mailto:hanhuang.tech@gmail.com" class="email__wrap">
-        <img src="img/emailicon.png" class="email__img" alt="email icon" />
-        <p class="email__caption">hanhuang.tech@gmail.com</p>
-      </a>
-      <div class="find-me__list">
-        <div class="find-me__wrap">
-          <a href="https://github.com/hanhuang-tech/hanhuang.tech">
-            <img
-              src="img/githubicon.png"
-              class="find-me__img"
-              alt="github icon"
-            />
-          </a>
-        </div>
-        <div class="find-me__wrap">
-          <a href="https://hub.docker.com/u/hanhuangtech">
-            <img
-              src="img/dockericon.png"
-              class="find-me__img"
-              alt="docker icon"
-            />
-          </a>
-        </div>
-        <div class="find-me__wrap">
-          <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ">
-            <img
-              src="img/youtubeicon.png"
-              class="find-me__img"
-              alt="youtube icon"
-            />
-          </a>
-        </div>
-        <div class="find-me__wrap">
-          <a href="https://www.linkedin.com/in/han-huang-6808bb123">
-            <img
-              src="img/linkedinicon.png"
-              class="find-me__img"
-              alt="linkedin icon"
-            />
-          </a>
-        </div>
+  <!-- findme -->
+  <section class="find-me__section find-me__background" id="findme">
+    <h1 class="find-me__title">Find me</h1>
+    <a href="mailto:hanhuang.tech@gmail.com" class="email__wrap">
+      <img src="img/emailicon.png" class="email__img" alt="email icon" />
+      <p class="email__caption">hanhuang.tech@gmail.com</p>
+    </a>
+    <div class="find-me__list">
+      <div class="find-me__wrap">
+        <a href="https://github.com/hanhuang-tech/hanhuang.tech">
+          <img src="img/githubicon.png" class="find-me__img" alt="github icon" />
+        </a>
       </div>
-    </section>
+      <div class="find-me__wrap">
+        <a href="https://hub.docker.com/u/hanhuangtech">
+          <img src="img/dockericon.png" class="find-me__img" alt="docker icon" />
+        </a>
+      </div>
+      <div class="find-me__wrap">
+        <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ">
+          <img src="img/youtubeicon.png" class="find-me__img" alt="youtube icon" />
+        </a>
+      </div>
+      <div class="find-me__wrap">
+        <a href="https://www.linkedin.com/in/han-huang-6808bb123">
+          <img src="img/linkedinicon.png" class="find-me__img" alt="linkedin icon" />
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- hh-tech -->
-    <footer>
-      <h4 class="footer">hanhuang.tech 2022</h4>
-    </footer>
-    <script src="js/index.js"></script>
-  </body>
+  <!-- hh-tech -->
+  <footer>
+    <h4 class="footer">hanhuang.tech 2022</h4>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
