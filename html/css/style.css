@@ -125,23 +125,19 @@ html {
 }
 
 /*js walk-in*/
-.walk-in h1.wip,
-.walk-in img.wip,
-.walk-in h3.wip {
-  visibility: visible;
+.walk-in span.wip {
   opacity: 0;
-  transition-duration: 2s;
+  /* transition-delay: 1s;
+  transition-duration: 2s; */
 }
 
 /*js walk-out*/
 .walk-out h1.wip,
 .walk-out img.wip,
 .walk-out h3.wip {
-  visibility: visible;
   opacity: 1;
-  transition-duration: 2s;
+  /* transition-duration: 2s; */
 }
-
 
 /*keyframes*/
 @keyframes rotation {
@@ -453,7 +449,14 @@ img.habbit {
 
 img.banner {
   border: 4px solid var(--clr-accent);
-  border-radius: 10px 50px 10px;
+  border-radius: 10px 50px;
+}
+
+@media (max-width: 320px) {
+  div.logo {
+    width: 320px;
+    overflow: hidden;
+  }
 }
 
 div.rbanner {
@@ -828,6 +831,10 @@ section.wip {
   border-width: 50px 0;
 }
 
+div.wip {
+  margin: 0 auto;
+}
+
 h1.wip {
   color: white;
   text-align: center;
@@ -840,7 +847,7 @@ h1.wip::after {
   background: white;
   max-width: 160px;
   height: 3px;
-  margin: 0 0 20px 40px;
+  margin: 0 0 40px 40px;
 }
 
 img.wip {
@@ -848,11 +855,7 @@ img.wip {
 }
 
 img.wip:hover {
-  border: 2px solid blue;
-}
-
-span.divFadeOut img {
-  margin: 20px auto;
+  border: 2px solid orange;
 }
 
 h3.wip {
@@ -935,13 +938,13 @@ div.divFadeIn .hiddenDiv {
 
 @media (min-width: 900px) {
   h1.wip::after {
-    max-width: 425px;
+    max-width: 390px;
     margin: 0 auto 60px;
   }
 
-  /* div.wip img {
-    margin-left: 500px;
-  } */
+  img.wip {
+    margin: auto;
+  }
 
   /* .myproject {
     display: flex;
