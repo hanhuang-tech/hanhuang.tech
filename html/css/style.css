@@ -24,8 +24,8 @@
 @media (min-width: 900px) {
   :root {
     --fs-h1: 3rem;
-    --fs-h2: 2rem;
-    --fs-h3: 1.75rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
     --fs-h4: 1.25rem;
     --fs-body: 1.25rem;
   }
@@ -356,11 +356,25 @@ a.feedback {
   text-decoration: none;
 }
 
+/*lantern handle*/
+div.handle {
+  position: absolute;
+  z-index: 5;
+  bottom: 100px;
+  right: 15px;
+
+  border: 2px solid var(--clr-dark);
+  border-radius: 5px;
+
+  width: 18px;
+  height: 20px;
+}
+
 /*lantern post*/
 a.feedback::after {
   position: absolute;
   z-index: 4;
-  bottom: 10px;
+  bottom: 12px;
   right: 21px;
 
   content: "";
@@ -426,6 +440,10 @@ span.feedback {
 /*lantern hover*/
 a.feedback:hover {
   background: rgb(25, 25, 25);
+}
+
+div.handle {
+  border-color: rgb(25, 25, 25);
 }
 
 div.feedback:hover::before {
@@ -861,7 +879,7 @@ div.wip {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
-  transition-duration: 2s;
+  transition-duration: 2.5s;
 }
 
 #walkh1::after {
@@ -875,13 +893,13 @@ div.wip {
 
 #walkin {
   width: 200px;
-  border: 3px solid transparent;
+  border: 10px solid transparent;
   margin: 0 auto 20px;
-  transition-duration: 2s;
+  transition-duration: 2.5s;
 }
 
 #walkin:hover {
-  border: 3px solid blue;
+  border: 10px solid orange;
 }
 
 #walkh3 {
@@ -889,67 +907,15 @@ div.wip {
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
   color: white;
-  transition-duration: 2s;
+  transition-duration: 2.5s;
 }
 
-div.divFadeIn .hiddenDiv {
+div.hiddenwip {
   visibility: hidden;
   position: absolute;
   opacity: 0;
-  z-index: 1;
+  z-index: 5;
 }
-
-
-/* div.divFadeIn:hover .hiddenDiv {
-  visibility: visible;
-  opacity: 1;
-  animation-name: animateFI;
-  animation-duration: 3s;
-} */
-
-/* 
-.myproject {
-  display: flex;
-  justify-content: center;
-  grid-column-gap: 10px;
-  padding-bottom: 10px;
-  height: auto;
-}
-
-.imgrestrictor {
-  width: 250px;
-  overflow: hidden;
-}
-
-.myproject__img {
-  height: auto;
-}
-
-.myproject__text {
-  background-color: var(--clr-light2);
-  color: var(--clr-grey);
-  line-height: 1.5em;
-  width: 50%;
-  padding: 10px;
-  border: 4px solid var(--clr-dark);
-  border-radius: 10px;
-}
-
-.myproject__title {
-  display: inline;
-  color: var(--clr-dark);
-}
-
-.myproject__body {
-  margin: auto;
-}
-
-.myproject__img:hover {
-  transition: transform 700ms cubic-bezier(0.5, 0, 0.5, 1),
-    opacity 700ms cubic-bezier(0.5, 0, 0.5, 1);
-  transform: scale(1.05);
-  opacity: 0.8;
-} */
 
 @media (min-width: 900px) {
   #walkh1::after {
@@ -960,36 +926,12 @@ div.divFadeIn .hiddenDiv {
   #walkin {
     width: 280px;
     margin: 30px auto;
+    border: 15px solid transparent;
   }
 
-  /* .myproject {
-    display: flex;
-    justify-content: center;
-    grid-column-gap: 20px;
-    padding-bottom: 25px;
-    height: auto;
+  #walkin:hover {
+    border: 15px solid orange;
   }
-
-  .imgrestrictor {
-    width: 300px;
-    border: 5px solid var(--clr-light2);
-    background-color: var(--clr-lightblue);
-  }
-
-  .myproject__img {
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: auto;
-  }
-
-  .myproject__text {
-    line-height: 1.5em;
-    width: 45%;
-    padding: 10px;
-    border: 5px solid var(--clr-dark);
-    border-radius: 10px;
-  } */
 }
 
 /* flowersbed */
