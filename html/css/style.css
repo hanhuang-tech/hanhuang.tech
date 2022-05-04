@@ -874,6 +874,7 @@ div.wip {
 }
 
 #walkin {
+  width: 200px;
   border: 3px solid transparent;
   margin: 0 auto 20px;
   transition-duration: 2s;
@@ -881,7 +882,6 @@ div.wip {
 
 #walkin:hover {
   border: 3px solid blue;
-
 }
 
 #walkh3 {
@@ -891,18 +891,6 @@ div.wip {
   color: white;
   transition-duration: 2s;
 }
-
-/*fade out*/
-/* span.divFadeOut {
-    visibility: visible;
-    opacity: 1;
-  } 
-
-  span.divFadeOut:hover {
-    visibility: hidden;
-    opacity: 0;
-    transition-delay: 2s;
-  }*/
 
 div.divFadeIn .hiddenDiv {
   visibility: hidden;
@@ -964,13 +952,14 @@ div.divFadeIn .hiddenDiv {
 } */
 
 @media (min-width: 900px) {
-  h1.wip::after {
+  #walkh1::after {
     max-width: 390px;
     margin: 0 auto 60px;
   }
 
-  img.wip {
-    margin: auto;
+  #walkin {
+    width: 280px;
+    margin: 30px auto;
   }
 
   /* .myproject {
