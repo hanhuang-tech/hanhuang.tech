@@ -1,4 +1,4 @@
-// toggle function
+// function
 function functToggle(t) {
   document.body.classList.toggle(t);
 }
@@ -10,11 +10,10 @@ habbitToggle.addEventListener("click", function () {
 });
 
 // walk in
-const stairs = document.querySelector("#stairs");
+const stairs = document.querySelector("#walkin");
 const walkh1 = document.querySelector("#walkh1");
 const walkh3 = document.querySelector("#walkh3");
 stairs.addEventListener("mouseenter", function () {
-  stairs.style.opacity = 0;
   stairs.style.opacity = 0;
   walkh1.style.opacity = 0;
   walkh3.style.opacity = 0;
