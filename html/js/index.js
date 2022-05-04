@@ -10,17 +10,16 @@ habbitToggle.addEventListener("click", function () {
 });
 
 // walk in
-const stairs = document.querySelector("#walkin");
-const walkh1 = document.querySelector("#walkh1");
-const walkh3 = document.querySelector("#walkh3");
-stairs.addEventListener("mouseenter", function () {
-  stairs.style.opacity = 0;
-  walkh1.style.opacity = 0;
-  walkh3.style.opacity = 0;
+const walkIn = document.querySelector("#walkin");
+const revealHidden = document.querySelector("#hiddenwip");
+walkIn.addEventListener("mouseenter", function () {
+  walkIn.style.opacity = 0;
+  revealHidden.style.opacity = 1;
+  revealHidden.style.zIndex = "1";
 });
-const wipDiv = document.querySelector("#wip");
-wipDiv.addEventListener("mouseleave", function () {
-  stairs.style.opacity = 1;
-  walkh1.style.opacity = 1;
-  walkh3.style.opacity = 1;
+const wipSect = document.querySelector("#wip");
+wipSect.addEventListener("mouseleave", function () {
+  walkIn.style.opacity = 1;
+  revealHidden.style.opacity = 0;
+  revealHidden.style.zIndex = "0";
 });

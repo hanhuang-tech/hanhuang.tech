@@ -864,25 +864,36 @@ ul.subject li.subject ul.subject li.subject:hover {
 }
 
 /* wip */
-section.wip {
+
+/*wip section*/
+#wip {
+  display: grid;
   position: relative;
   background: rgb(60, 60, 60);
   border: 0px solid var(--clr-light);
   border-width: 40px 0;
 }
 
-div.wip {
-  margin: 0 auto;
+/*overlap visible and hidden div*/
+#walkin,
+#hiddenwip {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-#walkh1 {
+/*div wip elements*/
+#walkin {
+  transition-duration: 2.5s;
+  z-index: 1;
+}
+
+h1.walkin {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
-  transition-duration: 2.5s;
 }
 
-#walkh1::after {
+h1.walkin::after {
   content: "";
   display: block;
   background: white;
@@ -891,46 +902,61 @@ div.wip {
   margin: 0 auto 40px;
 }
 
-#walkin {
+img.walkin {
   width: 200px;
-  border: 10px solid transparent;
+  border: 5px solid transparent;
   margin: 0 auto 20px;
-  transition-duration: 2.5s;
 }
 
-#walkin:hover {
-  border: 10px solid orange;
+img.walkin:hover {
+  border: 5px solid orange;
 }
 
-#walkh3 {
+h3.walkin {
   text-align: center;
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
   color: white;
+}
+
+/*hidden wip*/
+#hiddenwip {
+  position: inherit;
+  opacity: 0;
   transition-duration: 2.5s;
 }
 
-div.hiddenwip {
-  visibility: hidden;
-  position: absolute;
-  opacity: 0;
-  z-index: 5;
+h1.progress {
+  color: white;
+  text-align: center;
+  font-family: var(--ff-secondary);
+}
+
+h1.progress::after {
+  content: "";
+  display: block;
+  background: white;
+  max-width: 160px;
+  height: 3px;
+  margin: 0 auto 40px;
 }
 
 @media (min-width: 900px) {
-  #walkh1::after {
+
+  h1.walkin::after,
+  h1.progress::after {
     max-width: 390px;
     margin: 0 auto 60px;
   }
 
-  #walkin {
+  img.walkin {
     width: 280px;
     margin: 30px auto;
-    border: 15px solid transparent;
+    border: 10px solid transparent;
   }
 
-  #walkin:hover {
-    border: 15px solid orange;
+  img.walkin:hover {
+    border: 10px solid orange;
   }
 }
 
