@@ -8,12 +8,12 @@
 
   --clr-light: rgb(230, 230, 230);
   --clr-dark: rgb(30, 30, 30);
-  --clr-accent: rgb(50, 150, 50);
+  --clr-accent: rgb(50, 140, 50);
   --clr-accent2: rgb(100, 100, 200);
 
   --fs-h1: 2.4rem;
   --fs-h2: 1.75rem;
-  --fs-h3: 1.5rem;
+  --fs-h3: 1.4rem;
   --fs-h4: 1rem;
   --fs-body: 1rem;
 
@@ -24,7 +24,7 @@
 @media (min-width: 900px) {
   :root {
     --fs-h1: 3rem;
-    --fs-h2: 2rem;
+    --fs-h2: 2.5rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.25rem;
     --fs-body: 1.25rem;
@@ -78,8 +78,7 @@ img {
   box-sizing: border-box;
 }
 
-.tooltip,
-.divFadeIn .divFadeOut {
+.tooltip {
   position: relative;
   display: inline-block;
 }
@@ -87,8 +86,8 @@ img {
 /* browse assist*/
 :focus {
   outline: 3px solid lightblue;
-  outline-offset: 1px;
-  position: relative;
+  outline-offset: 2px;
+  position: static;
   z-index: 5;
 }
 
@@ -100,8 +99,8 @@ html {
   visibility: hidden;
   padding: 0;
   margin: 0;
-  color: orange;
   line-height: 0;
+  color: orange;
 }
 
 @media (max-width: 320px) {
@@ -111,6 +110,8 @@ html {
 }
 
 /* animations */
+
+/*js habbit-move*/
 .habbit-move img.habbit {
   animation: rotation 5s;
 }
@@ -123,22 +124,7 @@ html {
   animation: arrowrotation 5s;
 }
 
-.walk-in h1.wip {
-  animation-name: animateFO;
-  animation-duration: 3s;
-}
-
-.walk-in img.wip {
-  border: 5px solid blue;
-  animation-name: animateFO;
-  animation-duration: 3s;
-}
-
-.walk-in h3.wip {
-  animation-name: animateFO;
-  animation-duration: 3s;
-}
-
+/*keyframes*/
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -186,11 +172,11 @@ html {
 }
 
 @keyframes animateFO {
-  0% {
+  from {
     opacity: 1;
   }
 
-  100% {
+  to {
     opacity: 0;
   }
 }
@@ -224,19 +210,23 @@ html {
 /* nav */
 nav.bar {
   position: fixed;
-  top: -18px;
-  right: -10px;
-  z-index: 4;
+  top: 0px;
+  right: 0px;
+  z-index: 5;
 }
 
-/*nav border*/
+/*border and positioning*/
 ul.nav {
+  position: absolute;
+  right: 0px;
   display: inline-grid;
   justify-items: right;
   border: 0px solid rgba(100, 100, 100, 0.5);
   border-width: 5px 5px 0 0;
-  padding: 5px;
-  grid-row-gap: 5px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 2px;
+  row-gap: 2px;
 }
 
 ul.nav:hover {
@@ -244,106 +234,26 @@ ul.nav:hover {
   border-width: 5px 5px 0 0;
 }
 
-/*nav item*/
+/*inside nav boxes*/
 li.nav {
   list-style-type: none;
   background-color: rgba(100, 100, 100, 0.5);
   border-radius: 5px;
+  line-height: 1.2rem;
+  padding: 2px 5px;
+
 }
 
 li.nav a {
-  font-size: 1em;
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 1px;
-  padding: 4px;
-}
-
-li.nav a:hover {
-  background-color: var(--clr-accent2);
-}
-
-/*feedback lantern*/
-/*post*/
-div.feedback {
-  position: fixed;
-  bottom: 35px;
-  right: 28px;
-  z-index: 4;
-  content: "";
-  display: block;
-  background: var(--clr-dark);
-  width: 6px;
-  height: 116px;
-  border-radius: 3px;
-}
-
-/*1st dome*/
-span.feedback::before {
-  content: "";
-  position: absolute;
-  bottom: 92px;
-  right: 0px;
-  border: 20px solid;
-  border-color: transparent transparent var(--clr-dark) transparent;
-  border-radius: 50px;
-}
-
-/*2nd dome*/
-span.feedback::after {
-  content: "";
-  position: absolute;
-  bottom: 72px;
-  right: -12px;
-  border: 32px solid;
-  border-color: transparent transparent var(--clr-dark) transparent;
-  border-radius: 14px;
-}
-
-/*bulb*/
-span.feedback {
-  position: absolute;
-  bottom: -10px;
-  left: -21px;
-
-  background: whitesmoke;
-  display: inline-block;
-  writing-mode: vertical-lr;
-
-  border-style: solid;
-  border-color: var(--clr-dark) gray;
-  border-width: 12px 4px;
-
-  text-decoration: none;
-  color: gray;
-  font-size: 0.9rem;
-  line-height: 2.5rem;
   font-weight: var(--fw-bold);
+  letter-spacing: 1px;
 }
 
-/*hover styles*/
-div.feedback:hover {
-  background: rgb(25, 25, 25);
-}
-
-span.feedback:hover::before {
-  border-color: transparent transparent rgb(25, 25, 25) transparent;
-}
-
-span.feedback:hover {
-  transition-delay: 2s;
-  background-color: yellow;
-  border-color: rgb(25, 25, 25);
-  color: brown;
-  animation-name: animateLtn;
-  animation-delay: .8s;
-  animation-duration: 2.5s;
-}
-
-span.feedback:hover::after {
-  border-color: transparent transparent rgb(25, 25, 25) transparent;
+li.nav:hover {
+  background-color: var(--clr-accent2);
 }
 
 /*wiptip*/
@@ -359,21 +269,12 @@ span.feedback:hover::after {
   line-height: 1rem;
   text-align: center;
   text-transform: capitalize;
+  letter-spacing: 0px;
   font-family: var(--ff-secondary);
   border-radius: 5px;
   border: 1px solid var(--clr-accent2);
-  top: -5px;
-  right: 110%;
-}
-
-@media (min-width: 900px) {
-  .tooltip .wiptip {
-    width: 180px;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    top: 4px;
-    right: 115%;
-  }
+  top: -2px;
+  right: 52px;
 }
 
 /*tooltip arrow*/
@@ -382,7 +283,7 @@ span.feedback:hover::after {
   position: absolute;
   top: 50%;
   left: 100%;
-  margin-top: -6px;
+  margin-top: -10px;
   border: 6px solid;
   border-color: transparent transparent transparent var(--clr-accent2);
 }
@@ -392,6 +293,16 @@ span.feedback:hover::after {
   opacity: 1;
   animation-name: animateFI;
   animation-duration: 2s;
+}
+
+@media (min-width: 900px) {
+  .tooltip .wiptip {
+    width: 90px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    top: 0px;
+    right: 62px;
+  }
 }
 
 /*arrow*/
@@ -408,7 +319,7 @@ span.feedback:hover::after {
   background-color: rgba(50, 150, 50, 0.5);
   font-size: 1.25em;
   transform: rotate(45deg);
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
 }
 
@@ -425,6 +336,137 @@ span.feedback:hover::after {
     height: 175px;
     width: 160px;
   }
+}
+
+/*feedback lantern*/
+
+/*hide lantern under 600px width*/
+@media (max-width: 600px) {
+  a.feedback {
+    visibility: hidden;
+    opacity: 1;
+  }
+}
+
+/*lantern intial position*/
+a.feedback {
+  position: fixed;
+  right: 7px;
+  bottom: 27px;
+  z-index: 5;
+  text-decoration: none;
+}
+
+/*lantern handle*/
+div.handle {
+  position: absolute;
+  z-index: 5;
+  bottom: 100px;
+  right: 15px;
+
+  border: 2px solid var(--clr-dark);
+  border-radius: 5px;
+
+  width: 18px;
+  height: 20px;
+}
+
+/*lantern post*/
+a.feedback::after {
+  position: absolute;
+  z-index: 4;
+  bottom: 12px;
+  right: 21px;
+
+  content: "";
+  display: block;
+  background: var(--clr-dark);
+  width: 6px;
+  height: 95px;
+  border-radius: 3px;
+}
+
+/*1st dome*/
+div.feedback::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  bottom: 74px;
+  right: 2px;
+  border: 20px solid;
+  border-color: transparent transparent var(--clr-dark) transparent;
+  border-radius: 20px;
+}
+
+/*2nd dome*/
+div.feedback::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  bottom: 56px;
+  right: -10px;
+  border: 32px solid;
+  border-color: transparent transparent var(--clr-dark) transparent;
+  border-radius: 20px;
+}
+
+/*whole bulb*/
+div.feedback {
+  position: absolute;
+  z-index: 5;
+  bottom: 0px;
+  right: 0px;
+
+  display: flex;
+  background: whitesmoke;
+  border-width: 10px 2px;
+  border-style: solid;
+  border-color: var(--clr-dark) gray;
+}
+
+/*twin bulbs*/
+span.feedback {
+  position: relative;
+  z-index: 5;
+  display: inline-block;
+  writing-mode: vertical-lr;
+
+  text-decoration: none;
+  color: gray;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  padding: 3px;
+}
+
+/*lantern hover*/
+a.feedback:hover {
+  background: rgb(25, 25, 25);
+}
+
+div.handle {
+  border-color: rgb(25, 25, 25);
+}
+
+div.feedback:hover::before {
+  border-color: transparent transparent rgb(25, 25, 25) transparent;
+}
+
+div.feedback:hover {
+  transition-delay: 1s;
+  background-color: yellow;
+  border-color: rgb(25, 25, 25);
+
+  animation-name: animateLtn;
+  animation-delay: .8s;
+  animation-duration: 1s;
+}
+
+span.feedback:hover {
+  color: rgb(25, 25, 25);
+}
+
+div.feedback:hover::after {
+  border-color: transparent transparent rgb(25, 25, 25) transparent;
 }
 
 /* logo */
@@ -448,7 +490,14 @@ img.habbit {
 
 img.banner {
   border: 4px solid var(--clr-accent);
-  border-radius: 10px 50px 10px;
+  border-radius: 10px 50px;
+}
+
+@media (max-width: 320px) {
+  div.logo {
+    width: 320px;
+    overflow: hidden;
+  }
 }
 
 div.rbanner {
@@ -469,10 +518,10 @@ section.resources {
   background-color: var(--clr-accent);
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
-  background-blend-mode: multiply;
+  background-blend-mode: darken;
   background-attachment: fixed;
   border: 0px solid var(--clr-light);
-  border-width: 50px 0;
+  border-width: 40px 0;
 }
 
 h1.resources {
@@ -486,7 +535,7 @@ h1.resources::after {
   display: block;
   max-width: 175px;
   height: 3px;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
   background: white;
 }
 
@@ -548,9 +597,9 @@ ul.subject li.subject:hover {
 .tooltip .awstip {
   background-color: white;
   color: black;
-  width: 104px;
+  width: 80px;
+  font-size: 1rem;
   border-radius: 5px;
-  font-size: 1.2rem;
   line-height: 1rem;
   font-family: var(--ff-secondary);
   text-align: center;
@@ -579,6 +628,13 @@ ul.subject li.subject:hover {
   opacity: 1;
   animation-name: animateFI;
   animation-duration: 2s;
+}
+
+@media (min-width: 900px) {
+  .tooltip .awstip {
+    width: 110px;
+    font-size: 1.2rem;
+  }
 }
 
 /*reveal dropdown on hover*/
@@ -816,159 +872,209 @@ ul.subject li.subject ul.subject li.subject:hover {
 }
 
 /* wip */
-section.wip {
+
+/*wip section*/
+#wip {
+  display: grid;
   position: relative;
   background: rgb(60, 60, 60);
   border: 0px solid var(--clr-light);
-  border-width: 50px 0;
+  border-width: 40px 0;
 }
 
-div.wip {
-  display: flex;
-  justify-content: center;
+/*overlap visible and hidden div*/
+#walkin,
+#hiddenwip {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-h1.wip {
+/*div wip elements*/
+#walkin {
+  opacity: 0;
+  transition-duration: 2.5s;
+  z-index: 1;
+}
+
+h1.walkin {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
 }
 
-h1.wip::after {
+h1.walkin::after {
   content: "";
   display: block;
   background: white;
-  max-width: 170px;
+  max-width: 160px;
   height: 3px;
-  margin: 0 0 20px 34px;
+  margin: 0 auto 40px;
 }
 
-span.divFadeOut img {
-  margin: 20px auto;
+img.walkin {
+  width: 200px;
+  border: 5px solid transparent;
+  margin: 0 auto 20px;
 }
 
-h3.wip {
+img.walkin:hover {
+  border: 5px solid orange;
+}
+
+h3.walkin {
   text-align: center;
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
   color: white;
 }
 
-/*fade out*/
-.divFadeOut {
-  visibility: visible;
-  opacity: 1;
+/*hidden wip*/
+#hiddenwip {
+  position: inherit;
+  /* opacity: 0; */
+  transition-duration: 2.5s;
+}
+
+h1.progress {
+  color: white;
+  text-align: center;
+  font-family: var(--ff-secondary);
+  grid-area: h1;
+}
+
+h1.progress::after {
+  content: "";
+  display: block;
+  background: white;
+  max-width: 160px;
+  height: 3px;
   margin: 0 auto;
 }
 
-.divFadeOut:hover {
-  visibility: hidden;
-  opacity: 0;
-  animation-name: animateFO;
-  animation-duration: 3s;
-}
-
-div.divFadeIn {
-  border: 2px solid brown
-}
-
-/*fade in*/
-div.divFadeIn .hiddenDiv {
-  visibility: hidden;
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-}
-
-div.divFadeIn:hover .hiddenDiv {
-  visibility: visible;
-  opacity: 1;
-  animation-name: animateFI;
-  animation-duration: 3s;
-}
-
-/* 
-.myproject {
+div.restrict {
   display: flex;
-  justify-content: center;
-  grid-column-gap: 10px;
-  padding-bottom: 10px;
-  height: auto;
-}
-
-.imgrestrictor {
-  width: 250px;
+  height: 145px;
+  width: 200px;
   overflow: hidden;
+  margin: 50px auto 30px;
 }
 
-.myproject__img {
-  height: auto;
+#certbot {
+  margin: -30px 0 0 0;
 }
 
-.myproject__text {
-  background-color: var(--clr-light2);
-  color: var(--clr-grey);
-  line-height: 1.5em;
-  width: 50%;
-  padding: 10px;
-  border: 4px solid var(--clr-dark);
-  border-radius: 10px;
+#certbot-eff {
+  display: block;
+  text-decoration: none;
+  color: red;
+  text-align: center;
+  margin: -50px auto 20px;
 }
 
-.myproject__title {
-  display: inline;
-  color: var(--clr-dark);
+img.progress {
+  width: 200px;
+  align-items: center;
 }
 
-.myproject__body {
-  margin: auto;
+img.progress:hover {
+  transform: scale(1.2);
+  transition: 2s;
 }
 
-.myproject__img:hover {
-  transition: transform 700ms cubic-bezier(0.5, 0, 0.5, 1),
-    opacity 700ms cubic-bezier(0.5, 0, 0.5, 1);
-  transform: scale(1.05);
-  opacity: 0.8;
-} */
+h3.progress {
+  text-align: center;
+  color: var(--clr-light);
+}
+
+p.progress {
+  text-align: center;
+  color: var(--clr-light);
+}
 
 @media (min-width: 900px) {
-  h1.wip::after {
-    max-width: 425px;
+
+  /*walkin*/
+  h1.walkin::after,
+  h1.progress::after {
+    max-width: 390px;
     margin: 0 auto 60px;
   }
 
-  /* div.wip img {
-    margin-left: 500px;
-  } */
-
-  /* .myproject {
-    display: flex;
-    justify-content: center;
-    grid-column-gap: 20px;
-    padding-bottom: 25px;
-    height: auto;
+  img.walkin {
+    width: 280px;
+    margin: 30px auto;
+    border: 10px solid transparent;
   }
 
-  .imgrestrictor {
-    width: 300px;
-    border: 5px solid var(--clr-light2);
-    background-color: var(--clr-lightblue);
+  img.walkin:hover {
+    border: 10px solid orange;
   }
 
-  .myproject__img {
-    margin-left: auto;
-    margin-right: auto;
+  /*hiddenwip*/
+  #hiddenwip {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+      "h1 h1"
+      "staticsite backend"
+      "certgendocker fourth";
+  }
+
+  #static {
+    grid-area: staticsite;
+    border: 1px solid white;
+  }
+
+  #backend {
+    grid-area: backend;
+    border: 1px solid white;
+  }
+
+  #certgen {
+    position: relative;
+    grid-area: certgendocker;
+    border: 1px solid white;
+
+  }
+
+  div.static {
+    float: right;
+  }
+
+  div.backend {
+    float: left;
+  }
+
+  div.certbot {
+    float: right;
+  }
+
+  #certbot-eff {
+    position: absolute;
+    z-index: 2;
+    left: 76%;
+    top: 35%;
+    margin: 0;
+    padding: 0;
+  }
+
+  div.restrict {
     height: 200px;
-    width: auto;
+    width: 300px;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
   }
 
-  .myproject__text {
-    line-height: 1.5em;
-    width: 45%;
-    padding: 10px;
-    border: 5px solid var(--clr-dark);
-    border-radius: 10px;
-  } */
+  img.progress {
+    width: 300px;
+  }
+
+  h3.progress,
+  p.progress {
+    text-align: justify;
+  }
 }
 
 /* flowersbed */
