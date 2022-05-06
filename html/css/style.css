@@ -891,8 +891,8 @@ ul.subject li.subject ul.subject li.subject:hover {
 
 /*div wip elements*/
 #walkin {
-  opacity: 0;
-  transition-duration: 2.5s;
+  opacity: 1;
+  transition-duration: 3s;
   z-index: 1;
 }
 
@@ -931,8 +931,8 @@ h3.walkin {
 /*hidden wip*/
 #hiddenwip {
   position: inherit;
-  /* opacity: 0; */
-  transition-duration: 2.5s;
+  opacity: 0;
+  transition-duration: 3s;
 }
 
 h1.progress {
