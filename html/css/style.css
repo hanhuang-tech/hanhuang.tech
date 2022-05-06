@@ -1014,7 +1014,7 @@ p.progress {
   #hiddenwip {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 80px auto auto;
+    grid-template-rows: 120px auto auto;
     grid-template-areas:
       "h1 h1"
       "staticsite backend"
@@ -1024,21 +1024,27 @@ p.progress {
   #static {
     grid-area: staticsite;
     border: 1px solid white;
+    padding: 0 0 0 20px;
+    margin: 0px;
   }
 
   #backend {
     grid-area: backend;
     border: 1px solid white;
+    padding: 0 20px 0 0;
+    margin: 0px;
   }
 
   #certgen {
     position: relative;
     grid-area: certgendocker;
     border: 1px solid white;
-
+    padding: 0 0 0 20px;
+    margin: 0px;
   }
 
-  div.static {
+  div.static,
+  div.certbot {
     float: right;
   }
 
@@ -1046,15 +1052,11 @@ p.progress {
     float: left;
   }
 
-  div.certbot {
-    float: right;
-  }
-
   #certbot-eff {
     position: absolute;
     z-index: 2;
-    left: 76%;
-    top: 35%;
+    left: 47%;
+    top: 80%;
     margin: 0;
     padding: 0;
   }
@@ -1063,15 +1065,18 @@ p.progress {
     height: 200px;
     width: 300px;
     border: 1px solid white;
-    margin: 0;
     padding: 0;
+    margin: 20px;
   }
 
   img.progress {
     width: 300px;
   }
 
-  h3.progress,
+  h3.progress {
+    margin-top: 20px;
+  }
+
   p.progress {
     text-align: justify;
   }
