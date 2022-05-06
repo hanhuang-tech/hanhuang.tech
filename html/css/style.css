@@ -12,7 +12,7 @@
   --clr-accent2: rgb(100, 100, 200);
 
   --fs-h1: 2.4rem;
-  --fs-h2: 1.75rem;
+  --fs-h2: 1.6rem;
   --fs-h3: 1.4rem;
   --fs-h4: 1rem;
   --fs-body: 1rem;
@@ -24,7 +24,7 @@
 @media (min-width: 900px) {
   :root {
     --fs-h1: 3rem;
-    --fs-h2: 2.5rem;
+    --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.25rem;
     --fs-body: 1.25rem;
@@ -880,6 +880,8 @@ ul.subject li.subject ul.subject li.subject:hover {
   background: rgb(60, 60, 60);
   border: 0px solid var(--clr-light);
   border-width: 40px 0;
+  transition-delay: 2s;
+  transition-duration: 1.5s;
 }
 
 /*overlap visible and hidden div*/
@@ -892,7 +894,8 @@ ul.subject li.subject ul.subject li.subject:hover {
 /*div wip elements*/
 #walkin {
   opacity: 1;
-  transition-duration: 3s;
+  transition-delay: 2s;
+  transition-duration: 1.5s;
   z-index: 1;
 }
 
@@ -900,6 +903,7 @@ h1.walkin {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
+  margin: 20px 0;
 }
 
 h1.walkin::after {
@@ -908,20 +912,21 @@ h1.walkin::after {
   background: white;
   max-width: 160px;
   height: 3px;
-  margin: 0 auto 40px;
+  margin: 0 auto 70px;
 }
 
 img.walkin {
-  width: 200px;
+  width: 210px;
   border: 5px solid transparent;
-  margin: 0 auto 20px;
+  margin: 10px auto;
 }
 
 img.walkin:hover {
-  border: 5px solid orange;
+  border: 5px solid purple;
+  transition-duration: 5s;
 }
 
-h3.walkin {
+h2.walkin {
   text-align: center;
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
@@ -932,7 +937,9 @@ h3.walkin {
 #hiddenwip {
   position: inherit;
   opacity: 0;
-  transition-duration: 3s;
+  transition-delay: 2s;
+  transition-duration: 1.5s;
+  z-index: 0;
 }
 
 h1.progress {
@@ -940,6 +947,7 @@ h1.progress {
   text-align: center;
   font-family: var(--ff-secondary);
   grid-area: h1;
+  margin: 20px 0;
 }
 
 h1.progress::after {
@@ -997,24 +1005,25 @@ p.progress {
   h1.walkin::after,
   h1.progress::after {
     max-width: 390px;
-    margin: 0 auto 60px;
+    margin: 0 auto 90px;
   }
 
   img.walkin {
     width: 280px;
-    margin: 30px auto;
+    margin: 0 auto;
     border: 10px solid transparent;
   }
 
   img.walkin:hover {
-    border: 10px solid orange;
+    border: 10px solid purple;
+    transition-duration: 5s;
   }
 
   /*hiddenwip*/
   #hiddenwip {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 120px auto auto;
+    grid-template-rows: 130px auto auto;
     grid-template-areas:
       "h1 h1"
       "staticsite backend"
@@ -1023,24 +1032,24 @@ p.progress {
 
   #static {
     grid-area: staticsite;
-    border: 1px solid white;
+    background: var(--clr-light);
     padding: 0 0 0 20px;
-    margin: 0px;
+    margin: 5px;
   }
 
   #backend {
     grid-area: backend;
-    border: 1px solid white;
+    background: var(--clr-light);
     padding: 0 20px 0 0;
-    margin: 0px;
+    margin: 5px;
   }
 
   #certgen {
     position: relative;
     grid-area: certgendocker;
-    border: 1px solid white;
+    background: var(--clr-light);
     padding: 0 0 0 20px;
-    margin: 0px;
+    margin: 5px;
   }
 
   div.static,
@@ -1064,7 +1073,6 @@ p.progress {
   div.restrict {
     height: 200px;
     width: 300px;
-    border: 1px solid white;
     padding: 0;
     margin: 20px;
   }
@@ -1073,11 +1081,17 @@ p.progress {
     width: 300px;
   }
 
+  h1.progress {
+    color: var(--clr-light);
+  }
+
   h3.progress {
+    color: lightslategray;
     margin-top: 20px;
   }
 
   p.progress {
+    color: lightslategray;
     text-align: justify;
   }
 }
