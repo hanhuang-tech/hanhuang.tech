@@ -975,8 +975,8 @@ p.progress {
 
 @media (min-width: 900px) {
   #sunset {
-    background-position: 0 50%;
-    height: 120px;
+    background-position: 0 56%;
+    height: 150px;
     border-width: 10px 0;
   }
 }
