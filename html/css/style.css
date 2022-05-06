@@ -916,13 +916,13 @@ h1.walkin::after {
 }
 
 img.walkin {
-  width: 210px;
-  border: 5px solid transparent;
+  width: 220px;
+  border: 7px solid transparent;
   margin: 10px auto;
 }
 
 img.walkin:hover {
-  border: 5px solid purple;
+  border: 7px solid purple;
   transition-duration: 5s;
 }
 
@@ -942,6 +942,10 @@ h2.walkin {
   z-index: 0;
 }
 
+#backend {
+  margin: 0 0 -20px 0;
+}
+
 h1.progress {
   color: white;
   text-align: center;
@@ -956,7 +960,7 @@ h1.progress::after {
   background: white;
   max-width: 160px;
   height: 3px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 
 div.restrict {
@@ -964,11 +968,7 @@ div.restrict {
   height: 145px;
   width: 200px;
   overflow: hidden;
-  margin: 50px auto 30px;
-}
-
-#certbot {
-  margin: -30px 0 0 0;
+  margin: 40px auto 30px;
 }
 
 #certbot-eff {
@@ -1011,11 +1011,11 @@ p.progress {
   img.walkin {
     width: 280px;
     margin: 0 auto;
-    border: 10px solid transparent;
+    border: 12px solid transparent;
   }
 
   img.walkin:hover {
-    border: 10px solid purple;
+    border: 12px solid purple;
     transition-duration: 5s;
   }
 
@@ -1028,19 +1028,21 @@ p.progress {
       "h1 h1"
       "staticsite backend"
       "certgendocker fourth";
+    margin-bottom: 25px;
+    padding: 0 50px;
   }
 
   #static {
     grid-area: staticsite;
     background: var(--clr-light);
-    padding: 0 0 0 20px;
+    padding: 0 0 0 25px;
     margin: 5px;
   }
 
   #backend {
     grid-area: backend;
     background: var(--clr-light);
-    padding: 0 20px 0 0;
+    padding: 0 25px 0 0;
     margin: 5px;
   }
 
@@ -1048,7 +1050,7 @@ p.progress {
     position: relative;
     grid-area: certgendocker;
     background: var(--clr-light);
-    padding: 0 0 0 20px;
+    padding: 0 0 0 25px;
     margin: 5px;
   }
 
@@ -1074,7 +1076,7 @@ p.progress {
     height: 200px;
     width: 300px;
     padding: 0;
-    margin: 20px;
+    margin: 25px;
   }
 
   img.progress {

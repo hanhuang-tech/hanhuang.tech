@@ -9,7 +9,7 @@ habbitToggle.addEventListener("click", function () {
   functToggle("habbit-move");
 });
 
-// wip mouse enter
+// walk in
 const wipSect = document.querySelector("#wip");
 const walkImg = document.querySelector("#walkimg");
 const walkDiv = document.querySelector("#walkin");
