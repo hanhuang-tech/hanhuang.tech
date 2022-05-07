@@ -513,15 +513,22 @@ div.rbanner {
   width: 1000px;
 }
 
-/* resources */
-section.resources {
+/*trees*/
+#trees {
   background-color: var(--clr-accent);
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: darken;
   background-attachment: fixed;
   border: 0px solid var(--clr-light);
-  border-width: 40px 0;
+  border-width: 30px 0;
+  height: 350px;
+}
+
+/*resources*/
+section.resources {
+  background: lightslategray;
+
 }
 
 h1.resources {
@@ -534,7 +541,7 @@ h1.resources::after {
   content: "";
   display: block;
   max-width: 175px;
-  height: 3px;
+  height: 2px;
   margin: 0 auto 50px;
   background: white;
 }
@@ -544,18 +551,17 @@ div.subject {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 div.subject img {
-  width: 180px;
+  width: 140px;
 }
 
 li.subject a {
   display: inline;
   text-decoration: none;
   color: white;
-  font-weight: var(--fw-bold);
   font-size: 1.4rem;
   padding: 0 10px;
 }
@@ -590,7 +596,7 @@ ul.subject li.subject {
 }
 
 ul.subject li.subject:hover {
-  background: var(--clr-accent2);
+  background: rgb(73, 73, 73);
 }
 
 /*tooltip*/
@@ -651,11 +657,11 @@ ul.subject li.subject:hover ul.subject {
 }
 
 ul.subject li.subject ul.subject li.subject {
-  background: black;
+  background: skyblue;
 }
 
 ul.subject li.subject ul.subject li.subject:hover {
-  background: var(--clr-dark);
+  background: steelblue;
 }
 
 @media (min-width: 900px) {
@@ -671,9 +677,9 @@ ul.subject li.subject ul.subject li.subject:hover {
 
   div.subject {
     position: relative;
-    width: 210px;
+    width: 160px;
     height: 210px;
-    margin: 150px 0 -50px 0;
+    margin: 150px 0 -90px 0;
   }
 
   div.subject img {
@@ -691,9 +697,9 @@ ul.subject li.subject ul.subject li.subject:hover {
 
   /*subject heading*/
   li.subject a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: var(--fw-bold);
+
   }
 
   /*subject li*/
@@ -980,7 +986,6 @@ p.progress {
     border-width: 10px 0;
   }
 }
-
 
 /*han*/
 #han {
