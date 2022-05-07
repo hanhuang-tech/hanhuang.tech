@@ -474,7 +474,7 @@ div.logo-bg {
   background-image: linear-gradient(to right, black 5%, white 95%);
   padding: 0px;
   border: 0px solid var(--clr-light);
-  border-width: 0 0 20px 0;
+  border-width: 0 0 15px 0;
 }
 
 div.logo {
@@ -520,7 +520,7 @@ div.rbanner {
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: var(--clr-accent);
+  background-color: darkgreen;
   background-attachment: fixed;
   opacity: 0.92;
   border: 0px solid var(--clr-light);
@@ -534,14 +534,14 @@ h1.trees {
   font-family: var(--ff-secondary);
 }
 
-h1.trees::after {
+/* h1.trees::after {
   content: "";
   display: block;
   background: white;
   max-width: 170px;
   height: 2px;
   margin: 0 auto 50px;
-}
+} */
 
 @media (min-width: 900px) {
   #trees {
@@ -555,19 +555,19 @@ h1.trees::after {
     font-family: var(--ff-secondary);
   }
 
-  h1.trees::after {
+  /* h1.trees::after {
     content: "";
     display: block;
     background: white;
     max-width: 210px;
     height: 2px;
     margin: 0 auto 50px;
-  }
+  } */
 }
 
 /*resources*/
 section.resources {
-  background: rgb(50, 70, 50);
+  background: rgb(50, 100, 50);
 }
 
 h1.resources {
