@@ -804,7 +804,6 @@ h1.walkin::after {
 
 img.walkin {
   width: 220px;
-  cursor: pointer;
   border: 7px solid transparent;
   margin: 10px auto;
 }
@@ -1860,9 +1859,10 @@ p.resindex {
 #construction {
   background: linear-gradient(to right, blue, red 60%, white 100%);
   background-blend-mode: difference;
-  border: 5px solid var(--clr-dark);
+  border: 0px solid var(--clr-dark);
+  border-width: 5px 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
 h3.construct {
