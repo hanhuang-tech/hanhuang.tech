@@ -19,7 +19,7 @@ const flowersBed2 = document.querySelector("#flowersbed2");
 
 walkImg.addEventListener("mouseenter", function () {
   wipSect.style.background = "lightslategray";
-  walkXh2.style.color = "var(--clr-accent)";
+  walkXh2.style.color = "slategray";
   walkDiv.style.opacity = 0;
   revealHidden.style.opacity = 1;
   revealHidden.style.zIndex = "1";

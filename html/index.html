@@ -20,7 +20,7 @@
 <body>
   <header>
     <!-- logo -->
-    <div class="logo-bg" id="index.html">
+    <div id="logo">
       <div class="logo">
         <div id="habbit-toggle">
           <img src="img/habbitnoborder.png" class="habbit" alt="a pic of habbit" />
@@ -36,19 +36,19 @@
     <nav class="bar">
       <ul class="nav">
         <li class="nav">
-          <a href="index.html#trees">resources</a>
+          <a href="#trees">resources</a>
         </li>
         <li class="nav tooltip">
-          <a href="index.html#wip">wip<span class="wiptip">Walk In Projects</span></a>
+          <a href="#wip">wip<span class="wiptip">Walk In Projects</span></a>
         </li>
-        <li class="nav"><a href="index.html#han">han</a></li>
-        <li class="nav"><a href="index.html#contact">contact</a></li>
+        <li class="nav"><a href="#han">han</a></li>
+        <li class="nav"><a href="#contact">contact</a></li>
         <li class="nav-arrow">
-          <a href="index.html#"><span class="arrow"></span></a>
+          <a href="#logo"><span class="arrow"></span></a>
         </li>
       </ul>
     </nav>
-    <a class="feedback" href="index.html#contact">
+    <a id="feedback" href="mailto:feedback@hanhuang.tech">
       <div class="handle"></div>
       <div class="feedback">
         <span class="feedback">back</span>
@@ -138,8 +138,8 @@
     </div>
   </section>
 
-  <!-- flowerbed1 -->
-  <div id="flowersbed1"></div>
+  <!-- flowers1 -->
+  <div id="flowers1"></div>
 
   <!-- wip -->
   <section id="wip">
@@ -199,8 +199,8 @@
     </div>
   </section>
 
-  <!-- flowerbed2 -->
-  <div id="flowersbed2"></div>
+  <!-- flower2 -->
+  <div id="flowers2"></div>
 
   <!-- sunset -->
   <div id="sunset"></div>
@@ -228,34 +228,31 @@
     </div>
   </section>
 
-  <!-- findme -->
-  <section class="find-me__section find-me__background" id="findme">
-    <h1 class="find-me__title">Find me</h1>
-    <a href="mailto:hanhuang.tech@gmail.com" class="email__wrap">
-      <img src="img/emailicon.png" class="email__img" alt="email icon" />
-      <p class="email__caption">hanhuang.tech@gmail.com</p>
-    </a>
-    <div class="find-me__list">
-      <div class="find-me__wrap">
-        <a href="https://github.com/hanhuang-tech/hanhuang.tech">
-          <img src="img/githubicon.png" class="find-me__img" alt="github icon" />
-        </a>
-      </div>
-      <div class="find-me__wrap">
-        <a href="https://hub.docker.com/u/hanhuangtech">
-          <img src="img/dockericon.png" class="find-me__img" alt="docker icon" />
-        </a>
-      </div>
-      <div class="find-me__wrap">
-        <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ">
-          <img src="img/youtubeicon.png" class="find-me__img" alt="youtube icon" />
-        </a>
-      </div>
-      <div class="find-me__wrap">
-        <a href="https://www.linkedin.com/in/han-huang-6808bb123">
-          <img src="img/linkedinicon.png" class="find-me__img" alt="linkedin icon" />
-        </a>
-      </div>
+  <!-- contact -->
+  <section id="contact">
+    <h2 class="contact">Contact</h2>
+    <div class="contact">
+      <a href="mailto:han@hanhuang.tech" class="email">
+        <img src="img/emailicon.png" class="email" alt="email icon" />
+        <h3 class="email">han@hanhuang.tech</h3>
+      </a>
+      <ul class="contact">
+        <li class="contact">
+          <a href="https://github.com/hanhuang-tech/hanhuang.tech" class="contact">
+            <img src="img/githubicon.png" id="github" alt="github icon" />
+          </a>
+        </li>
+        <li class="contact">
+          <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="contact">
+            <img src="img/linkedinicon.png" class="contact" alt="linkedin icon" />
+          </a>
+        </li>
+        <li class="contact">
+          <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ" class="contact">
+            <img src="img/youtubeicon.png" class="contact" alt="youtube icon" />
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
