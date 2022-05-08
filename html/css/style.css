@@ -525,13 +525,13 @@ div.rbanner {
     url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-attachment: fixed;
-  height: 220px;
+  height: 180px;
 }
 
 h1.trees {
   text-align: center;
   color: white;
-  padding: 150px 0 50px;
+  padding: 120px 0 50px;
   font-family: var(--ff-secondary);
 }
 
@@ -1035,6 +1035,7 @@ p.progress {
 h1.han {
   font-weight: var(--fw-bold);
   padding: 20px 0;
+  color: var(--clr-dark);
 }
 
 h3.han {
@@ -1042,6 +1043,7 @@ h3.han {
   letter-spacing: 2px;
   font-weight: var(--fw-reg);
   line-height: 2rem;
+  color: var(--clr-dark);
 }
 
 img.han {
@@ -1075,20 +1077,12 @@ div.contact {
   max-width: 1000px;
 }
 
-h2.contact {
-  text-transform: uppercase;
-
-  color: lightslategray;
-  font-weight: var(--fw-bold);
-  margin: 5px 0;
-}
-
 a.email {
   display: flex;
   text-decoration: none;
   justify-content: center;
   padding: 5px;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   border-radius: 8px;
 }
 
@@ -1096,7 +1090,7 @@ a.email:hover {
   background: var(--clr-accent2);
 }
 
-img.email {
+#email {
   width: 50px;
   height: 100%;
   padding: 0 10px 0 0;
@@ -1118,12 +1112,14 @@ h3.email {
   filter: invert(2%);
 }
 
-img.contact {
+#linkedin,
+#youtube {
   max-width: 50px;
   filter: invert(100%);
 }
 
-img.contact:hover {
+#linkedin:hover,
+#youtube:hover {
   filter: invert(10%);
 }
 
@@ -1146,7 +1142,7 @@ li.contact {
   div.contact {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 0;
   }
 
   a.email {
@@ -1154,7 +1150,7 @@ li.contact {
     text-decoration: none;
     justify-content: center;
     padding: 5px;
-    margin: 0 0 10px 0;
+    margin: 0;
     border-radius: 8px;
   }
 
@@ -1162,7 +1158,7 @@ li.contact {
     background: var(--clr-accent2);
   }
 
-  img.email {
+  #email {
     width: 70px;
     height: 100%;
     padding-right: 15px;
@@ -1176,7 +1172,8 @@ li.contact {
   }
 
   #github,
-  img.contact {
+  #linkedin,
+  #youtube {
     max-width: 60px;
     filter: invert(100%);
     margin: 0 20px;
@@ -1186,7 +1183,8 @@ li.contact {
     filter: invert(2%);
   }
 
-  img.contact:hover {
+  #linkedin:hover,
+  #youtube:hover {
     filter: invert(10%);
   }
 
@@ -1199,7 +1197,6 @@ li.contact {
 }
 
 /* footer */
-
 footer {
   height: 30px;
   position: relative;
@@ -1215,8 +1212,8 @@ h4.footer {
 }
 
 /***********************************************************************************************************/
-/* resources frontend */
-.ref-titlepage__div {
+/* resfrontend */
+/* .ref-titlepage__div {
   background-color: var(--clr-dirt);
   border: 0px solid var(--clr-light);
   border-width: 10px 0 10px 0;
@@ -1256,50 +1253,34 @@ h4.footer {
 
   border: 0px solid var(--clr-light);
   border-width: 0 0 0 5px;
-}
+} */
 
-.ref-logo__background {
-  background-color: var(--clr-pastelorange);
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 30px;
-}
-
-.ref-logo__holder {
-  background-color: var(--clr-light2);
-  padding-top: 20px;
-
-  min-width: 200px;
+#resindex {
+  background-color: var(--clr-dark2);
   border: 5px solid var(--clr-dark);
   border-radius: 10px;
 }
 
-@media (min-width: 900px) {
-  .ref-titlepage__title {
-    font-size: 2rem;
-  }
-
-  .ref-titlepage__subtitle {
-    font-size: 1.8rem;
-  }
+div.resindex {
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 580px) {
-  .ref-titlepage__services {
-    width: 200px;
-  }
+img.resindex {
+  padding: 20px;
+}
 
-  .ref-titlepage__title {
-    margin-bottom: 20px;
-    height: 40px;
-    font-size: 1.4rem;
-    line-height: 1;
-  }
+div.indices {
+  display: flex;
+}
 
-  .ref-titlepage__subtitle {
-    font-size: 1.25rem;
-  }
+p.resindex {
+  text-align: center;
+}
+
+.res-github,
+.res-youtube {
+  width: 50px;
 }
 
 .moby__background {
@@ -1872,4 +1853,25 @@ h4.footer {
 .reveal-sfeb {
   height: 100%;
   opacity: 1;
+}
+
+
+/* under construction */
+#construction {
+  background: linear-gradient(to right, blue, red 60%, white 100%);
+  background-blend-mode: difference;
+  border: 5px solid var(--clr-dark);
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+h3.construct {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  color: var(--clr-light);
+  font-weight: var(--fw-bold);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 5px;
 }
