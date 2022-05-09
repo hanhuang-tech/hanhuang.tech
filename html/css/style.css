@@ -9,7 +9,7 @@
   --clr-light: rgb(230, 230, 230);
   --clr-dark: rgb(30, 30, 30);
   --clr-dark2: rgb(60, 60, 60);
-  --clr-accent: rgb(50, 140, 50);
+  --clr-accent: rgb(25, 131, 25);
   --clr-accent2: rgb(80, 80, 120);
   --fs-h1: 2.4rem;
   --fs-h2: 1.6rem;
@@ -351,7 +351,7 @@ li.nav:hover {
 /*lantern intial position*/
 #feedback {
   position: fixed;
-  right: 30px;
+  right: 20px;
   bottom: 30px;
   z-index: 4;
   text-decoration: none;
@@ -360,22 +360,34 @@ li.nav:hover {
 /*lantern stand hori*/
 div.lantern::before {
   position: absolute;
-  z-index: 4;
-  bottom: 50%;
-  right: 50%;
+  z-index: 5;
+  bottom: 4px;
+  left: -20px;
 
-  width: 2000px;
-  height: 2000px;
+  content: "";
+  display: block;
+  background: var(--clr-dark);
+
+  width: 70px;
+  height: 12px;
+  border-radius: 4px;
 }
 
 /*lantern stand vert*/
 div.lantern::after {
   position: absolute;
   z-index: 4;
-  bottom: 100px;
-  right: 15px;
-  width: 2000px;
-  height: 2000px;
+  top: -10px;
+  left: 20px;
+
+  content: "";
+  display: block;
+  background: var(--clr-dark2);
+  border: 0px solid var(--clr-dark);
+  border-width: 7px 2px 0;
+  width: 25px;
+  height: 160px;
+  border-radius: 3px;
 }
 
 /*lantern handle*/
@@ -571,7 +583,7 @@ h1.trees {
 
 /*resources*/
 section.resources {
-  background: linear-gradient(to bottom, rgb(85, 175, 11) 30%, rgba(0, 100, 0, 0));
+  background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
   padding: 40px 0;
 }
 
@@ -636,7 +648,7 @@ ul.subject li.subject {
 }
 
 ul.subject li.subject:hover {
-  background: green;
+  background: var(--clr-accent);
 }
 
 /*tooltip*/
@@ -791,8 +803,6 @@ ul.subject li.subject ul.subject li.subject:hover {
   display: grid;
   position: relative;
   background: var(--clr-dark2);
-  /* border: 0px solid var(--clr-light);
-  border-width: 45px 0; */
   transition-delay: 2s;
   transition-duration: 1.5s;
 }
@@ -816,20 +826,21 @@ h1.walkin {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
-  margin: 20px 0;
+  font-size: 2.4rem;
+  margin: 40px 0;
 }
 
 h1.walkin::after {
   content: "";
   display: block;
   background: white;
-  max-width: 140px;
+  max-width: 150px;
   height: 2px;
   margin: 0 auto 70px;
 }
 
 img.walkin {
-  width: 220px;
+  width: 215px;
   cursor: wait;
   border: 7px solid transparent;
   margin: 10px auto;
@@ -843,6 +854,7 @@ img.walkin:hover {
 
 h2.walkin {
   text-align: center;
+  text-shadow: 5px 0 black;
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
   color: white;
@@ -864,9 +876,10 @@ h2.walkin {
 h1.progress {
   color: white;
   text-align: center;
+  font-size: 2.4rem;
   font-family: var(--ff-secondary);
   grid-area: h1;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 h1.progress::after {
@@ -920,14 +933,20 @@ p.progress {
   }
 
   /*walkin*/
+  h1.walkin,
+  h1.progress {
+    font-size: 2.75rem;
+    margin-bottom: 90px;
+  }
+
   h1.walkin::after,
   h1.progress::after {
-    max-width: 370px;
-    margin: 0 auto 90px;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   img.walkin {
-    width: 290px;
+    width: 280px;
     margin: 0 auto;
     border: 12px solid transparent;
   }
@@ -1238,13 +1257,13 @@ li.contact {
   height: 30px;
   position: relative;
   background: lightslategray;
-  z-index: 5;
+  z-index: 0;
 }
 
 h4.footer {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 38px;
   font-weight: var(--fw-reg);
   color: white;
 }
