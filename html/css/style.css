@@ -14,7 +14,7 @@
   --fs-h1: 2.4rem;
   --fs-h2: 1.6rem;
   --fs-h3: 1.4rem;
-  --fs-h4: 1rem;
+  --fs-h4: 1.2rem;
   --fs-body: 1rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -26,7 +26,7 @@
     --fs-h1: 3rem;
     --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
-    --fs-h4: 1.25rem;
+    --fs-h4: 1.5rem;
     --fs-body: 1.25rem;
   }
 }
@@ -520,8 +520,8 @@ div.rbanner {
 /*trees*/
 #trees {
   background-image: linear-gradient(to bottom,
-      rgb(0, 0, 0, 1) 0%,
-      rgba(20, 150, 20, 0.2) 100%),
+      rgb(0, 0, 0, 0.6) 0%,
+      rgba(20, 150, 20, 0.8) 100%),
     url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -531,19 +531,19 @@ div.rbanner {
 h1.trees {
   text-align: center;
   color: white;
-  padding: 120px 0 50px;
+  padding: 80px 0;
   font-family: var(--ff-secondary);
 }
 
 @media (min-width: 900px) {
   #trees {
-    height: 750px;
+    height: 770px;
   }
 
   h1.trees {
     text-align: center;
     color: white;
-    padding: 280px;
+    padding: 250px;
     font-family: var(--ff-secondary);
   }
 }
@@ -552,6 +552,13 @@ h1.trees {
 section.resources {
   background: rgb(27, 73, 27);
   padding: 40px 0 40px;
+}
+
+h1.resources {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /*subject div of resources*/
@@ -606,7 +613,6 @@ ul.subject li.subject {
 ul.subject li.subject:hover {
   background: var(--clr-accent);
 }
-
 
 /*tooltip*/
 .tooltip .awstip {
@@ -682,12 +688,8 @@ ul.subject li.subject ul.subject li.subject:hover {
     width: 70%;
     margin: 0 0 0 15%;
     padding: 10px 0;
+    border: 1px solid var(--clr-light);
     border-radius: 30px;
-  }
-
-  h1.resources {
-    margin: 0 auto;
-    padding: 20px;
   }
 
   div.subject-grps {
@@ -698,13 +700,13 @@ ul.subject li.subject ul.subject li.subject:hover {
   div.subject {
     position: relative;
     width: 170px;
-    height: 150px;
-    margin: 0px 0 -20px 0;
+    height: 130px;
+    margin: 0;
   }
 
   div.subject img {
     position: absolute;
-    bottom: 140px;
+    bottom: 120px;
     width: 100%;
     margin: auto auto;
   }
@@ -719,7 +721,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   li.subject a {
     font-size: 1.5rem;
     line-height: 2rem;
-
+    margin: 0;
   }
 
   /*subject li*/
@@ -749,13 +751,13 @@ ul.subject li.subject ul.subject li.subject:hover {
 @media (min-width: 900px) {
   #flowers1 {
     visibility: visible;
-    opacity: 0.85;
+    opacity: 0.7;
     background-image: url(../img/flowersbed.jpg);
     background-position-y: 490px;
     background-size: cover;
     filter: grayscale(100%);
-    height: 240px;
-    border: 0px solid var(--clr-dark);
+    height: 210px;
+    border: 0px solid lightgray;
     border-width: 20px 0 0;
   }
 }
@@ -1032,18 +1034,24 @@ p.progress {
 }
 
 /*han*/
-h1.han {
-  font-weight: var(--fw-bold);
-  padding: 20px 0;
+#han {
   color: var(--clr-dark);
 }
 
-h3.han {
+h1.han {
+  font-weight: var(--fw-bold);
+}
+
+h4.han {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-reg);
-  line-height: 2rem;
-  color: var(--clr-dark);
+  line-height: 1.8rem;
+  padding-top: 20px;
+}
+
+p.han {
+  text-align: center;
 }
 
 img.han {
@@ -1058,10 +1066,15 @@ img.han {
     margin: 0 auto;
   }
 
+  p.han {
+    text-align: start;
+    padding: 30px 0;
+    margin: 0;
+  }
+
   img.han {
     float: right;
-    max-width: 250px;
-    margin: 20px;
+    margin: -55px 20px 0px;
   }
 }
 
@@ -1863,7 +1876,7 @@ p.resindex {
   border: 0px solid var(--clr-dark);
   border-width: 5px 0;
   padding: 0;
-  margin: 0;
+  margin: 10px 0;
 }
 
 h3.construct {
@@ -1874,5 +1887,4 @@ h3.construct {
   font-weight: var(--fw-bold);
   font-size: 1.2rem;
   line-height: 1;
-  padding: 5px;
 }
