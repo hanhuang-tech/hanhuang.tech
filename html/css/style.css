@@ -11,6 +11,7 @@
   --clr-dark2: rgb(60, 60, 60);
   --clr-accent: rgb(25, 131, 25);
   --clr-accent2: rgb(80, 80, 120);
+  --clr-brown: rgb(138, 62, 0);
   --fs-h1: 2.4rem;
   --fs-h2: 1.6rem;
   --fs-h3: 1.4rem;
@@ -107,6 +108,26 @@ html {
   .mb {
     visibility: visible;
   }
+}
+
+/* under construction */
+#construction {
+  background: linear-gradient(to right, blue, red 60%, white 100%);
+  background-blend-mode: difference;
+  /* border: 0px solid var(--clr-dark);
+  border-width: 2px 0; */
+  padding: 0;
+  margin: 10px 0;
+}
+
+h3.construct {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  color: var(--clr-light);
+  font-weight: var(--fw-bold);
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 /* animations */
@@ -1270,75 +1291,95 @@ h4.footer {
 
 /***********************************************************************************************************/
 /* resfrontend */
-/* .ref-titlepage__div {
-  background-color: var(--clr-dirt);
-  border: 0px solid var(--clr-light);
-  border-width: 10px 0 10px 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 275px;
-}
-
-.ref-titlepage__services {
-  margin-top: 115px;
-  margin-left: 35px;
-}
-
-.ref-titlepage__title {
-  color: var(--clr-light2);
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.ref-titlepage__subtitle {
-  color: var(--clr-light2);
-  font-size: 1.5rem;
-  line-height: 1;
-  margin-top: 10px;
-}
-
-.ref-titlepage__background {
-  background-image: linear-gradient(to right,
-      rgba(161, 97, 33) 5%,
-      rgba(255, 255, 255, 1)),
-    url("../img/treebyhouse.jpg");
-  background-size: cover;
-  background-position: 0px;
-  background-blend-mode: multiply;
-  height: 255px;
-
-  border: 0px solid var(--clr-light);
-  border-width: 0 0 0 5px;
-} */
-
 #resindex {
-  background-color: var(--clr-dark2);
-  border: 5px solid var(--clr-dark);
-  border-radius: 10px;
+  background-image: linear-gradient(to bottom,
+      rgb(0, 0, 0, 0.6) 0%,
+      rgba(170, 112, 5, 0.8) 100%),
+    url(../img/treebyhouse.jpg);
+  background-size: cover;
+  background-position-y: -200px;
+  background-position-x: -100px;
+  background-attachment: fixed;
+  height: 550px;
 }
 
 div.resindex {
+  background-color: var(--clr-light);
+  border-radius: 20px 20px 0 0;
+  max-width: 460px;
+  margin: 80px auto 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+div.resindex2 {
   display: flex;
   justify-content: center;
 }
 
 img.resindex {
-  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 3px;
 }
 
-div.indices {
+div.resstatic {
+  margin: auto 0;
+}
+
+a.resstatic {
+  text-decoration: none;
+}
+
+h4.resstatic {
+  display: inline-block;
+  background: var(--clr-dark2);
+  color: var(--clr-light);
+  line-height: 2rem;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-family: var(--ff-secondary);
+}
+
+div.ressocial {
   display: flex;
-}
-
-p.resindex {
-  text-align: center;
+  padding: 0;
 }
 
 .res-github,
 .res-youtube {
   width: 50px;
+  margin: 0 3px;
 }
+
+.res-github {
+  opacity: 90%;
+}
+
+.res-github:hover {
+  opacity: 100%;
+}
+
+.res-youtube {
+  opacity: 85%;
+}
+
+.res-youtube:hover {
+  opacity: 100%;
+}
+
+h4.resstatic:hover {
+  background: black;
+}
+
+p.resindex {
+  background: var(--clr-light);
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 460px;
+}
+
 
 .moby__background {
   background-color: var(--clr-lightgrey);
@@ -1910,25 +1951,4 @@ p.resindex {
 .reveal-sfeb {
   height: 100%;
   opacity: 1;
-}
-
-
-/* under construction */
-#construction {
-  background: linear-gradient(to right, blue, red 60%, white 100%);
-  background-blend-mode: difference;
-  border: 0px solid var(--clr-dark);
-  border-width: 5px 0;
-  padding: 0;
-  margin: 10px 0;
-}
-
-h3.construct {
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  color: var(--clr-light);
-  font-weight: var(--fw-bold);
-  font-size: 1.2rem;
-  line-height: 1;
 }
