@@ -1305,7 +1305,7 @@ h4.footer {
 
 div.resindex {
   background-color: var(--clr-light);
-  width: 400px;
+  max-width: 400px;
   margin: 70px auto 0;
   padding: 0;
 
@@ -1348,7 +1348,7 @@ div.ressocial {
 
 .res-github,
 .res-youtube {
-  width: 46px;
+  max-width: 46px;
   margin: 0 3px;
 }
 
@@ -1377,7 +1377,7 @@ p.resindex {
   text-align: center;
   padding: 5px 20px;
   margin: 0 auto;
-  width: 400px;
+  max-width: 400px;
   border-radius: 0 0 10px 10px;
 }
 
