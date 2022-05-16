@@ -1297,7 +1297,6 @@ h4.footer {
       rgba(170, 112, 5, 0.8) 100%),
     url(../img/treebyhouse.jpg);
   background-size: cover;
-  background-position-y: -200px;
   background-position-x: -100px;
   background-attachment: fixed;
   height: 550px;
@@ -1306,14 +1305,14 @@ h4.footer {
 div.resindex {
   background-color: var(--clr-light);
   max-width: 400px;
-  margin: 70px auto 0;
+  margin: 85px auto 0;
   padding: 0;
 
   display: flex;
   flex-direction: column;
 }
 
-div.resindex2 {
+div.reswrapper {
   display: flex;
   justify-content: center;
 }
@@ -1324,8 +1323,7 @@ img.resindex {
 }
 
 div.resstatic {
-  margin: auto 0;
-  padding: 0;
+  margin: auto 0px;
 }
 
 a.resstatic {
@@ -1338,17 +1336,29 @@ h4.resstatic {
   color: var(--clr-light);
   line-height: 2rem;
   padding: 0 10px;
+  margin: 2px 0;
   font-family: var(--ff-secondary);
+}
+
+h4.resstatic:hover {
+  background: var(--clr-dark);
+}
+
+@media (max-width: 450px) {
+
+  div.reswrapper {
+    margin: auto 50px;
+  }
 }
 
 div.ressocial {
   display: flex;
-  padding: 0;
+  margin: auto 0;
 }
 
 .res-github,
 .res-youtube {
-  max-width: 46px;
+  max-width: 40px;
   margin: 0 3px;
 }
 
@@ -1368,40 +1378,34 @@ div.ressocial {
   opacity: 100%;
 }
 
-h4.resstatic:hover {
-  background: black;
-}
-
 p.resindex {
   background: var(--clr-light);
   text-align: center;
-  padding: 5px 20px;
+  padding: 0 20px 5px;
   margin: 0 auto;
   max-width: 400px;
   border-radius: 0 0 10px 10px;
 }
 
+/* html */
 
-.moby__background {
-  background-color: var(--clr-lightgrey);
-  background-size: cover;
-  border: 20px solid var(--clr-lightgrey2);
-  max-height: 325px;
+#html {
+  background: var(--clr-light);
 }
 
-.moby__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+#reshtml {
+  display: flex;
+  justify-content: center;
 }
 
-.moby__caption {
-  color: var(--clr-dirt);
-  font-weight: var(--fw-bold);
+div.reshtml {
+  display: inline-flex;
+  padding: 0 15px;
+  border: 5px solid var(--clr-dark);
+}
+
+h1.reshtml {
   font-family: var(--ff-secondary);
-  font-size: 2em;
-  text-align: center;
-  margin: auto;
 }
 
 /* sitebackend */
