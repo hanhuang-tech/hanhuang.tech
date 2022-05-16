@@ -1400,12 +1400,23 @@ p.resindex {
 
 div.reshtml {
   display: inline-flex;
-  padding: 0 15px;
-  border: 5px solid var(--clr-dark);
+  padding: 0 5px;
+  border: 3px solid var(--clr-dark);
 }
 
-h1.reshtml {
+h2.reshtml {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  margin: auto 0;
   font-family: var(--ff-secondary);
+}
+
+@media (max-width: 320px) {
+
+  h2.reshtml {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 
 /* sitebackend */
