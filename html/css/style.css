@@ -984,7 +984,7 @@ p.progress {
     grid-template-rows: 130px auto auto;
     grid-template-areas: "h1 h1"
       "staticsite backend"
-      "certgendocker fourth";
+      "certgendocker other";
     margin-bottom: 25px;
     padding: 0 50px;
   }
@@ -1003,6 +1003,13 @@ p.progress {
     margin: 5px;
   }
 
+  #other {
+    grid-area: other;
+    background: var(--clr-light);
+    padding: 0 25px 0 0;
+    margin: 5px;
+  }
+
   #certgen {
     position: relative;
     grid-area: certgendocker;
@@ -1016,7 +1023,8 @@ p.progress {
     float: right;
   }
 
-  div.backend {
+  div.backend,
+  div.other {
     float: left;
   }
 
