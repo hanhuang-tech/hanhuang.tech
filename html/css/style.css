@@ -1415,6 +1415,10 @@ div.reshtml {
   border: 5px solid var(--clr-dark);
 }
 
+a.reshtml {
+  text-decoration: none;
+}
+
 h3.reshtml {
   font-size: 2rem;
   line-height: 2.8rem;
@@ -1442,7 +1446,7 @@ h3.reshtml {
 }
 
 /* sitebackend */
-
+/*
 .sitebackend__title {
   text-align: center;
 }
@@ -1451,12 +1455,12 @@ h3.reshtml {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 /* .resourcesbackend */
 
 .resourcesbackend__background {
-  background-color: var(--clr-grey);
+  background-color: grey;
   background-image: url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-blend-mode: multiply;
@@ -1471,7 +1475,7 @@ h3.reshtml {
 }
 
 .resourcesbackend__caption {
-  color: var(--clr-light2);
+  color: lightblue2;
   font-weight: var(--fw-bold);
   font-family: var(--ff-secondary);
   font-size: 2em;
@@ -1506,7 +1510,7 @@ h3.reshtml {
 }
 
 .sfe-titlepage__div {
-  background-color: var(--clr-blue);
+  background-color: var(blue);
   border: 0px solid var(--clr-light);
   border-width: 10px 0 10px 0;
 
@@ -1556,7 +1560,7 @@ h3.reshtml {
 }
 
 .sfe-logo__holder {
-  background-image: linear-gradient(var(--clr-lightblue) 1%, var(--clr-light));
+  background-image: linear-gradient(lightblue 1%, var(--clr-light));
   padding-top: 20px;
 
   min-width: 200px;
@@ -1598,7 +1602,7 @@ h3.reshtml {
   text-decoration: none;
   height: 35px;
   max-width: 230px;
-  background-color: var(--clr-lightgrey);
+  background-color: lightgrey;
   border: 1px solid var(--clr-dark);
 }
 
@@ -1632,9 +1636,9 @@ h3.reshtml {
 }
 
 .sfe-html__background {
-  background-color: var(--clr-lightgrey2);
+  background-color: lightgrey;
   background-size: cover;
-  border: 5px solid var(--clr-grey);
+  border: 5px solid grey;
   padding: 20px;
   padding-left: 15px;
 }
@@ -1692,7 +1696,7 @@ h3.reshtml {
   margin-left: 12px;
   margin-bottom: 8px;
   font-size: 1.6rem;
-  color: var(--clr-grey);
+  color: grey;
 }
 
 .con__ul {
@@ -1701,7 +1705,7 @@ h3.reshtml {
   max-width: 410px;
   height: 3px;
   margin: auto;
-  background: var(--clr-pastelorange);
+  background: orange;
   margin-bottom: 10px;
 }
 
@@ -1717,9 +1721,9 @@ h3.reshtml {
 }
 
 .sfe-javascript__background {
-  background-color: var(--clr-lightgreen);
+  background-color: lightgreen;
   background-size: cover;
-  border: 5px solid var(--clr-forestgreen);
+  border: 5px solid green;
   padding: 40px;
 }
 
@@ -1727,30 +1731,23 @@ h3.reshtml {
   margin-top: 50px;
 }
 
-.ref-page {
+h3.side-page {
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 30px;
-  line-height: 1;
-  font-family: var(--ff-secondary);
   font-size: 1.8rem;
-  color: var(--clr-grey);
+  line-height: 0.8rem;
+  font-family: var(--ff-secondary);
 }
 
-.ref-page__section {
+h3.side-section {
   display: inline-block;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-reg);
   font-size: 1.4rem;
-  color: var(--clr-gr);
   line-height: 0.5;
-  color: var(--clr-darkblue);
-  background-color: var(--clr-light2);
-  margin-left: 30px;
-  margin-bottom: 10px;
-  margin-top: 0px;
+  background-color: lightgray;
   padding: 8px;
-  border: 2px solid var(--clr-darkblue);
+  border: 2px solid darkblue;
   border-radius: 5px;
   box-shadow: 1px 1px;
 }
@@ -1778,7 +1775,7 @@ h3.reshtml {
 
 /* codebox coloured text */
 .codeblue {
-  color: var(--clr-darkblue);
+  color: darkblue;
 }
 
 .codebrown {
@@ -1786,7 +1783,7 @@ h3.reshtml {
 }
 
 .codegreen {
-  color: var(--clr-darklimegreen);
+  color: darkgreen;
 }
 
 .codebox__margin0 {
@@ -1830,6 +1827,7 @@ h3.reshtml {
   margin-left: 200px;
 }
 
+/*
 @media (max-width: 900px) {
   .sfe-github__link {
     height: 34px;
@@ -1883,14 +1881,14 @@ h3.reshtml {
   .sfe-titlepage__subtitle {
     font-size: 1.25rem;
   }
-}
+}*/
 
 /* spoilers */
 
 #spoil-btn1 {
-  color: var(--clr-grey);
-  background: var(--clr-lightgrey2);
-  border: 0px solid var(--clr-grey);
+  color: grey;
+  background: lightgrey;
+  border: 0px solid grey;
   border-width: 2px 2px 2px 8px;
   font-family: (var(--ff-secondary));
   position: relative;
@@ -1899,13 +1897,13 @@ h3.reshtml {
 }
 
 #spoil-btn1:hover {
-  background: var(--clr-lightgrey);
+  background: lightgrey;
   cursor: pointer;
 }
 
 #spoil-btn2 {
   color: var(--clr-brown);
-  background: var(--clr-pastelorange);
+  background: orange;
   border: 0px solid var(--clr-brown);
   border-width: 2px 2px 2px 8px;
   font-family: (var(--ff-secondary));
