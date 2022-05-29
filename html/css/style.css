@@ -1475,7 +1475,7 @@ h3.reshtml {
 }
 
 .resourcesbackend__caption {
-  color: lightblue2;
+  color: lightblue;
   font-weight: var(--fw-bold);
   font-family: var(--ff-secondary);
   font-size: 2em;
