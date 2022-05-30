@@ -107,12 +107,13 @@ html {
 
 .mb::after {
   position: relative;
+  z-index: 6;
   display: block;
   padding: 0;
   margin: 0;
   content: "";
   background: black;
-  height: 2px;
+  height: 1px;
   top: 675px;
 }
 
@@ -541,7 +542,7 @@ div.feedback:hover::after {
 }
 
 div.fourofour {
-  padding: 35px;
+  padding: 22px;
 }
 
 img.fourofour {
@@ -588,7 +589,7 @@ a.fourreturn {
 
 @media (min-width: 900px) {
   div.fourofour {
-    padding: 100px;
+    padding: 102.5px;
   }
 
   img.fourofour {
@@ -1385,6 +1386,7 @@ li.contact {
   position: relative;
   background: lightslategray;
   z-index: 0;
+  bottom: 0px;
 }
 
 h4.footer {
