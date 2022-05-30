@@ -588,11 +588,11 @@ a.fourreturn {
 
 @media (min-width: 900px) {
   div.fourofour {
-    padding: 120px;
+    padding: 100px;
   }
 
   img.fourofour {
-    max-width: 230px;
+    max-width: 200px;
   }
 
   h1.fourofour {
