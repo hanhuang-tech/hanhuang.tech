@@ -114,6 +114,7 @@ html {
   content: "";
   background: black;
   height: 1px;
+  width: 2px;
   top: 675px;
 }
 
