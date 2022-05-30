@@ -101,10 +101,23 @@ html {
   padding: 0;
   margin: 0;
   line-height: 0;
+  font-size: 0.7rem;
   color: black;
 }
 
-@media (max-width: 320px) {
+.mb::after {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  content: "";
+  background: black;
+  height: 2px;
+  top: 675px;
+}
+
+
+@media (width: 320px) {
   .mb {
     visibility: visible;
   }
@@ -360,7 +373,6 @@ li.nav:hover {
 }
 
 /*feedback lantern*/
-
 /*hide lantern under 600px width*/
 @media (max-width: 600px) {
   #feedback {
@@ -521,6 +533,92 @@ span.feedback:hover {
 
 div.feedback:hover::after {
   border-color: transparent transparent rgb(25, 25, 25) transparent;
+}
+
+/* fourofour */
+#fourofour {
+  background: lightcyan;
+}
+
+div.fourofour {
+  padding: 35px;
+}
+
+img.fourofour {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 180px;
+}
+
+h1.fourofour {
+  text-align: center;
+  color: var(--clr-dark2);
+  font-size: 2.2rem;
+  line-height: 3rem;
+  padding: 5px;
+}
+
+h3.fourofour {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: cadetblue;
+}
+
+h4.fourofour {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: var(--clr-dark2);
+}
+
+div.fourreturn {
+  background: red;
+  text-align: center;
+  max-width: 190px;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+a.fourreturn {
+  color: var(--clr-light);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  div.fourofour {
+    padding: 120px;
+  }
+
+  img.fourofour {
+    max-width: 230px;
+  }
+
+  h1.fourofour {
+    font-size: 2.8rem;
+  }
+
+  h3.fourofour {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  h4.fourofour {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding: 10px;
+  }
+
+  div.fourreturn {
+    max-width: 220px;
+  }
+
+  a.fourreturn {
+    font-size: 1.3rem;
+  }
 }
 
 /* logo */
