@@ -22,7 +22,7 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   :root {
     --fs-h1: 3rem;
     --fs-h2: 2.2rem;
@@ -119,7 +119,7 @@ html {
 }
 
 
-@media (width: 320px) {
+@media (max-width: 30em) {
   .mb {
     visibility: visible;
   }
@@ -331,7 +331,7 @@ li.nav:hover {
   animation-duration: 2s;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   .tooltip .wiptip {
     width: 90px;
     font-size: 1.2rem;
@@ -363,7 +363,7 @@ li.nav:hover {
   background-color: var(--clr-accent);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   .nav-arrow {
     font-size: 1em;
   }
@@ -376,7 +376,7 @@ li.nav:hover {
 
 /*feedback lantern*/
 /*hide lantern under 600px width*/
-@media (max-width: 600px) {
+@media (max-width: 40em) {
   #feedback {
     visibility: hidden;
     opacity: 1;
@@ -588,7 +588,7 @@ a.fourreturn {
   text-decoration: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   div.fourofour {
     padding: 102.5px;
   }
@@ -650,7 +650,7 @@ img.banner {
   border-radius: 10px 50px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 30em) {
   div.logo {
     width: 320px;
     overflow: hidden;
@@ -689,7 +689,7 @@ h1.trees {
   font-family: var(--ff-secondary);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   #trees {
     height: 770px;
   }
@@ -809,7 +809,7 @@ ul.subject li.subject:hover {
   animation-duration: 2s;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   .tooltip .awstip {
     width: 110px;
     font-size: 1.2rem;
@@ -837,7 +837,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   background: var(--clr-dark2);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   section.resources {
     position: absolute;
     opacity: 0.9;
@@ -905,7 +905,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   opacity: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   #flowers1 {
     visibility: visible;
     opacity: 0.7;
@@ -955,7 +955,7 @@ h1.walkin::after {
   content: "";
   display: block;
   background: white;
-  max-width: 150px;
+  max-width: 300px;
   height: 2px;
   margin: 0 auto 70px;
 }
@@ -1007,7 +1007,7 @@ h1.progress::after {
   content: "";
   display: block;
   background: white;
-  max-width: 150px;
+  max-width: 300px;
   height: 2px;
   margin: 0 auto 50px;
 }
@@ -1048,7 +1048,7 @@ p.progress {
   color: var(--clr-light);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   #wip {
     border-width: 30px 0;
   }
@@ -1176,7 +1176,7 @@ p.progress {
   transition-duration: 5s;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   #flowers2 {
     visibility: hidden;
     opacity: 0;
@@ -1189,7 +1189,7 @@ p.progress {
   opacity: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   #sunset {
     visibility: visible;
     opacity: 1;
@@ -1232,7 +1232,7 @@ img.han {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   div.han {
     max-width: 1000px;
     margin: 0 auto;
@@ -1319,7 +1319,7 @@ li.contact {
   list-style-type: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 64em) {
   h2.contact {
     text-align: center;
   }
@@ -1458,7 +1458,7 @@ div.ressocial {
   margin: auto 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 30em) {
   div.reswrapper {
     margin: auto 50px;
   }
@@ -1528,7 +1528,7 @@ h3.reshtml {
   font-family: var(--ff-secondary);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 30em) {
 
   h3.reshtml {
     font-size: 1.7rem;
@@ -1927,62 +1927,6 @@ h3.side-section {
   margin-bottom: 0px;
   margin-left: 200px;
 }
-
-/*
-@media (max-width: 900px) {
-  .sfe-github__link {
-    height: 34px;
-    max-width: 182px;
-  }
-
-  .sfe-github__desc {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16px;
-    font-size: 0.8rem;
-  }
-
-  .sfe-logo__title {
-    font-size: 1.2rem;
-  }
-}
-
-@media (min-width: 900px) {
-  .sfe-html__background {
-    padding: 40px;
-  }
-
-  .sfe-titlepage__title {
-    font-size: 2rem;
-  }
-
-  .sfe-titlepage__subtitle {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .sfe-titlepage__services {
-    margin-top: 150px;
-    width: 200px;
-  }
-
-  .sfe-github__desc {
-    font-size: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .sfe-titlepage__title {
-    height: 40px;
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-
-  .sfe-titlepage__subtitle {
-    font-size: 1.25rem;
-  }
-}*/
 
 /* spoilers */
 
