@@ -149,15 +149,15 @@ h3.construct {
 
 /*js habbit-move*/
 .habbit-move img.habbit {
-  animation: rotation 5s;
+  animation: rotation 4s;
 }
 
 .habbit-move img.banner {
-  animation: movenback 5s;
+  animation: movenback 4s;
 }
 
 .habbit-move .nav-arrow {
-  animation: arrowrotation 5s;
+  animation: arrowrotation 4s;
 }
 
 /*keyframes*/
@@ -177,9 +177,8 @@ h3.construct {
 
 @keyframes movenback {
   50% {
-    transform: translateX(100px);
-    filter: opacity(0);
     border-radius: 50px 10px 50px;
+    border-color: var(--clr-accent2);
   }
 }
 
@@ -623,38 +622,42 @@ a.fourreturn {
   }
 }
 
+/*trees*/
+#trees {
+  background-image: linear-gradient(to bottom,
+      rgb(0, 0, 0, 0.6) 0%,
+      rgba(20, 150, 20, 0.8) 100%),
+    url(../img/treesbyfootpath.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 135px;
+  padding: 10px;
+}
+
 /* logo */
 #logo {
   display: flex;
-  background-image: linear-gradient(to right, black 5%, white 95%);
-  padding: 0px;
-  border: 0px solid var(--clr-light);
-  border-width: 0 0 15px 0;
 }
 
 div.logo {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   column-gap: 5%;
-  min-width: 300px;
+  min-width: 250px;
   width: 25%;
+  background: var(--clr-dark);
+  border: 2px solid var(--clr-dark2);
+  border-radius: 10px;
 }
 
 img.habbit {
-  border: 4px solid white;
+  border: 4px solid var(--clr-light);
   cursor: pointer;
 }
 
 img.banner {
   border: 4px solid var(--clr-accent);
   border-radius: 10px 50px;
-}
-
-@media (max-width: 30em) {
-  div.logo {
-    width: 320px;
-    overflow: hidden;
-  }
 }
 
 div.rbanner {
@@ -671,33 +674,32 @@ div.rbanner {
   width: 1000px;
 }
 
-/*trees*/
-#trees {
-  background-image: linear-gradient(to bottom,
-      rgb(0, 0, 0, 0.6) 0%,
-      rgba(20, 150, 20, 0.8) 100%),
-    url(../img/treesbyfootpath.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  height: 180px;
+/* title: resources */
+div.trees {
+  text-align: center;
 }
 
 h1.trees {
-  text-align: center;
+  display: inline-block;
   color: white;
   padding: 80px 0;
   font-family: var(--ff-secondary);
+  background: rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 64em) {
   #trees {
-    height: 770px;
+    height: 650px;
+  }
+
+  div.logo {
+    max-width: 300px;
   }
 
   h1.trees {
     text-align: center;
     color: white;
-    padding: 245px;
+    padding: 60px;
     font-family: var(--ff-secondary);
   }
 }
@@ -705,7 +707,7 @@ h1.trees {
 /*resources*/
 section.resources {
   background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
-  padding: 40px 0;
+  padding: 120px 0 40px;
 }
 
 h1.resources {
@@ -842,7 +844,7 @@ ul.subject li.subject ul.subject li.subject:hover {
     position: absolute;
     opacity: 0.9;
     z-index: 1;
-    top: 600px;
+    top: 380px;
     width: 70%;
     margin: 0 0 0 15%;
     padding: 10px 0;
