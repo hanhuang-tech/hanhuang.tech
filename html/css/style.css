@@ -715,15 +715,16 @@ h1.trees {
     text-align: center;
     color: white;
     margin: 100px 0;
-    padding: 3px 20px;
+    padding: 0px 20px;
     font-family: var(--ff-secondary);
     background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--clr-light);
   }
 }
 
 /*resources*/
 section.resources {
-  background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
+  background: var(--clr-accent2);
   padding: 120px 0 40px;
 }
 
@@ -789,7 +790,7 @@ ul.subject li.subject {
 }
 
 ul.subject li.subject:hover {
-  background: var(--clr-accent);
+  background: mediumslateblue;
 }
 
 /*tooltip*/
@@ -864,8 +865,12 @@ ul.subject li.subject ul.subject li.subject:hover {
     z-index: 1;
     top: 380px;
     width: 70%;
+    background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
     margin: 0 0 0 15%;
     padding: 10px 0;
+    border-width: 3px 0px 0px;
+    border-style: solid;
+    border-color: var(--clr-accent);
     border-radius: 30px;
   }
 
@@ -886,6 +891,10 @@ ul.subject li.subject ul.subject li.subject:hover {
     bottom: 120px;
     width: 100%;
     margin: auto auto;
+  }
+
+  ul.subject li.subject:hover {
+    background: var(--clr-accent);
   }
 
   ul.subject li.subject ul.subject {
