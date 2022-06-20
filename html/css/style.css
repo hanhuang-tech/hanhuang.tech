@@ -24,7 +24,7 @@
 
 @media (min-width: 64em) {
   :root {
-    --fs-h1: 2.8rem;
+    --fs-h1: 2.6rem;
     --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.5rem;
@@ -715,7 +715,7 @@ h1.trees {
     text-align: center;
     color: white;
     margin: 100px 0;
-    padding: 5px 20px;
+    padding: 3px 20px;
     font-family: var(--ff-secondary);
     background: rgba(0, 0, 0, 0.6);
   }
@@ -966,7 +966,7 @@ h1.walkin {
   color: white;
   text-align: center;
   font-family: var(--ff-secondary);
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin: 40px 0;
 }
 
@@ -974,7 +974,7 @@ h1.walkin::after {
   content: "";
   display: block;
   background: white;
-  max-width: 300px;
+  max-width: 280px;
   height: 2px;
   margin: 0 auto 70px;
 }
