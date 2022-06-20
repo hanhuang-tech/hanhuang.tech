@@ -24,7 +24,7 @@
 
 @media (min-width: 64em) {
   :root {
-    --fs-h1: 3rem;
+    --fs-h1: 2.8rem;
     --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.5rem;
@@ -630,8 +630,11 @@ a.fourreturn {
     url(../img/treesbyfootpath.jpg);
   background-size: cover;
   background-attachment: fixed;
-  height: 135px;
-  padding: 10px;
+  height: 154px;
+  padding: 15px;
+  border-width: 0 0 12px 0;
+  border-style: solid;
+  border-color: var(--clr-dark);
 }
 
 /* logo */
@@ -655,9 +658,19 @@ img.habbit {
   cursor: pointer;
 }
 
+img.habbit:hover {
+  border: 4px solid var(--clr-dark2);
+  transition: 0.5s;
+}
+
 img.banner {
   border: 4px solid var(--clr-accent);
   border-radius: 10px 50px;
+}
+
+img.banner:hover {
+  border: 4px solid var(--clr-dark2);
+  transition: 0.5s;
 }
 
 div.rbanner {
@@ -682,25 +695,29 @@ div.trees {
 h1.trees {
   display: inline-block;
   color: white;
-  padding: 80px 0;
+  margin: 80px 0;
+  padding: 2px 20px;
   font-family: var(--ff-secondary);
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 64em) {
   #trees {
-    height: 650px;
+    height: 680px;
+    border-color: transparent;
   }
 
   div.logo {
-    max-width: 300px;
+    max-width: 250px;
   }
 
   h1.trees {
     text-align: center;
     color: white;
-    padding: 60px;
+    margin: 100px 0;
+    padding: 5px 20px;
     font-family: var(--ff-secondary);
+    background: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -734,6 +751,7 @@ li.subject a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
+  font-weight: 600;
   padding: 0 10px;
 }
 
@@ -766,7 +784,7 @@ ul.subject li.subject {
   display: inline-block;
   font-weight: var(--fw-reg);
   font-family: var(--ff-secondary);
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   border-radius: 5px;
 }
 
@@ -907,19 +925,18 @@ ul.subject li.subject ul.subject li.subject:hover {
   opacity: 0;
 }
 
-@media (min-width: 64em) {
+/*@media (min-width: 64em) {
   #flowers1 {
     visibility: visible;
-    opacity: 0.7;
+    opacity: 1;
     background-image: url(../img/flowersbed.jpg);
     background-position-y: 490px;
     background-size: cover;
-    filter: grayscale(100%);
     height: 210px;
-    border: 0px solid lightgray;
-    border-width: 20px 0 0;
+    border: 0px solid var(--clr-dark2);
+    border-width: 30px 0 0;
   }
-}
+}*/
 
 /*wip*/
 #wip {
