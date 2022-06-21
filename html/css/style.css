@@ -703,7 +703,7 @@ h1.trees {
 
 @media (min-width: 64em) {
   #trees {
-    height: 660px;
+    height: 600px;
     border-color: transparent;
   }
 
@@ -714,7 +714,7 @@ h1.trees {
   h1.trees {
     text-align: center;
     color: white;
-    margin: 100px 0;
+    margin: 40px 0;
     padding: 0px 20px;
     font-family: var(--ff-secondary);
     background: rgba(0, 0, 0, 0.6);
@@ -863,7 +863,7 @@ ul.subject li.subject ul.subject li.subject:hover {
     position: absolute;
     opacity: 0.9;
     z-index: 1;
-    top: 380px;
+    top: 320px;
     width: 70%;
     background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
     margin: 0 0 0 15%;
@@ -1088,7 +1088,7 @@ p.progress {
   h1.walkin,
   h1.progress {
     font-size: 2.75rem;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
   }
 
   h1.walkin::after,
