@@ -956,7 +956,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   transition-duration: 1.5s;
 }
 
-/*overlap visible and hidden div*/
+/*overlap visible and hidden div requires grid (above)*/
 #walkin,
 #hiddenwip {
   grid-column: 1;
@@ -965,15 +965,14 @@ ul.subject li.subject ul.subject li.subject:hover {
 
 /*div wip elements*/
 #walkin {
-  opacity: 1;
+  opacity: 0;
   transition-delay: 2s;
   transition-duration: 1.5s;
   z-index: 1;
   background-color: var(--clr-light);
   border: 5px solid var(--clr-dark);
-  margin: 0 auto;
-  min-width: 300px;
-  min-height: 400px;
+  margin: 15px auto 0;
+  max-height: 640px;
 }
 
 h1.walkin {
@@ -981,7 +980,7 @@ h1.walkin {
   text-align: center;
   font-family: var(--ff-secondary);
   font-size: 2.2rem;
-  margin: 40px 0;
+  margin: 20px 20px;
 }
 
 h1.walkin::after {
@@ -1017,7 +1016,7 @@ h2.walkin {
 
 /*hidden wip*/
 #hiddenwip {
-  opacity: 0;
+  opacity: 1;
   transition-delay: 2s;
   transition-duration: 1.5s;
   z-index: 0;
@@ -1113,24 +1112,32 @@ p.progress {
   /*hiddenwip*/
   #hiddenwip {
     display: grid;
-    grid-template-columns: auto auto;
     grid-template-rows: 130px auto auto;
-    grid-template-areas: "h1 h1"
-      "staticsite backend"
-      "certgendocker other";
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+      "h1 h1"
+      "hht certgendocker clothingsite"
+      "a other z";
     margin-bottom: 25px;
     padding: 0 50px;
   }
 
-  #static {
-    grid-area: staticsite;
+  #hht {
+    grid-area: hht;
     background: var(--clr-light);
     padding: 0 0 0 25px;
     margin: 5px;
   }
 
-  #backend {
-    grid-area: backend;
+  #certgen {
+    grid-area: certgen;
+    background: var(--clr-light);
+    padding: 0 0 0 25px;
+    margin: 5px;
+  }
+
+  #clothingsite {
+    grid-area: clothingsite;
     background: var(--clr-light);
     padding: 0 25px 0 0;
     margin: 5px;
@@ -1143,13 +1150,7 @@ p.progress {
     margin: 5px;
   }
 
-  #certgen {
-    position: relative;
-    grid-area: certgendocker;
-    background: var(--clr-light);
-    padding: 0 0 0 25px;
-    margin: 5px;
-  }
+
 
   div.static,
   div.certbot {
