@@ -178,7 +178,7 @@ h3.construct {
 @keyframes movenback {
   50% {
     border-radius: 50px 10px 50px;
-    border-color: var(--clr-accent2);
+    border-color: maroon;
   }
 }
 
@@ -624,10 +624,9 @@ a.fourreturn {
 
 /*trees*/
 #trees {
-  background-image: linear-gradient(to bottom,
-      rgb(0, 0, 0, 0.6) 0%,
-      rgba(20, 150, 20, 0.8) 100%),
-    url(../img/treesbyfootpath.jpg);
+  background-image: url(../img/trees.jpg);
+  background-position: bottom 180px left -400px;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 154px;
@@ -669,7 +668,7 @@ img.banner {
 }
 
 img.banner:hover {
-  border: 4px solid var(--clr-dark2);
+  border: 4px solid var(--clr-accent2);
   transition: 0.5s;
 }
 
@@ -703,7 +702,7 @@ h1.trees {
 
 @media (min-width: 64em) {
   #trees {
-    height: 600px;
+    height: 560px;
     border-color: transparent;
   }
 
@@ -713,12 +712,13 @@ h1.trees {
 
   h1.trees {
     text-align: center;
-    color: white;
-    margin: 40px 0;
-    padding: 0px 20px;
+    color: var(--clr-dark);
+    margin: 20px 0;
+    padding: 0px 5px;
     font-family: var(--ff-secondary);
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid var(--clr-light);
+    background: var(--clr-light);
+    border: 5px solid var(--clr-dark);
+    border-radius: 5px;
   }
 }
 
@@ -863,14 +863,14 @@ ul.subject li.subject ul.subject li.subject:hover {
     position: absolute;
     opacity: 0.9;
     z-index: 1;
-    top: 320px;
+    top: 290px;
     width: 70%;
-    background: linear-gradient(to bottom, rgb(98, 156, 23) 30%, rgba(0, 100, 0, 0));
+    background: linear-gradient(to bottom, var(--clr-dark) 50%, rgba(0, 100, 0, 0));
     margin: 0 0 0 15%;
     padding: 10px 0;
     border-width: 3px 0px 0px;
     border-style: solid;
-    border-color: var(--clr-accent);
+    border-color: var(--clr-light);
     border-radius: 30px;
   }
 
@@ -894,7 +894,7 @@ ul.subject li.subject ul.subject li.subject:hover {
   }
 
   ul.subject li.subject:hover {
-    background: var(--clr-accent);
+    background: slategray;
   }
 
   ul.subject li.subject ul.subject {
@@ -954,9 +954,6 @@ ul.subject li.subject ul.subject li.subject:hover {
   background: var(--clr-dark2);
   transition-delay: 2s;
   transition-duration: 1.5s;
-  border-width: 10px;
-  border-style: solid;
-  border-color: rgb(100, 100, 100);
 }
 
 /*overlap visible and hidden div*/
@@ -972,10 +969,15 @@ ul.subject li.subject ul.subject li.subject:hover {
   transition-delay: 2s;
   transition-duration: 1.5s;
   z-index: 1;
+  background-color: var(--clr-light);
+  border: 5px solid var(--clr-dark);
+  margin: 0 auto;
+  min-width: 300px;
+  min-height: 400px;
 }
 
 h1.walkin {
-  color: white;
+  color: var(--clr-dark2);
   text-align: center;
   font-family: var(--ff-secondary);
   font-size: 2.2rem;
@@ -985,7 +987,7 @@ h1.walkin {
 h1.walkin::after {
   content: "";
   display: block;
-  background: white;
+  background: var(--clr-dark2);
   max-width: 280px;
   height: 2px;
   margin: 0 auto 70px;
@@ -1006,10 +1008,10 @@ img.walkin:hover {
 
 h2.walkin {
   text-align: center;
-  text-shadow: 5px 0 black;
+  text-shadow: 2px 0 gray;
   font-family: var(--ff-secondary);
   letter-spacing: 2px;
-  color: white;
+  color: var(--clr-dark);
   transition-duration: 6s;
 }
 
@@ -1081,7 +1083,7 @@ p.progress {
 
 @media (min-width: 64em) {
   #wip {
-    border-width: 13px;
+    border-width: 10px;
   }
 
   /*walkin*/

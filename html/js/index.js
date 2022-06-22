@@ -19,7 +19,6 @@ const flowers2 = document.querySelector("#flowers2");
 
 walkImg.addEventListener("mouseenter", function () {
   wipSect.style.background = "lightslategray";
-  wipSect.style.borderColor = "rgb(80, 95, 105)";
   walkXh2.style.color = "slategray";
   walkDiv.style.opacity = 0;
   revealHidden.style.opacity = 1;
@@ -31,7 +30,6 @@ walkImg.addEventListener("mouseenter", function () {
 wipSect.addEventListener("mouseleave", function () {
   wipSect.style.background = "rgb(60, 60, 60)";
   wipSect.style.borderColor = "rgb(100, 100, 100)";
-  walkXh2.style.color = "white";
   walkDiv.style.opacity = 1;
   revealHidden.style.opacity = 0;
   revealHidden.style.zIndex = "0";
