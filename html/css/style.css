@@ -1115,9 +1115,9 @@ p.progress {
     grid-template-rows: 130px auto auto;
     grid-template-columns: auto auto auto;
     grid-template-areas:
-      "h1 h1"
-      "hht certgendocker clothingsite"
-      "a other z";
+      "h1 h1 h1"
+      "hht certgen clothingsite"
+      "csp other z";
     margin-bottom: 25px;
     padding: 0 50px;
   }
