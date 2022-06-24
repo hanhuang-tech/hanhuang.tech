@@ -1022,10 +1022,6 @@ h2.walkin {
   z-index: 0;
 }
 
-#backend {
-  margin: 0 0 -20px 0;
-}
-
 h1.progress {
   color: white;
   text-align: center;
@@ -1045,6 +1041,7 @@ h1.progress::after {
 }
 
 div.restrict {
+  /*image restrictor*/
   display: flex;
   height: 145px;
   width: 200px;
@@ -1070,9 +1067,9 @@ img.progress:hover {
   transition: 2s;
 }
 
-h3.progress {
+h4.progress {
   text-align: center;
-  color: var(--clr-light);
+  color: slategray;
 }
 
 p.progress {
@@ -1116,8 +1113,8 @@ p.progress {
     grid-template-columns: auto auto auto;
     grid-template-areas:
       "h1 h1 h1"
-      "hht certgen clothingsite"
-      "csp other z";
+      "hht certgen clothing"
+      "dotnet other buffer";
     margin-bottom: 25px;
     padding: 0 50px;
   }
@@ -1137,9 +1134,16 @@ p.progress {
   }
 
   #clothingsite {
-    grid-area: clothingsite;
+    grid-area: clothing;
     background: var(--clr-light);
     padding: 0 25px 0 0;
+    margin: 5px;
+  }
+
+  #dotnet {
+    grid-area: dotnet;
+    background: var(--clr-light);
+    padding: 0 0 0 25px;
     margin: 5px;
   }
 
@@ -1150,15 +1154,12 @@ p.progress {
     margin: 5px;
   }
 
-
-
-  div.static,
-  div.certbot {
+  div.hht,
+  div.dotnet {
     float: right;
   }
 
-  div.backend,
-  div.other {
+  div.clothingsite {
     float: left;
   }
 
