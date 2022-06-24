@@ -13,9 +13,10 @@
   --clr-accent2: rgb(80, 80, 120);
   --clr-brown: rgb(138, 62, 0);
   --fs-h1: 2.4rem;
-  --fs-h2: 1.6rem;
+  --fs-h2: 1.8rem;
   --fs-h3: 1.4rem;
   --fs-h4: 1.2rem;
+  --fs-h5: 1.2rem;
   --fs-body: 1rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -28,6 +29,7 @@
     --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.5rem;
+    --fs-h5: 1.4rem;
     --fs-body: 1.25rem;
   }
 }
@@ -55,6 +57,12 @@ h4 {
   line-height: 0.5;
   margin: 0;
   font-size: var(--fs-h4);
+}
+
+h5 {
+  line-height: 1.2rem;
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-reg);
 }
 
 body {
@@ -950,7 +958,6 @@ ul.subject li.subject ul.subject li.subject:hover {
 /*wip*/
 #wip {
   display: grid;
-  position: relative;
   background: var(--clr-dark2);
   transition-delay: 2s;
   transition-duration: 1.5s;
@@ -1028,7 +1035,6 @@ h1.progress {
   font-size: 2.2rem;
   font-family: var(--ff-secondary);
   grid-area: h1;
-  margin: 40px 0;
 }
 
 h1.progress::after {
@@ -1046,15 +1052,17 @@ div.restrict {
   height: 145px;
   width: 200px;
   overflow: hidden;
-  margin: 40px auto 30px;
+  margin: 40px auto 20px;
 }
 
 #certbot-eff {
-  display: block;
+  display: inline;
+  background: red;
+  color: white;
   text-decoration: none;
-  color: red;
   text-align: center;
-  margin: -50px auto 20px;
+  margin: -20px auto 10px;
+  width: 200px;
 }
 
 img.progress {
@@ -1069,12 +1077,20 @@ img.progress:hover {
 
 h4.progress {
   text-align: center;
-  color: slategray;
+  color: var(--clr-light);
 }
 
 p.progress {
   text-align: center;
   color: var(--clr-light);
+  margin: 10px 0 0;
+}
+
+h5.progress {
+  text-align: center;
+  margin: 5px 0 5px;
+  color: orange;
+  font-family: var(--ff-secondary);
 }
 
 @media (min-width: 64em) {
@@ -1109,6 +1125,7 @@ p.progress {
   /*hiddenwip*/
   #hiddenwip {
     display: grid;
+    position: relative;
     grid-template-rows: 130px auto auto;
     grid-template-columns: auto auto auto;
     grid-template-areas:
@@ -1131,6 +1148,15 @@ p.progress {
     background: var(--clr-light);
     padding: 0 0 0 25px;
     margin: 5px;
+  }
+
+  #certbot-eff {
+    position: absolute;
+    z-index: 1;
+    left: 700px;
+    top: 360px;
+    margin: 0;
+    padding: 0;
   }
 
   #clothingsite {
@@ -1163,20 +1189,12 @@ p.progress {
     float: left;
   }
 
-  #certbot-eff {
-    position: absolute;
-    z-index: 1;
-    left: 47%;
-    top: 80%;
-    margin: 0;
-    padding: 0;
-  }
 
   div.restrict {
     height: 200px;
     width: 300px;
     padding: 0;
-    margin: 25px;
+    margin: 45px 25px 25px;
   }
 
   img.progress {
@@ -1187,14 +1205,22 @@ p.progress {
     color: var(--clr-light);
   }
 
-  h3.progress {
+  h4.progress {
     color: lightslategray;
-    margin-top: 20px;
+    line-height: 1.8rem;
+    margin: 20px 0 5px;
+  }
+
+  h5.progress {
+    color: red;
   }
 
   p.progress {
     color: lightslategray;
     text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 0;
   }
 }
 
