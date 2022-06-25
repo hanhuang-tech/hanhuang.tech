@@ -1056,13 +1056,20 @@ div.restrict {
 }
 
 #certbot-eff {
-  display: inline;
+  display: block;
   background: red;
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: -20px auto 10px;
-  width: 200px;
+  margin: -30px auto 10px;
+  width: 150px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+#certbot-eff:hover {
+  background: white;
+  color: red;
 }
 
 img.progress {
@@ -1133,28 +1140,28 @@ h5.progress {
       "hht certgen clothing"
       "dotnet other buffer";
     margin-bottom: 25px;
-    padding: 0 50px;
+    padding: 25px;
   }
 
   #hht {
     grid-area: hht;
     background: var(--clr-light);
     padding: 0 0 0 25px;
-    margin: 5px;
+    margin: 10px;
   }
 
   #certgen {
     grid-area: certgen;
     background: var(--clr-light);
-    padding: 0 0 0 25px;
-    margin: 5px;
+    padding-left: 25px;
+    margin: 10px;
   }
 
   #certbot-eff {
     position: absolute;
     z-index: 1;
-    left: 700px;
-    top: 360px;
+    left: 950px;
+    top: 220px;
     margin: 0;
     padding: 0;
   }
@@ -1162,39 +1169,42 @@ h5.progress {
   #clothingsite {
     grid-area: clothing;
     background: var(--clr-light);
-    padding: 0 25px 0 0;
-    margin: 5px;
+    padding-right: 25px;
+    margin: 10px;
   }
 
   #dotnet {
     grid-area: dotnet;
     background: var(--clr-light);
-    padding: 0 0 0 25px;
-    margin: 5px;
+    padding-left: 25px;
+    margin: 10px;
   }
 
   #other {
     grid-area: other;
     background: var(--clr-light);
-    padding: 0 25px 0 0;
-    margin: 5px;
+    padding-right: 25px;
+    margin: 10px;
+  }
+
+  div.restrict {
+    height: 200px;
+    width: 300px;
   }
 
   div.hht,
   div.dotnet {
     float: right;
+    margin: 50px 30px 20px;
+  }
+
+  div.certbot,
+  div.other {
+    margin: 0 auto;
   }
 
   div.clothingsite {
     float: left;
-  }
-
-
-  div.restrict {
-    height: 200px;
-    width: 300px;
-    padding: 0;
-    margin: 45px 25px 25px;
   }
 
   img.progress {
@@ -1208,20 +1218,21 @@ h5.progress {
   h4.progress {
     color: lightslategray;
     line-height: 1.8rem;
-    margin: 20px 0 5px;
-  }
-
-  h5.progress {
-    color: red;
   }
 
   p.progress {
     color: lightslategray;
-    text-align: justify;
+    text-align: center;
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin: 0;
   }
+
+  h5.progress {
+    color: red;
+    margin: 5px;
+  }
+
 }
 
 /*flowers2*/
