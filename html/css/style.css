@@ -29,7 +29,7 @@
     --fs-h2: 2.2rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.5rem;
-    --fs-h5: 1.4rem;
+    --fs-h5: 1.2rem;
     --fs-body: 1.25rem;
   }
 }
@@ -942,19 +942,6 @@ ul.subject li.subject ul.subject li.subject:hover {
   opacity: 0;
 }
 
-/*@media (min-width: 64em) {
-  #flowers1 {
-    visibility: visible;
-    opacity: 1;
-    background-image: url(../img/flowersbed.jpg);
-    background-position-y: 490px;
-    background-size: cover;
-    height: 210px;
-    border: 0px solid var(--clr-dark2);
-    border-width: 30px 0 0;
-  }
-}*/
-
 /*wip*/
 #wip {
   display: grid;
@@ -1035,6 +1022,7 @@ h1.progress {
   font-size: 2.2rem;
   font-family: var(--ff-secondary);
   grid-area: h1;
+  margin: 40px auto;
 }
 
 h1.progress::after {
@@ -1043,7 +1031,7 @@ h1.progress::after {
   background: white;
   max-width: 280px;
   height: 2px;
-  margin: 0 auto 50px;
+  margin: 0 auto 60px;
 }
 
 div.restrict {
@@ -1070,6 +1058,7 @@ div.restrict {
 #certbot-eff:hover {
   background: white;
   color: red;
+  transition: 0.5s;
 }
 
 img.progress {
@@ -1078,7 +1067,8 @@ img.progress {
 }
 
 img.progress:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  opacity: 0.8;
   transition: 2s;
 }
 
@@ -1102,12 +1092,13 @@ h5.progress {
 
 @media (min-width: 64em) {
   #wip {
-    border-width: 10px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 10px 0;
   }
 
   /*walkin*/
-  h1.walkin,
-  h1.progress {
+  h1.walkin {
     font-size: 2.75rem;
     margin-bottom: 60px;
   }
@@ -1133,27 +1124,29 @@ h5.progress {
   #hiddenwip {
     display: grid;
     position: relative;
-    grid-template-rows: 130px auto auto;
+    grid-template-rows: 140px auto auto;
     grid-template-columns: auto auto auto;
     grid-template-areas:
       "h1 h1 h1"
       "hht certgen clothing"
       "dotnet other buffer";
-    margin-bottom: 25px;
-    padding: 25px;
+  }
+
+  h1.progress {
+    font-size: 2.75rem;
   }
 
   #hht {
     grid-area: hht;
     background: var(--clr-light);
-    padding: 0 0 0 25px;
+    padding: 25px;
     margin: 10px;
   }
 
   #certgen {
     grid-area: certgen;
     background: var(--clr-light);
-    padding-left: 25px;
+    padding: 25px;
     margin: 10px;
   }
 
@@ -1163,27 +1156,26 @@ h5.progress {
     left: 950px;
     top: 220px;
     margin: 0;
-    padding: 0;
   }
 
   #clothingsite {
     grid-area: clothing;
     background: var(--clr-light);
-    padding-right: 25px;
+    padding: 25px;
     margin: 10px;
   }
 
   #dotnet {
     grid-area: dotnet;
     background: var(--clr-light);
-    padding-left: 25px;
+    padding: 25px;
     margin: 10px;
   }
 
   #other {
     grid-area: other;
     background: var(--clr-light);
-    padding-right: 25px;
+    padding: 25px;
     margin: 10px;
   }
 
@@ -1195,24 +1187,24 @@ h5.progress {
   div.hht,
   div.dotnet {
     float: right;
-    margin: 50px 30px 20px;
+    margin: 0 0 100px 20px;
   }
 
-  div.certbot,
+  div.certbot {
+    margin: 0 auto;
+  }
+
   div.other {
     margin: 0 auto;
   }
 
   div.clothingsite {
     float: left;
+    margin: 0 20px 116px 0;
   }
 
   img.progress {
     width: 300px;
-  }
-
-  h1.progress {
-    color: var(--clr-light);
   }
 
   h4.progress {
@@ -1224,15 +1216,20 @@ h5.progress {
     color: lightslategray;
     text-align: center;
     font-size: 1.2rem;
-    line-height: 1.8rem;
-    margin: 0;
+    line-height: 1.5rem;
+    margin: 10px 0 5px;
   }
 
   h5.progress {
-    color: red;
-    margin: 5px;
+    display: inline-block;
+    align-content: center;
+    color: var(--clr-accent);
+    outline: 2px solid var(--clr-accent);
+    background: white;
+    max-width: 450px;
+    padding: 5px;
+    margin: 0;
   }
-
 }
 
 /*flowers2*/
