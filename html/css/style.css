@@ -974,7 +974,7 @@ h1.walkin {
   text-align: center;
   font-family: var(--ff-secondary);
   font-size: 2.2rem;
-  margin: 20px 20px;
+  margin: 20px;
 }
 
 h1.walkin::after {
@@ -1056,8 +1056,8 @@ div.restrict {
 }
 
 #certbot-eff:hover {
-  background: white;
-  color: red;
+  background: black;
+  border-color: black;
   transition: 0.5s;
 }
 
@@ -1083,7 +1083,9 @@ p.progress {
   margin: 10px 0 0;
 }
 
-h5.progress {
+h5.techleft,
+h5.techmid,
+h5.techright {
   text-align: center;
   margin: 5px 0 5px;
   color: orange;
@@ -1137,6 +1139,8 @@ h5.progress {
   }
 
   #hht {
+    position: relative;
+    flex-direction: column;
     grid-area: hht;
     background: var(--clr-light);
     padding: 25px;
@@ -1144,21 +1148,23 @@ h5.progress {
   }
 
   #certgen {
+    position: relative;
     grid-area: certgen;
     background: var(--clr-light);
-    padding: 25px;
+    padding: 0 25px;
     margin: 10px;
   }
 
   #certbot-eff {
     position: absolute;
     z-index: 1;
-    left: 950px;
-    top: 220px;
+    right: 80px;
+    top: 50px;
     margin: 0;
   }
 
   #clothingsite {
+    position: relative;
     grid-area: clothing;
     background: var(--clr-light);
     padding: 25px;
@@ -1166,6 +1172,7 @@ h5.progress {
   }
 
   #dotnet {
+    position: relative;
     grid-area: dotnet;
     background: var(--clr-light);
     padding: 25px;
@@ -1173,9 +1180,10 @@ h5.progress {
   }
 
   #other {
+    position: relative;
     grid-area: other;
     background: var(--clr-light);
-    padding: 25px;
+    padding: 0 25px;
     margin: 10px;
   }
 
@@ -1191,6 +1199,7 @@ h5.progress {
   }
 
   div.certbot {
+    padding: 0;
     margin: 0 auto;
   }
 
@@ -1220,15 +1229,46 @@ h5.progress {
     margin: 10px 0 5px;
   }
 
-  h5.progress {
+  h5.techleft {
+    position: absolute;
     display: inline-block;
     align-content: center;
     color: var(--clr-accent);
     outline: 2px solid var(--clr-accent);
     background: white;
-    max-width: 450px;
+    max-width: 290px;
     padding: 5px;
     margin: 0;
+    right: 30px;
+    top: 240px;
+  }
+
+  h5.techmid {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    color: var(--clr-accent);
+    outline: 2px solid var(--clr-accent);
+    background: white;
+    max-width: 290px;
+    padding: 5px;
+    margin: 0;
+    right: 30px;
+    top: 240px;
+  }
+
+  h5.techright {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    color: var(--clr-accent);
+    outline: 2px solid var(--clr-accent);
+    background: white;
+    max-width: 290px;
+    padding: 5px;
+    margin: 0;
+    left: 30px;
+    top: 240px;
   }
 }
 
@@ -1236,12 +1276,12 @@ h5.progress {
 #flowers2 {
   opacity: 0.8;
   z-index: 1;
-  background-image: url(../img/flowersbed.jpg);
-  background-position: 0;
+  background-image: url(../img/pohutu.jpg);
+  background-position-x: 20%;
   background-size: cover;
   filter: grayscale(50%);
-  height: 450px;
-  margin-top: -450px;
+  height: 500px;
+  margin-top: -500px;
   transition-duration: 5s;
 }
 
