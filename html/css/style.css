@@ -959,7 +959,7 @@ ul.subject li.subject ul.subject li.subject:hover {
 
 /*div wip elements*/
 #walkin {
-  opacity: 0;
+  opacity: 1;
   transition-delay: 2s;
   transition-duration: 1.5s;
   z-index: 1;
@@ -1010,7 +1010,7 @@ h2.walkin {
 
 /*hidden wip*/
 #hiddenwip {
-  opacity: 1;
+  opacity: 0;
   transition-delay: 2s;
   transition-duration: 1.5s;
   z-index: 0;
@@ -1049,15 +1049,13 @@ div.restrict {
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: -30px auto 10px;
+  margin: 0px auto 10px;
   width: 150px;
-  border: 1px solid red;
   border-radius: 5px;
 }
 
 #certbot-eff:hover {
-  background: black;
-  border-color: black;
+  background: var(--clr-dark);
   transition: 0.5s;
 }
 
@@ -1080,14 +1078,14 @@ h4.progress {
 p.progress {
   text-align: center;
   color: var(--clr-light);
-  margin: 10px 0 0;
+  margin-top: 10px;
 }
 
 h5.techleft,
 h5.techmid,
 h5.techright {
   text-align: center;
-  margin: 5px 0 5px;
+  margin: 0px;
   color: orange;
   font-family: var(--ff-secondary);
 }
@@ -1140,11 +1138,11 @@ h5.techright {
 
   #hht {
     position: relative;
-    flex-direction: column;
     grid-area: hht;
     background: var(--clr-light);
     padding: 25px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 
   #certgen {
@@ -1152,14 +1150,15 @@ h5.techright {
     grid-area: certgen;
     background: var(--clr-light);
     padding: 0 25px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 
   #certbot-eff {
     position: absolute;
     z-index: 1;
     right: 80px;
-    top: 50px;
+    top: 40px;
     margin: 0;
   }
 
@@ -1168,7 +1167,8 @@ h5.techright {
     grid-area: clothing;
     background: var(--clr-light);
     padding: 25px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 
   #dotnet {
@@ -1176,7 +1176,8 @@ h5.techright {
     grid-area: dotnet;
     background: var(--clr-light);
     padding: 25px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 
   #other {
@@ -1184,7 +1185,8 @@ h5.techright {
     grid-area: other;
     background: var(--clr-light);
     padding: 0 25px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 
   div.restrict {
@@ -1195,21 +1197,20 @@ h5.techright {
   div.hht,
   div.dotnet {
     float: right;
-    margin: 0 0 100px 20px;
+    margin: 0 0 60px 20px;
   }
 
-  div.certbot {
-    padding: 0;
-    margin: 0 auto;
-  }
-
+  div.certbot,
   div.other {
+    height: 150px;
+    width: 225px;
     margin: 0 auto;
+    padding: 0;
   }
 
   div.clothingsite {
     float: left;
-    margin: 0 20px 116px 0;
+    margin: 0 20px 60px 0;
   }
 
   img.progress {
@@ -1236,25 +1237,25 @@ h5.techright {
     color: var(--clr-accent);
     outline: 2px solid var(--clr-accent);
     background: white;
-    max-width: 290px;
-    padding: 5px;
+    width: 300px;
+    padding: 3px;
     margin: 0;
-    right: 30px;
-    top: 240px;
+    right: 25px;
+    top: 230px;
   }
 
   h5.techmid {
     position: absolute;
     display: inline-block;
     align-content: center;
-    color: var(--clr-accent);
-    outline: 2px solid var(--clr-accent);
+    color: var(--clr-brown);
+    outline: 2px solid var(--clr-brown);
     background: white;
-    max-width: 290px;
+    width: 300px;
     padding: 5px;
     margin: 0;
-    right: 30px;
-    top: 240px;
+    left: 120px;
+    top: 245px;
   }
 
   h5.techright {
@@ -1264,11 +1265,11 @@ h5.techright {
     color: var(--clr-accent);
     outline: 2px solid var(--clr-accent);
     background: white;
-    max-width: 290px;
+    width: 300px;
     padding: 5px;
     margin: 0;
-    left: 30px;
-    top: 240px;
+    left: 25px;
+    top: 230px;
   }
 }
 
@@ -1353,7 +1354,7 @@ img.han {
 
   img.han {
     float: right;
-    margin: -55px 20px 0px;
+    margin: -60px 20px 0px;
   }
 }
 
