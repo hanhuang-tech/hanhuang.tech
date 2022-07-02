@@ -94,7 +94,7 @@ img {
 
 /* browse assist*/
 :focus {
-  outline: 3px solid lightblue;
+  outline: 3px solid red;
   outline-offset: 2px;
   position: static;
   z-index: 5;
@@ -651,10 +651,9 @@ a.fourreturn {
 
 div.logo {
   display: flex;
-  padding: 10px;
-  column-gap: 5%;
-  min-width: 250px;
-  width: 25%;
+  padding: 7px;
+  column-gap: 7px;
+  max-width: 220px;
   background: var(--clr-dark);
   border: 2px solid var(--clr-dark2);
   border-radius: 10px;
@@ -676,7 +675,7 @@ img.banner {
 }
 
 img.banner:hover {
-  border: 4px solid var(--clr-accent2);
+  border: 4px solid var(--clr-dark2);
   transition: 0.5s;
 }
 
@@ -1516,14 +1515,27 @@ h4.footer {
   background-size: cover;
   background-position-x: -100px;
   background-attachment: fixed;
-  height: 550px;
+  height: 570px;
+  padding: 15px;
+}
+
+h1.resindex {
+  display: inline-block;
+  font-size: 2.1rem;
+  color: var(--clr-dark);
+  margin: 25px auto;
+  padding: 0px 5px;
+  font-family: var(--ff-secondary);
+  background: var(--clr-light);
+  border: 5px solid var(--clr-dark);
+  border-radius: 5px;
 }
 
 div.resindex {
   background-color: var(--clr-light);
-  max-width: 400px;
-  margin: 85px auto 0;
-  padding: 0;
+  width: 350px;
+  margin: 0px auto 0;
+  border-radius: 10px 10px 0 0;
 
   display: flex;
   flex-direction: column;
@@ -1536,7 +1548,8 @@ div.reswrapper {
 
 img.resindex {
   margin: 0 auto 3px;
-  width: 400px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
 }
 
 div.resstatic {
@@ -1566,27 +1579,16 @@ div.ressocial {
   margin: auto 0;
 }
 
-@media (max-width: 30em) {
-  div.reswrapper {
-    margin: auto 50px;
-  }
-
-  .res-github,
-  .res-youtube {
-    width: 35px;
-  }
-}
-
 .res-github {
   opacity: 90%;
-  max-width: 40px;
-  margin: 0 3px;
+  max-width: 35px;
+  margin: 1px 4px 0;
 }
 
 .res-youtube {
   opacity: 85%;
   max-width: 40px;
-  margin: 0 3px;
+  margin: 0 0 0 3px;
 }
 
 .res-github:hover,
@@ -1595,12 +1597,29 @@ div.ressocial {
 }
 
 p.resindex {
+  width: 350px;
   background: var(--clr-light);
   text-align: center;
-  padding: 0 20px 5px;
   margin: 0 auto;
-  max-width: 400px;
   border-radius: 0 0 10px 10px;
+}
+
+@media (min-width:64em) {
+  #resindex {
+    height: 650px;
+    padding: 15px;
+  }
+
+  h1.resindex {
+    margin: 25px 0;
+    padding: 0px 5px;
+    border: 5px solid var(--clr-dark);
+    border-radius: 5px;
+  }
+
+  img.resindex {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 /* html */
@@ -1608,8 +1627,8 @@ p.resindex {
 #html {
   background: var(--clr-light);
   border: 0px solid var(--clr-brown);
-  border-width: 30px 0;
-  padding: 20px;
+  border-width: 15px 0;
+  padding: 30px;
 }
 
 #reshtml {
