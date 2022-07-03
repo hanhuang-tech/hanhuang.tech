@@ -382,13 +382,6 @@ li.nav:hover {
 }
 
 /*feedback lantern*/
-/*hide lantern under 600px width*/
-@media (max-width: 40em) {
-  #feedback {
-    visibility: hidden;
-    opacity: 1;
-  }
-}
 
 /*lantern intial position*/
 #feedback {
@@ -545,59 +538,83 @@ div.feedback:hover::after {
 }
 
 /* fourofour */
-#fourofour {
+body.fourofour {
   background: lightcyan;
+  background-size: cover;
+  background-image: linear-gradient(to top,
+      var(--clr-dark2) 50%,
+      rgba(255, 255, 255, 0.2)),
+    url(../img/sunset.jpg);
+  background-position: 25% 75%;
+  background-repeat: no-repeat;
+}
+
+#fourofour {
+  position: relative;
+  padding: 0px;
+}
+
+div.padding {
+  padding: 15px;
 }
 
 div.fourofour {
-  padding: 22px;
+  margin: 150px 0;
 }
 
 img.fourofour {
   margin: 0 auto;
-  padding: 10px;
-  max-width: 180px;
+  max-width: 150px;
 }
 
 h1.fourofour {
   text-align: center;
+  background: skyblue;
   color: var(--clr-dark2);
   font-size: 2.2rem;
   line-height: 3rem;
-  padding: 5px;
+  margin: 30px auto;
+  width: 100px;
 }
 
 h3.fourofour {
   text-align: center;
   font-size: 1.4rem;
-  line-height: 2.5rem;
+  line-height: 1.5rem;
   color: cadetblue;
 }
 
 h4.fourofour {
   text-align: center;
-  font-size: 1.1rem;
+  max-width: 350px;
+  font-size: 1.2rem;
   line-height: 2rem;
-  color: var(--clr-dark2);
+  margin: 20px auto 5px;
+  color: var(--clr-light);
 }
 
 div.fourreturn {
   background: red;
   text-align: center;
-  max-width: 190px;
-  padding: 5px;
-  margin: 10px auto;
+  max-width: 230px;
+  padding: 0px 10px;
+  margin: 20px auto 0px;
 }
 
 a.fourreturn {
   color: var(--clr-light);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-decoration: none;
 }
 
+div.fourreturn:hover {
+  background: green;
+  transition: background 1s;
+}
+
 @media (min-width: 64em) {
-  div.fourofour {
-    padding: 102.5px;
+  body.fourofour {
+    background-position: 50% 100%;
   }
 
   img.fourofour {
@@ -611,22 +628,24 @@ a.fourreturn {
   h3.fourofour {
     text-align: center;
     font-size: 1.8rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 
   h4.fourofour {
     text-align: center;
     font-size: 1.4rem;
     line-height: 2.5rem;
-    padding: 10px;
+    margin: 20px auto 0px;
+    max-width: 500px;
   }
 
   div.fourreturn {
-    max-width: 220px;
+    max-width: 250px;
+    margin: 20px auto 0px;
   }
 
   a.fourreturn {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1058,6 +1077,28 @@ div.restrict {
   transition: 0.5s;
 }
 
+div.clothinghht {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a.clothinghht {
+  text-decoration: none;
+  color: var(--clr-light);
+  background: var(--clr-accent);
+  padding: 3px 15px;
+  border-radius: 5px;
+}
+
+a.clothinghht:hover {
+  transition: 0.5s;
+  border-style: solid;
+  border-color: slategray;
+  border-width: 0 0 5px 5px;
+  border-radius: 5px;
+  background: var(--clr-accent2);
+}
+
 img.progress {
   width: 200px;
   align-items: center;
@@ -1093,7 +1134,7 @@ h5.techright {
   #wip {
     border-style: solid;
     border-color: gray;
-    border-width: 10px 0;
+    border-width: 15px 0;
   }
 
   /*walkin*/
@@ -1125,8 +1166,7 @@ h5.techright {
     position: relative;
     grid-template-rows: 140px auto auto;
     grid-template-columns: auto auto auto;
-    grid-template-areas:
-      "h1 h1 h1"
+    grid-template-areas: "h1 h1 h1"
       "hht certgen clothing"
       "dotnet other buffer";
   }
@@ -1168,6 +1208,28 @@ h5.techright {
     padding: 25px;
     margin: 5px;
     border-radius: 10px;
+  }
+
+  div.clothinghht {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  a.clothinghht {
+    text-decoration: none;
+    color: var(--clr-light);
+    background: var(--clr-accent);
+    padding: 3px 15px;
+    border-radius: 5px;
+  }
+
+  a.clothinghht:hover {
+    transition: 0.5s;
+    border-style: solid;
+    border-color: slategray;
+    border-width: 0 0 5px 5px;
+    border-radius: 5px;
+    background: var(--clr-accent2);
   }
 
   #dotnet {
@@ -1494,7 +1556,6 @@ li.contact {
   position: relative;
   background: lightslategray;
   z-index: 0;
-  bottom: 0px;
 }
 
 h4.footer {
