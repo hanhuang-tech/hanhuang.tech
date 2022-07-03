@@ -573,14 +573,14 @@ h1.fourofour {
   color: var(--clr-dark2);
   font-size: 2.2rem;
   line-height: 3rem;
-  margin: 30px auto;
+  margin: 20px auto 10px;
   width: 100px;
 }
 
 h3.fourofour {
   text-align: center;
   font-size: 1.4rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   color: cadetblue;
 }
 
@@ -589,7 +589,7 @@ h4.fourofour {
   max-width: 350px;
   font-size: 1.2rem;
   line-height: 2rem;
-  margin: 20px auto 5px;
+  margin: 0px auto 5px;
   color: var(--clr-light);
 }
 
@@ -597,8 +597,9 @@ div.fourreturn {
   background: red;
   text-align: center;
   max-width: 230px;
-  padding: 0px 10px;
-  margin: 20px auto 0px;
+  padding: 5px 10px;
+  margin: 0px auto;
+  border-radius: 10px;
 }
 
 a.fourreturn {
@@ -634,14 +635,15 @@ div.fourreturn:hover {
   h4.fourofour {
     text-align: center;
     font-size: 1.4rem;
-    line-height: 2.5rem;
-    margin: 20px auto 0px;
+    line-height: 2.2rem;
+    margin: 0px auto;
     max-width: 500px;
   }
 
   div.fourreturn {
     max-width: 250px;
-    margin: 20px auto 0px;
+    padding: 5px 10px;
+    margin: 10px auto 220px;
   }
 
   a.fourreturn {
