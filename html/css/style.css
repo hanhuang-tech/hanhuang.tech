@@ -1777,20 +1777,6 @@ h3.reshtml {
   }
 }
 
-/* sitebackend */
-/*
-.sitebackend__title {
-  text-align: center;
-}
-
-.sitebackend__blog {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-/* .resourcesbackend */
-
 .resourcesbackend__background {
   background-color: grey;
   background-image: url(../img/treesbyfootpath.jpg);
@@ -2066,8 +2052,8 @@ h3.reshtml {
 h3.side-page {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 1.8rem;
-  line-height: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 0.5rem;
   font-family: var(--ff-secondary);
 }
 
@@ -2075,34 +2061,54 @@ h3.side-section {
   display: inline-block;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-reg);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 0.5;
   background-color: lightgray;
-  padding: 8px;
+  padding: 5px;
   border: 2px solid darkblue;
   border-radius: 5px;
-  box-shadow: 1px 1px;
+  box-shadow: 0 1px;
 }
 
-.section__restrict {
+div.sectionwrapper {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
 }
 
-.section__title {
-  font-size: 1.4rem;
-  margin-bottom: 5px;
+div.section-title {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
 }
 
 .codebox {
-  display: block;
-  font-family: var(--ff-secondary);
+  display: grid;
+  grid-template-columns: 450px;
   padding: 12px 12px;
-  background-color: var(--clr-light);
+  font-family: var(--ff-secondary);
   border: 0px solid var(--clr-dark);
   border-width: 2px 2px 2px 8px;
+}
+
+@media(min-width: 64em) {
+  h3.side-page {
+    font-size: 1.8rem;
+  }
+
+  h3.side-section {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  div.section-title {
+    font-size: 1.5rem;
+    margin: 15px 0 8px;
+  }
+
+  .codebox {
+    grid-template-columns: 900px;
+  }
 }
 
 /* codebox coloured text */
@@ -2162,18 +2168,18 @@ h3.side-section {
 /* spoilers */
 
 #spoil-btn1 {
-  color: grey;
-  background: lightgrey;
-  border: 0px solid grey;
+  color: blue;
+  background: skyblue;
+  border: 0px solid blue;
   border-width: 2px 2px 2px 8px;
-  font-family: (var(--ff-secondary));
+  font-family: var(--ff-secondary);
   position: relative;
   margin: 0px 0px;
   line-height: 0.5;
 }
 
 #spoil-btn1:hover {
-  background: lightgrey;
+  background: lightblue;
   cursor: pointer;
 }
 
@@ -2182,22 +2188,22 @@ h3.side-section {
   background: orange;
   border: 0px solid var(--clr-brown);
   border-width: 2px 2px 2px 8px;
-  font-family: (var(--ff-secondary));
+  font-family: var(--ff-secondary);
   position: relative;
   line-height: 0.5;
 }
 
 #spoil-btn2:hover {
-  background: var(--clr-darkorange);
+  background: lightgoldenrodyellow;
   cursor: pointer;
 }
 
 #spoil-btn3 {
-  color: var(--clr-dodgerblue);
-  background: var(--clr-paleaqua);
-  border: 0px solid var(--clr-dodgerblue);
+  color: red;
+  background: lightcoral;
+  border: 0px solid red;
   border-width: 2px 2px 2px 8px;
-  font-family: (var(--ff-secondary));
+  font-family: var(--ff-secondary);
   position: relative;
   line-height: 0.5;
 }
@@ -2212,7 +2218,7 @@ h3.side-section {
   background: var(--clr-light);
   border: 3px solid var(--clr-forestgreen);
   border-radius: 10px;
-  font-family: (var(--ff-secondary));
+  font-family: var(--ff-secondary);
   font-size: 1.4rem;
   position: relative;
 }
@@ -2228,7 +2234,7 @@ h3.side-section {
   background: var(--clr-light);
   border: 3px solid var(--clr-copper);
   border-radius: 10px;
-  font-family: (var(--ff-secondary));
+  font-family: var(--ff-secondary);
   font-size: 1.4rem;
   position: relative;
 }
