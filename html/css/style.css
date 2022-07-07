@@ -186,7 +186,7 @@ h3.construct {
 @keyframes movenback {
   50% {
     border-radius: 50px 10px 50px;
-    border-color: maroon;
+    border-color: var(--clr-accent2);
   }
 }
 
@@ -682,7 +682,9 @@ div.logo {
   column-gap: 7px;
   max-width: 220px;
   background: var(--clr-dark);
-  border: 2px solid var(--clr-dark2);
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--clr-dark2);
   border-radius: 10px;
 }
 
@@ -1362,14 +1364,14 @@ h5.techright {
   }
 }
 
-/*sunset*/
-#sunset {
+/*bridge*/
+#bridge {
   visibility: hidden;
   opacity: 0;
 }
 
 @media (min-width: 64em) {
-  #sunset {
+  #bridge {
     visibility: visible;
     opacity: 1;
     background-image: url(../img/bridge.jpg);
