@@ -109,8 +109,8 @@ html {
   padding: 0;
   margin: 0;
   line-height: 0;
-  font-size: 1.5rem;
-  color: lightgray;
+  font-size: 0.6rem;
+  color: white;
 }
 
 .mb::after {
@@ -120,14 +120,14 @@ html {
   padding: 0;
   margin: 0;
   content: "";
-  background: gray;
-  height: 3px;
-  width: 3px;
-  top: 675px;
+  background: red;
+  height: 2px;
+  width: 2px;
+  top: 710px;
 }
 
 
-@media (max-width: 30em) {
+@media (max-width: 25em) {
   .mb {
     visibility: visible;
   }
@@ -1711,6 +1711,10 @@ p.resindex {
   padding: 20px;
 }
 
+#html5 {
+  margin: 5px auto;
+}
+
 #reshtml {
   max-width: 160px;
   background: lightgrey;
@@ -1753,26 +1757,25 @@ h3.reshtml {
 
 @media (min-width: 64em) {
   #reshtml {
-    max-width: 210px;
+    max-width: 185px;
   }
 
   div.reshtml {
-    padding: 3px 20px;
-    border-width: 3px;
+    border-width: 4px;
   }
 
   h3.reshtml {
-    font-size: 2.5rem;
-    margin-top: 4px;
+    font-size: 2.4rem;
+    margin-top: 2px;
   }
 
   .html-github {
-    max-width: 40px;
+    max-width: 35px;
     margin: 0;
   }
 
   .html-youtube {
-    max-width: 40px;
+    max-width: 35px;
     margin: 0;
   }
 }
