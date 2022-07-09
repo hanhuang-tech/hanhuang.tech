@@ -2085,15 +2085,6 @@ div.section-title {
   margin: 10px 0 5px;
 }
 
-.codebox {
-  display: grid;
-  grid-template-columns: 450px;
-  padding: 12px 12px;
-  font-family: var(--ff-secondary);
-  border: 0px solid var(--clr-dark);
-  border-width: 2px 2px 2px 8px;
-}
-
 @media(min-width: 64em) {
   h3.side-page {
     font-size: 1.8rem;
@@ -2125,6 +2116,15 @@ div.section-title {
 
 .codegreen {
   color: darkgreen;
+}
+
+.codebox {
+  display: grid;
+  grid-template-columns: 350px;
+  padding: 12px 12px;
+  font-family: var(--ff-secondary);
+  border: 0px solid var(--clr-dark);
+  border-width: 2px 2px 2px 8px;
 }
 
 .codebox__margin0 {
@@ -2218,7 +2218,7 @@ div.section-title {
 }
 
 #spoil-btn3:hover {
-  background: var(--clr-skyblue);
+  background: lightpink;
   cursor: pointer;
 }
 
