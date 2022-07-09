@@ -2128,6 +2128,7 @@ div.section-title {
   line-height: 1;
   margin-top: 0px;
   margin-bottom: 0px;
+  z-index: 1;
 }
 
 .codebox__margin1 {
@@ -2135,6 +2136,7 @@ div.section-title {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 40px;
+  z-index: 1;
 }
 
 .codebox__margin2 {
@@ -2142,6 +2144,7 @@ div.section-title {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 80px;
+  z-index: 1;
 }
 
 .codebox__margin3 {
@@ -2149,6 +2152,7 @@ div.section-title {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 120px;
+  z-index: 1;
 }
 
 .codebox__margin4 {
@@ -2156,6 +2160,7 @@ div.section-title {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 160px;
+  z-index: 1;
 }
 
 .codebox__margin5 {
@@ -2163,6 +2168,7 @@ div.section-title {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 200px;
+  z-index: 1;
 }
 
 /* spoilers */
