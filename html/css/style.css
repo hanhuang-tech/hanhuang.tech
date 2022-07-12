@@ -1715,7 +1715,7 @@ p.resindex {
 /* html, css, js */
 
 #html {
-  background: var(--clr-light);
+  background: lightgrey;
   border: 0px solid var(--clr-brown);
   border-width: 10px 0;
   padding: 20px;
@@ -1723,14 +1723,14 @@ p.resindex {
 
 #css {
   background: lightgreen;
-  border: 0px solid var(--clr-brown);
+  border: 0px solid var(--clr-dark2);
   border-width: 10px 0;
   padding: 20px;
 }
 
 #js {
   background: lightblue;
-  border: 0px solid var(--clr-brown);
+  border: 0px solid var(--clr-dark2);
   border-width: 10px 0;
   padding: 20px;
 }
@@ -2115,10 +2115,6 @@ p.html-body {
   background-size: cover;
   border: 5px solid green;
   padding: 40px;
-}
-
-.html__gap {
-  margin-top: 50px;
 }
 
 h3.side-page {
