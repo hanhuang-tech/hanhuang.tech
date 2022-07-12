@@ -1592,8 +1592,11 @@ h4.footer {
   background-size: cover;
   background-position-x: -100px;
   background-attachment: fixed;
-  height: 630px;
+  height: 670px;
   padding: 15px;
+  border-color: var(--clr-brown);
+  border-style: solid;
+  border-width: 0 0 10px 0;
 }
 
 h1.resindex {
@@ -1687,7 +1690,8 @@ p.resindex {
   }
 
   #resindex {
-    height: 660px;
+    height: 680px;
+    border-width: 0 0 15px 0;
     padding: 15px;
   }
 
@@ -1713,26 +1717,37 @@ p.resindex {
 }
 
 /* html, css, js */
-
 #html {
   background: lightgrey;
-  border: 0px solid var(--clr-brown);
-  border-width: 10px 0;
   padding: 20px;
+  margin: 0;
 }
 
 #css {
   background: lightgreen;
-  border: 0px solid var(--clr-dark2);
-  border-width: 10px 0;
   padding: 20px;
+  margin: 0;
 }
 
 #js {
   background: lightblue;
-  border: 0px solid var(--clr-dark2);
-  border-width: 10px 0;
   padding: 20px;
+  margin: 0;
+}
+
+#htmlwrapper {
+  background-color: rgb(163, 162, 162);
+  padding: 15px;
+}
+
+#csswrapper {
+  background-color: rgb(116, 187, 116);
+  padding: 15px;
+}
+
+#jswrapper {
+  background-color: rgb(111, 167, 189);
+  padding: 15px;
 }
 
 #htmllogo,
@@ -1821,7 +1836,7 @@ h3.resjs {
   }
 
   #resjs {
-    max-width: 250px;
+    max-width: 245px;
   }
 
   div.reshtml,
@@ -2118,31 +2133,33 @@ p.html-body {
 }
 
 h3.side-page {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  line-height: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin: 5px 0;
   font-family: var(--ff-secondary);
 }
 
-h3.side-section {
+h3.side-tag {
   display: inline-block;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-reg);
-  font-size: 1.2rem;
-  line-height: 0.5;
-  background-color: lightgray;
-  padding: 5px;
-  border: 2px solid darkblue;
-  border-radius: 5px;
+  color: darkblue;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 1px 2px;
+  margin: 2px 0;
+
+  background-color: var(--clr-light);
+  border-style: solid;
+  border-color: darkblue;
+  border-width: 2px;
   box-shadow: 0 1px;
+  border-radius: 5px;
 }
 
-div.sectionwrapper {
+div.sidewrapper {
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
+  margin: 0 auto;
 }
 
 div.section-title {
@@ -2152,17 +2169,25 @@ div.section-title {
 
 @media(min-width: 64em) {
   h3.side-page {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 8px 0;
   }
 
-  h3.side-section {
-    font-size: 1.5rem;
-    padding: 5px;
+  h3.side-tag {
+    font-size: 1.25rem;
+    line-height: 1rem;
+    padding: 4px;
+    margin: 3px 0;
+
+    border-width: 2px;
+    box-shadow: 0 2px;
+    border-radius: 6px;
   }
 
   div.section-title {
     font-size: 1.5rem;
-    margin: 15px 0 8px;
+    margin: 10px 0 8px;
   }
 
   .codebox {
@@ -2184,8 +2209,6 @@ div.section-title {
 }
 
 .codebox {
-  display: grid;
-  grid-template-columns: 350px;
   padding: 12px 12px;
   font-family: var(--ff-secondary);
   background: var(--clr-light);
@@ -2195,48 +2218,37 @@ div.section-title {
 
 .codebox__margin0 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   z-index: 1;
 }
 
 .codebox__margin1 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 40px;
+  margin: 0 0 0 40px;
   z-index: 1;
 }
 
 .codebox__margin2 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 80px;
+  margin: 0 0 0 80px;
   z-index: 1;
 }
 
 .codebox__margin3 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 120px;
+  margin: 0 0 0 120px;
   z-index: 1;
 }
 
 .codebox__margin4 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 160px;
+  margin: 0 0 0 160px;
   z-index: 1;
 }
 
 .codebox__margin5 {
   line-height: 1;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 200px;
+  margin: 0 0 0 200px;
   z-index: 1;
 }
 
@@ -2291,11 +2303,16 @@ div.section-title {
 #spoil-btna {
   color: darkgreen;
   background: var(--clr-light);
-  border: 3px solid darkgreen;
-  border-radius: 10px;
   font-family: var(--ff-secondary);
-  font-size: 1.4rem;
+
   position: relative;
+  border-color: darkgreen;
+  border-style: solid;
+
+  font-size: 1.1rem;
+  margin: 5px 0;
+  border-width: 2px;
+  border-radius: 10px;
 }
 
 #spoil-btna:hover {
@@ -2307,11 +2324,16 @@ div.section-title {
 #spoil-btnb {
   color: chocolate;
   background: var(--clr-light);
-  border: 3px solid chocolate;
-  border-radius: 10px;
   font-family: var(--ff-secondary);
-  font-size: 1.4rem;
+
   position: relative;
+  border-color: chocolate;
+  border-style: solid;
+
+  font-size: 1.1rem;
+  margin: 5px 0;
+  border-width: 2px;
+  border-radius: 10px;
 }
 
 #spoil-btnb:hover {
@@ -2344,4 +2366,15 @@ div.section-title {
 .reveal-sfeb {
   height: 100%;
   opacity: 1;
+}
+
+@media (min-width: 64em) {
+
+  #spoil-btna,
+  #spoil-btnb {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    border-width: 2px;
+    border-radius: 12px;
+  }
 }
