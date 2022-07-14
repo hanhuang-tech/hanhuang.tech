@@ -1077,7 +1077,7 @@ div.restrict {
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: 0px auto 10px;
+  margin: 0px auto 20px;
   width: 150px;
   border-radius: 5px;
 }
@@ -1128,26 +1128,37 @@ h4.progress {
 p.progress {
   text-align: center;
   color: var(--clr-light);
-  margin-top: 10px;
+  margin: 5px 0;
 }
 
 #justifications {
-  background: lightgoldenrodyellow;
-  color: var(--clr-dark2);
-  transition-duration: 1s;
+  display: block;
   cursor: pointer;
+  background: khaki;
   border-color: var(--clr-dark2);
   border-style: solid;
-  border-width: 2px;
-  margin: 0 auto 20px;
+  border-width: 3px;
   border-radius: 5px;
+  transition-duration: 1s;
+
+  text-align: center;
+  font-weight: var(--fw-bold);
+  margin: 0 20px 10px;
   padding: 2px 5px;
 }
 
 #justifications:hover {
   background-color: darkgoldenrod;
-  color: var(--clr-light);
   border-color: darkgoldenrod;
+}
+
+a.justifications {
+  text-decoration: none;
+  color: var(--clr-dark2);
+}
+
+a.justifications:hover {
+  color: var(--clr-light);
 }
 
 h5.techleft,
