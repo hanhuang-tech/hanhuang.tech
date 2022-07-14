@@ -1768,7 +1768,7 @@ p.justindex {
   }
 
   #justindex {
-    height: 710px;
+    height: 690px;
     border-width: 0 0 15px 0;
     padding: 15px;
   }
@@ -1954,214 +1954,32 @@ h3.resjs {
   }
 }
 
-.resourcesbackend__background {
-  background-color: grey;
-  background-image: url(../img/treesbyfootpath.jpg);
-  background-size: cover;
-  background-blend-mode: multiply;
-  max-height: 350px;
-}
 
-.resourcesbackend__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 200px;
-}
-
-.resourcesbackend__caption {
-  color: lightblue;
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
-  font-size: 2em;
-  text-align: center;
-  margin: auto;
-}
-
-/* express */
-
-.express__title {
-  text-align: center;
-}
-
-.express__blog {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* site frontend */
-
-.sfe-nav__bar {
-  position: fixed;
-  top: -18px;
-  right: 2px;
-  z-index: 4;
-  width: 100px;
-}
-
-.sfe-titlepage__section {
-  padding: 0;
-}
-
-.sfe-titlepage__div {
-  background-color: var(blue);
-  border: 0px solid var(--clr-light);
-  border-width: 10px 0 10px 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 275px;
-}
-
-.sfe-titlepage__services {
-  margin-top: 175px;
-  margin-left: 35px;
-}
-
-.sfe-titlepage__title {
-  color: var(--clr-light2);
-  font-size: 1.75rem;
-  line-height: 0;
-}
-
-.sfe-titlepage__subtitle {
-  color: var(--clr-light2);
-  font-size: 1.5rem;
-  line-height: 1;
-  padding-right: 20px;
-}
-
-.sfe-titlepage__background {
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 205, 1) 5%,
-      rgba(255, 255, 255, 1)),
-    url("../img/streetopening.jpg");
-  background-size: cover;
-  background-position: 0px;
-
-  background-blend-mode: multiply;
-  height: 255px;
-
-  border: 0px solid var(--clr-light);
-  border-width: 0 0 0 5px;
-}
-
-.sfe-logo__background {
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 30px;
-}
-
-.sfe-logo__holder {
-  background-image: linear-gradient(lightblue 1%, var(--clr-light));
-  padding-top: 20px;
-
-  min-width: 200px;
-  border: 5px solid var(--clr-dark);
-  border-radius: 10px;
-}
-
-.sfe-logo__img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
-  min-width: 170px;
-}
-
-.sfe-logo__text {
-  text-align: center;
-  min-width: 170px;
-}
-
-.sfe-logo__title {
-  background-color: var(--clr-light);
-  line-height: 1.5;
-  font-size: 1.5rem;
-  width: 20%;
-  min-width: 170px;
-
-  text-align: center;
-  margin: auto;
-  margin-top: 3px;
-  margin-bottom: 3px;
-  color: var(--clr-dark);
-  border: 5px solid var(--clr-dark);
-}
-
-.sfe-github__link {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
-  height: 35px;
-  max-width: 230px;
-  background-color: lightgrey;
-  border: 1px solid var(--clr-dark);
-}
-
-.sfe-github__desc {
-  line-height: 0;
-  font-size: 1.1rem;
-  font-family: var(--ff-secondary);
-  letter-spacing: 2px;
-  margin-top: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--clr-darkgrey);
-  position: relative;
-}
-
-.sfe-github__desc:hover,
-.sfe-github__link:hover {
-  background-color: var(--clr-light);
-}
-
-.sfe-logo__body {
-  background-color: var(--clr-light);
-  max-width: 600px;
-  border: 2px solid var(--clr-dark);
-  border-radius: 10px;
-
-  margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-}
-
-.sfe-html__background {
-  background-color: lightgrey;
-  background-size: cover;
-  border: 5px solid grey;
-  padding: 20px;
-  padding-left: 15px;
-}
-
-.rating__section {
+div.wrating {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin: 0 auto;
+  background: green;
+  padding: 7px;
+  width: 280px;
+  border-radius: 8px;
 }
 
-.pro-cir {
-  min-width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--clr-forestgreen);
-
+div.circle {
   position: relative;
-  z-index: 0;
-  margin-left: -28px;
-  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+
+  margin: auto 0;
+  border-radius: 50%;
+  background: var(--clr-light);
 }
 
-.pro__title {
-  line-height: 1;
-  margin-left: 12px;
-  margin-bottom: 8px;
-  font-size: 1.6rem;
-  color: var(--clr-darkgrey);
+h3.well {
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--clr-light);
+  margin-left: 8px;
 }
 
 .pro__ul {
