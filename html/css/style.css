@@ -1331,6 +1331,14 @@ h5.techright {
     margin: 10px 0 5px;
   }
 
+  #justifications {
+    display: inline-block;
+    margin: 10px 0 0 25px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 210px;
+  }
+
   h5.techleft {
     position: absolute;
     display: inline-block;
