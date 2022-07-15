@@ -1954,15 +1954,15 @@ h3.resjs {
   }
 }
 
-#ratingbar {
+div.ratingbar {
   display: block;
   content: "";
-  background-color: lightgray;
+  background-color: transparent;
   width: 75%;
   height: 15px;
   border-width: 5px 0 5px 0;
   border-style: solid;
-  border-color: var(--clr-dark);
+  border-color: var(--clr-dark2);
   margin: 20px auto;
 }
 
@@ -2125,88 +2125,86 @@ div.title {
   border-width: 2px 2px 2px 8px;
 }
 
-.codebox__margin0 {
+.codebox__margin0,
+.codebox__margin1,
+.codebox__margin2,
+.codebox__margin3,
+.codebox__margin4,
+.codebox__margin5 {
   line-height: 1;
-  margin: 0;
   z-index: 1;
+}
+
+.codebox__margin0 {
+  margin: 0;
 }
 
 .codebox__margin1 {
-  line-height: 1;
   margin: 0 0 0 40px;
-  z-index: 1;
 }
 
 .codebox__margin2 {
-  line-height: 1;
   margin: 0 0 0 80px;
-  z-index: 1;
 }
 
 .codebox__margin3 {
-  line-height: 1;
   margin: 0 0 0 120px;
-  z-index: 1;
 }
 
 .codebox__margin4 {
-  line-height: 1;
   margin: 0 0 0 160px;
-  z-index: 1;
 }
 
 .codebox__margin5 {
-  line-height: 1;
   margin: 0 0 0 200px;
-  z-index: 1;
 }
 
 /* spoilers */
 
+#spoil-btn1,
+#spoil-btn2,
+#spoil-btn3 {
+  border-style: solid;
+  border-width: 2px 2px 2px 8px;
+  font-family: var(--ff-secondary);
+  line-height: 1.2rem;
+  position: relative;
+}
+
 #spoil-btn1 {
   color: blue;
   background: skyblue;
-  border: 0px solid blue;
-  border-width: 2px 2px 2px 8px;
-  font-family: var(--ff-secondary);
-  position: relative;
-  margin: 0px 0px;
-  line-height: 0.5;
-}
-
-#spoil-btn1:hover {
-  background: lightblue;
-  cursor: pointer;
+  border-color: blue;
 }
 
 #spoil-btn2 {
   color: var(--clr-brown);
   background: orange;
-  border: 0px solid var(--clr-brown);
-  border-width: 2px 2px 2px 8px;
-  font-family: var(--ff-secondary);
-  position: relative;
-  line-height: 0.5;
-}
-
-#spoil-btn2:hover {
-  background: lightgoldenrodyellow;
-  cursor: pointer;
+  border-color: var(--clr-brown);
 }
 
 #spoil-btn3 {
   color: red;
   background: lightcoral;
-  border: 0px solid red;
-  border-width: 2px 2px 2px 8px;
-  font-family: var(--ff-secondary);
-  position: relative;
-  line-height: 0.5;
+  border-color: red;
+}
+
+#spoil-btn1:hover,
+#spoil-btn2:hover,
+#spoil-btn3:hover {
+  cursor: pointer;
+}
+
+#spoil-btn1:hover {
+  background: lightblue;
+}
+
+#spoil-btn2:hover {
+  background: lightgoldenrodyellow;
 }
 
 #spoil-btn3:hover {
   background: lightpink;
-  cursor: pointer;
 }
 
 #spoil-btna {
