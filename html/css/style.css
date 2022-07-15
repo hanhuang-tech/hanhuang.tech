@@ -1954,12 +1954,16 @@ h3.resjs {
   }
 }
 
-div.crating::before {
+#ratingbar {
   display: block;
   content: "";
-  background: var(--clr-dark);
-  height: 100%;
-  width: 5px;
+  background-color: lightgray;
+  width: 75%;
+  height: 15px;
+  border-width: 5px 0 5px 0;
+  border-style: solid;
+  border-color: var(--clr-dark);
+  margin: 20px auto;
 }
 
 div.prating,
@@ -2039,12 +2043,16 @@ div.sidewrapper {
   margin: 0 auto;
 }
 
-div.section-title {
+div.title {
   font-size: 1.2rem;
   margin: 10px 0 5px;
 }
 
 @media(min-width: 64em) {
+  #ratingbar {
+    width: 50%;
+    margin: 40px auto 25px;
+  }
 
   div.prating,
   div.crating {
@@ -2086,7 +2094,7 @@ div.section-title {
     border-radius: 6px;
   }
 
-  div.section-title {
+  div.title {
     font-size: 1.5rem;
     margin: 10px 0 8px;
   }
