@@ -94,7 +94,7 @@ img {
 
 /* browse assist*/
 :focus {
-  outline: 3px solid red;
+  outline: 3px solid darkred;
   outline-offset: 2px;
   position: static;
   z-index: 5;
@@ -2121,7 +2121,8 @@ div.title {
   padding: 12px 12px;
   font-family: var(--ff-secondary);
   background: var(--clr-light);
-  border: 0px solid var(--clr-dark);
+  border-style: solid;
+  border-color: var(--clr-dark);
   border-width: 2px 2px 2px 8px;
 }
 
@@ -2165,16 +2166,18 @@ div.title {
 #spoil-btn2,
 #spoil-btn3 {
   border-style: solid;
-  border-width: 2px 2px 2px 8px;
+  border-width: 2px 2px 4px 8px;
   font-family: var(--ff-secondary);
   line-height: 1.2rem;
   position: relative;
+  margin: 2px 0;
 }
 
 #spoil-btn1 {
   color: blue;
   background: skyblue;
   border-color: blue;
+
 }
 
 #spoil-btn2 {
@@ -2205,6 +2208,17 @@ div.title {
 
 #spoil-btn3:hover {
   background: lightpink;
+}
+
+@media (min-width: 64em) {
+
+  #spoil-btn1,
+  #spoil-btn2,
+  #spoil-btn3 {
+    padding: 10px;
+    font-size: 1.25rem;
+    margin: 3px 0;
+  }
 }
 
 #spoil-btna {
