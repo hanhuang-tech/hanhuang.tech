@@ -64,9 +64,9 @@ spoilBtn[4].addEventListener("click", function () {
 const codeBox = document.body.querySelector(".codebox");
 
 const span = "</span>";
-const spanBlue = "<span class='codeblue'>"
-const spanGreen = "<span class='codegreen'>"
-const spanBrown = "<span class='codebrown'>"
+const spanBlue = "<span class='codeblue'>";
+const spanGreen = "<span class='codegreen'>";
+const spanBrown = "<span class='codebrown'>";
 
 
 function styleEl(codeBox) {
